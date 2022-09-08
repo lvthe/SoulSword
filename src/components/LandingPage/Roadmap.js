@@ -215,8 +215,8 @@ const Roadmap = () => {
                   <h3 style={{ color: '#e5e5e5', fontWeight: 700 }}>{stepData.title}</h3>
                   <h5 style={{ fontSize: 14, color: '#e5e5e5', fontWeight: 600 }}>{stepData.heading}</h5>
                   <ul style={{ borderLeft: '1px solid grey	' }}>
-                    {stepData.subheadings.map((subheading) => (
-                      <li style={{ marginRight: -5, color: '#e5e5e5' }}>
+                    {stepData.subheadings.map((subheading, index) => (
+                      <li key={index} style={{ marginRight: -5, color: '#e5e5e5' }}>
                         <p style={{ fontSize: 14, fontWeight: 500 }}>{subheading}</p>
                       </li>
                     ))}

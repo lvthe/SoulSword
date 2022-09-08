@@ -18,6 +18,7 @@ const LandingPage = () => {
       <section className="header-section">
         <HomePage />
       </section>
+
       <section id="intro">
         <About />
       </section>
@@ -30,17 +31,17 @@ const LandingPage = () => {
         <Souls />
       </section>
 
-      <section id="items">
+      <section id="swords">
         <Swords />
-      </section>
+      </section> 
 
-      <section id="mode">
+     <section id="mode">
         <Mode />
       </section>
       
       <section id="play">
         <Play />
-      </section>
+      </section> 
 
       <section id="usecase">
         <Token />

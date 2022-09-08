@@ -242,19 +242,17 @@ const Navbar = () => {
       <List>
         {[
           { name: 'Introduction', id: 'intro', icon: <TouchAppOutlined /> },
-          {
-            name: 'Characters',
-            id: 'characters',
-            icon: <PeopleAltOutlined />,
-          },
-          { name: 'Game Items', id: 'items', icon: <VpnLockOutlined /> },
-          { name: 'Features', id: 'features', icon: <FlareOutlined /> },
-          { name: 'PWAR Token', id: 'usecase', icon: <CategoryIcon /> },
-          { name: 'Roadmap', id: 'roadmap', icon: <TimelineOutlined /> },
+          { name: 'Rules', id: 'rules',  icon: <PeopleAltOutlined />, },
+          { name: 'Souls', id: 'souls',  icon: <PeopleAltOutlined />, },
+          { name: 'Words', id: 'words', icon: <VpnLockOutlined /> },
+          { name: 'Mode', id: 'mode', icon: <FlareOutlined /> },
+          { name: 'Play', id: 'play', icon: <CategoryIcon /> },
+          { name: 'Use Case', id: 'usecase', icon: <TimelineOutlined /> },
+          {name: 'Token', id: 'tokenomics', icon: <TimelineOutlined />},
           {},
         ].map((tab, index) => (
-          <Link activeClass="active" to={tab.id} smooth={true} offset={0} duration={500} delay={0}>
-            <ListItem button key={tab.name} onClick={toggleDrawer(anchor, false)}>
+          <Link key={tab.id}  activeClass="active" to={tab.id} smooth={true} offset={0} duration={500} delay={0}>
+            <ListItem button key={tab.id} onClick={toggleDrawer(anchor, false)}>
               <Typography className={classes.menuTitleMobile}>{tab.name}</Typography>
             </ListItem>
           </Link>

@@ -178,10 +178,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const GameItems = () => {
+const Souls = () => {
   const classes = useStyles();
   let items = [
     {
+      id: '1',
       name: 'Soul Ice',
       image: Soul,
       listData: (
@@ -199,6 +200,7 @@ const GameItems = () => {
       ),
     },
     {
+      id: '2',
       name: 'Soul Posion',
       image: bigknife,
       listData: (
@@ -215,6 +217,7 @@ const GameItems = () => {
       ),
     },
     {
+      id: '3',
       name: 'Soul Fire',
       image: tessen,
       listData: (
@@ -231,6 +234,7 @@ const GameItems = () => {
       ),
     },
     {
+      id: '4',
       name: 'Soul Wind',
       image: bow,
       listData: (
@@ -247,6 +251,7 @@ const GameItems = () => {
       ),
     },
     {
+      id: '5',
       name: 'Soul Ice Max',
       image: gun,
       listData: (
@@ -283,14 +288,14 @@ const GameItems = () => {
     //     })}
     //   </div>
     // </div>
-    <div className={classes.background}>
+    <div key={classes.id} className={classes.background}>
       <h1 className={classes.heading}>Souls</h1>
       <div className={classes.itemsContainer}>
         {items.map((item) => {
           return (
-            <div className={classes.frameCard}>
+            <div key={item.id} className={classes.frameCard}>
               <div className={classes.frameImage}>
-               <video width="300" height="500" autoplay muted >
+               <video width="300" height="500" loop autoPlay muted >
                 <source src={video} type="video/mp4"/>
               </video>
               </div>
@@ -306,6 +311,4 @@ const GameItems = () => {
   );
 };
 
-
-
-export default GameItems;
+export default Souls;

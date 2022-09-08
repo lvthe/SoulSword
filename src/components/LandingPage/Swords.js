@@ -178,10 +178,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const GameItems = () => {
+const Swords = () => {
   const classes = useStyles();
   let items = [
     {
+      id:'1',
       name: 'Sword Ice',
       image: sword,
       listData: (
@@ -199,6 +200,7 @@ const GameItems = () => {
       ),
     },
     {
+      id:'2',
       name: 'Sword Posion',
       image: bigknife,
       listData: (
@@ -215,6 +217,7 @@ const GameItems = () => {
       ),
     },
     {
+      id:'3',
       name: 'Sword Fire',
       image: tessen,
       listData: (
@@ -231,6 +234,7 @@ const GameItems = () => {
       ),
     },
     {
+      id:'4',
       name: 'Sword Wind',
       image: bow,
       listData: (
@@ -247,6 +251,7 @@ const GameItems = () => {
       ),
     },
     {
+      id:'5',
       name: 'Sword Ice Max',
       image: gun,
       listData: (
@@ -263,6 +268,7 @@ const GameItems = () => {
       ),
     },
     {
+      id:'6',
       name: 'Sword Posion Max',
       image: sceptre,
       listData: (
@@ -279,6 +285,7 @@ const GameItems = () => {
       ),
     },
     {
+      id:'7',
       name: 'Sword Fire Max',
       image: magicvase,
       listData: (
@@ -295,6 +302,7 @@ const GameItems = () => {
       ),
     },
     {
+      id:'8',
       name: 'Sword Wind Max',
       image: armor,
       listData: (
@@ -335,9 +343,9 @@ const GameItems = () => {
       <div className={classes.itemsContainer}>
         {items.map((item) => {
           return (
-            <div className={classes.frameCard}>
+            <div key={item.id }  className={classes.frameCard}>
               <div className={classes.frameImage}>
-               <video width="300" height="500" autoplay muted >
+               <video width="300" height="500" loop autoPlay muted >
                 <source src={video} type="video/mp4"/>
               </video>
               </div>
@@ -355,4 +363,4 @@ const GameItems = () => {
 
 
 
-export default GameItems;
+export default Swords;
