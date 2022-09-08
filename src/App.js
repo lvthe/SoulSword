@@ -15,7 +15,7 @@ function App() {
       <Router>
         <Switch>
           <Fragment>
-            <Route exact path="/">
+            <Route exact path="/SoulWord">
               <section className="appbar-section">
                 <Navbar />
                 <LandingPage />
