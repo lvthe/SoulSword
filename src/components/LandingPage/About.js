@@ -91,7 +91,7 @@ const About = () => {
           {' '}
           <div className={classes.textContainer}>
             <h5 className={classes.subHeading}>The Decentralized Fighting Game Platform</h5>
-            <Typography component="p" className={classes.para}>
+            {/* <Typography component={'p'} className={classes.para}>
               SoulsWord is a blockchain based NFT gaming platform and marketplace. Inspired by the recent crypto NFT and
               gaming narratives, SoulsWord will combine and synergize them both to build an attractive platform.
               <br />
@@ -100,7 +100,7 @@ const About = () => {
                 Further, SoulsWord will also include an NFT marketplace, where players can sell their items, weapons and
                 upgraded equipment for crypto. Some of the items can even be redeemed for real world replicas.
               </div>{' '}
-            </Typography>
+            </Typography> */}
           </div>
         </div>
       </div>

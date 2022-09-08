@@ -239,7 +239,7 @@ const Navbar = () => {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}>
-      <List>
+      <List key={'99'}>
         {[
           { name: 'Introduction', id: 'intro', icon: <TouchAppOutlined /> },
           { name: 'Rules', id: 'rules',  icon: <PeopleAltOutlined />, },
@@ -249,30 +249,30 @@ const Navbar = () => {
           { name: 'Play', id: 'play', icon: <CategoryIcon /> },
           { name: 'Use Case', id: 'usecase', icon: <TimelineOutlined /> },
           {name: 'Token', id: 'tokenomics', icon: <TimelineOutlined />},
-          {},
-        ].map((tab, index) => (
-          <Link key={tab.id}  activeClass="active" to={tab.id} smooth={true} offset={0} duration={500} delay={0}>
+         
+        ].map((tab) => (
+          <Link key={tab.id}  activeClass="active" to = {tab.id} smooth={true} offset={0} duration={500} delay={0}>
             <ListItem button key={tab.id} onClick={toggleDrawer(anchor, false)}>
               <Typography className={classes.menuTitleMobile}>{tab.name}</Typography>
             </ListItem>
           </Link>
         ))}
         <Divider />
-        <ListItem button>
+        <ListItem key={'0'} button>
           <a href="https://SoulsWord.com/docs/whitepaper.pdf" style={{ textDecoration: 'none' }}>
             <Button variant="outlined" className={classes.outlinedWhitepaper}>
               Read White paper
             </Button>
           </a>
         </ListItem>
-        <ListItem button style={{ marginTop: 5 }}>
+        <ListItem key={'0'} button style={{ marginTop: 5 }}>
           <a href="https://game.SoulsWord.com" style={{ textDecoration: 'none' }}>
             <Button variant="outlined" className={classes.outlinedGame}>
               Game Portal
             </Button>
           </a>
         </ListItem>
-        <ListItem button style={{ marginTop: 5 }}>
+        <ListItem key={'0'} button style={{ marginTop: 5 }}>
           <a href="https://stake.polkabridge.org" style={{ textDecoration: 'none' }}>
             <Button variant="outlined" className={classes.outlinedGame}>
               Staking
@@ -288,6 +288,7 @@ const Navbar = () => {
       <AppBar position="relative" className={classes.appBarBackground}>
         <Toolbar className={classes.sectionDesktop}>
           <Link
+            key={'0'}
             exact="true"
             activeClass="active"
             to="header-section"
@@ -301,6 +302,7 @@ const Navbar = () => {
           <div className={classes.grow} />
 
           <Link
+            key={'1'}
             exact="true"
             activeClass="active"
             to="intro"
@@ -313,28 +315,43 @@ const Navbar = () => {
               Introduction
             </Typography>
           </Link>
-          <Link exact="true" to="characters" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
+          <Link key={'2'} exact="true" to="rules" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
-              Characters
+              Rules
             </Typography>
           </Link>
-          <Link exact="true" to="items" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
+          <Link key={'3'} exact="true" to="souls" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
-              Game Items
+              Souls
+            </Typography>
+          </Link>
+          <Link key={'4'} exact="true" to="swords" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
+            <Typography className={classes.tabs} variant="body1">
+              Swords
             </Typography>{' '}
           </Link>
-          <Link exact="true" to="features" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
+          <Link key={'5'} exact="true" to="mode" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
-              Features
+              Mode
             </Typography>{' '}
           </Link>
-          <Link exact="true" to="usecase" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
+          <Link key={'6'} exact="true" to="play" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
+            <Typography className={classes.tabs} variant="body1">
+              Play
+            </Typography>{' '}
+          </Link>
+          <Link key={'7'} exact="true" to="usecase" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
+            <Typography className={classes.tabs} variant="body1">
+              Token
+            </Typography>{' '}
+          </Link>
+          <Link key={'8'} exact="true" to="tokenomics" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
               Tokenomics
             </Typography>{' '}
           </Link>
 
-          <Link exact="true" to="roadmap" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
+          <Link key={'8'} exact="true" to="roadmap" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
               Roadmap
             </Typography>{' '}
