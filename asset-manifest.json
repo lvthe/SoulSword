@@ -1,29 +1,30 @@
 {
   "files": {
-    "main.css": "/SoulSword/static/css/main.1d639fe2.chunk.css",
-    "main.js": "/SoulSword/static/js/main.98e05898.chunk.js",
-    "main.js.map": "/SoulSword/static/js/main.98e05898.chunk.js.map",
-    "runtime-main.js": "/SoulSword/static/js/runtime-main.b8b71db3.js",
-    "runtime-main.js.map": "/SoulSword/static/js/runtime-main.b8b71db3.js.map",
-    "static/js/2.4c60409f.chunk.js": "/SoulSword/static/js/2.4c60409f.chunk.js",
-    "static/js/2.4c60409f.chunk.js.map": "/SoulSword/static/js/2.4c60409f.chunk.js.map",
-    "static/js/3.ffc0c8bc.chunk.js": "/SoulSword/static/js/3.ffc0c8bc.chunk.js",
-    "static/js/3.ffc0c8bc.chunk.js.map": "/SoulSword/static/js/3.ffc0c8bc.chunk.js.map",
-    "index.html": "/SoulSword/index.html",
-    "static/css/main.1d639fe2.chunk.css.map": "/SoulSword/static/css/main.1d639fe2.chunk.css.map",
-    "static/js/2.4c60409f.chunk.js.LICENSE.txt": "/SoulSword/static/js/2.4c60409f.chunk.js.LICENSE.txt",
-    "static/media/about.22d9cbd1.png": "/SoulSword/static/media/about.22d9cbd1.png",
-    "static/media/card.720a18f8.png": "/SoulSword/static/media/card.720a18f8.png",
-    "static/media/header-right.0fcec029.png": "/SoulSword/static/media/header-right.0fcec029.png",
-    "static/media/sword.74095f77.mp4": "/SoulSword/static/media/sword.74095f77.mp4",
-    "static/media/sword.845e524c.png": "/SoulSword/static/media/sword.845e524c.png",
-    "static/media/token.6f39484b.png": "/SoulSword/static/media/token.6f39484b.png",
-    "static/media/tokenomics_back.441e8152.png": "/SoulSword/static/media/tokenomics_back.441e8152.png"
+    "main.css": "/lvthe/SoulSword/static/css/main.c1a50de7.chunk.css",
+    "main.js": "/lvthe/SoulSword/static/js/main.5bc12967.chunk.js",
+    "main.js.map": "/lvthe/SoulSword/static/js/main.5bc12967.chunk.js.map",
+    "runtime-main.js": "/lvthe/SoulSword/static/js/runtime-main.b0be5209.js",
+    "runtime-main.js.map": "/lvthe/SoulSword/static/js/runtime-main.b0be5209.js.map",
+    "static/js/2.4c60409f.chunk.js": "/lvthe/SoulSword/static/js/2.4c60409f.chunk.js",
+    "static/js/2.4c60409f.chunk.js.map": "/lvthe/SoulSword/static/js/2.4c60409f.chunk.js.map",
+    "static/js/3.ffc0c8bc.chunk.js": "/lvthe/SoulSword/static/js/3.ffc0c8bc.chunk.js",
+    "static/js/3.ffc0c8bc.chunk.js.map": "/lvthe/SoulSword/static/js/3.ffc0c8bc.chunk.js.map",
+    "index.html": "/lvthe/SoulSword/index.html",
+    "static/css/main.c1a50de7.chunk.css.map": "/lvthe/SoulSword/static/css/main.c1a50de7.chunk.css.map",
+    "static/js/2.4c60409f.chunk.js.LICENSE.txt": "/lvthe/SoulSword/static/js/2.4c60409f.chunk.js.LICENSE.txt",
+    "static/media/about.22d9cbd1.png": "/lvthe/SoulSword/static/media/about.22d9cbd1.png",
+    "static/media/index.css": "/lvthe/SoulSword/static/media/background.0c4a0158.jpg",
+    "static/media/card.720a18f8.png": "/lvthe/SoulSword/static/media/card.720a18f8.png",
+    "static/media/header-right.0fcec029.png": "/lvthe/SoulSword/static/media/header-right.0fcec029.png",
+    "static/media/sword.74095f77.mp4": "/lvthe/SoulSword/static/media/sword.74095f77.mp4",
+    "static/media/sword.845e524c.png": "/lvthe/SoulSword/static/media/sword.845e524c.png",
+    "static/media/token.6f39484b.png": "/lvthe/SoulSword/static/media/token.6f39484b.png",
+    "static/media/tokenomics_back.441e8152.png": "/lvthe/SoulSword/static/media/tokenomics_back.441e8152.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b8b71db3.js",
+    "static/js/runtime-main.b0be5209.js",
     "static/js/2.4c60409f.chunk.js",
-    "static/css/main.1d639fe2.chunk.css",
-    "static/js/main.98e05898.chunk.js"
+    "static/css/main.c1a50de7.chunk.css",
+    "static/js/main.5bc12967.chunk.js"
   ]
 }
