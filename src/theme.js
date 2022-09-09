@@ -12,7 +12,8 @@ export const theme = createMuiTheme({
     },
     primary: {
       light: 'rgba(89, 210, 188, 1)',
-      main: '#674293',
+      // main: '#674293',
+      main: 'rgba(255, 0, 0, 0)'
     },
     pbr: {
       primary: '#C80C81',

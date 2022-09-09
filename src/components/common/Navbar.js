@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   appBarBackground: {
-    background: `#000000`,
+    //background: `#000000`,
     [theme.breakpoints.down('md')]: {
       borderBottom: '1px solid #e5e5e5',
     },
@@ -87,6 +87,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#212121',
     [theme.breakpoints.down('md')]: {
       color: '#e5e5e5',
+      backgroundImage: "linear-gradient(.25turn, #f00, #00f)"
     },
   },
   list: {
@@ -241,14 +242,13 @@ const Navbar = () => {
       onKeyDown={toggleDrawer(anchor, false)}>
       <List key={'99'}>
         {[
-          { name: 'Introduction', id: 'intro', icon: <TouchAppOutlined /> },
-          { name: 'Rules', id: 'rules',  icon: <PeopleAltOutlined />, },
-          { name: 'Souls', id: 'souls',  icon: <PeopleAltOutlined />, },
-          { name: 'Words', id: 'words', icon: <VpnLockOutlined /> },
-          { name: 'Mode', id: 'mode', icon: <FlareOutlined /> },
-          { name: 'Play', id: 'play', icon: <CategoryIcon /> },
-          { name: 'Use Case', id: 'usecase', icon: <TimelineOutlined /> },
-          {name: 'Token', id: 'tokenomics', icon: <TimelineOutlined />},
+          { name: 'HOME', id: 'intro', icon: <TouchAppOutlined /> },
+          { name: 'SOUL', id: 'souls',  icon: <PeopleAltOutlined />, },
+          { name: 'SWORD', id: 'words', icon: <VpnLockOutlined /> },
+          { name: 'FEATURE', id: 'mode', icon: <FlareOutlined /> },
+          { name: 'TOKENS NOMIC', id: 'tokenomics', icon: <TimelineOutlined />},
+          { name: 'ROADMAP', id: 'roadmap', icon: <CategoryIcon /> },
+          { name: 'PARTNER & ADVISOR', id: 'partner',  icon: <PeopleAltOutlined />, },
          
         ].map((tab) => (
           <Link key={tab.id}  activeClass="active" to = {tab.id} smooth={true} offset={0} duration={500} delay={0}>
@@ -313,48 +313,38 @@ const Navbar = () => {
             delay={0}
             className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
-              Introduction
-            </Typography>
-          </Link>
-          <Link key={'2'} exact="true" to="rules" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
-            <Typography className={classes.tabs} variant="body1">
-              Rules
+              HOME
             </Typography>
           </Link>
           <Link key={'3'} exact="true" to="souls" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
-              Souls
+              SOUL
             </Typography>
           </Link>
           <Link key={'4'} exact="true" to="swords" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
-              Swords
+              SWORD
             </Typography>{' '}
           </Link>
           <Link key={'5'} exact="true" to="mode" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
-              Mode
+              FEARTUE
             </Typography>{' '}
           </Link>
-          <Link key={'6'} exact="true" to="play" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
+          <Link key={'6'} exact="true" to="tokenomics" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
-              Play
+              TOKENS NOMIC  
             </Typography>{' '}
           </Link>
-          <Link key={'7'} exact="true" to="usecase" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
+          <Link key={'7'} exact="true" to="tokenomics" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
-              Token
-            </Typography>{' '}
-          </Link>
-          <Link key={'8'} exact="true" to="tokenomics" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
-            <Typography className={classes.tabs} variant="body1">
-              Tokenomics
+              PARTNER&VISOR 
             </Typography>{' '}
           </Link>
 
-          <Link key={'8'} exact="true" to="roadmap" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
+          <Link key={'9'} exact="true" to="roadmap" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
-              Roadmap
+              ROADMAP
             </Typography>{' '}
           </Link>
 
@@ -372,17 +362,7 @@ const Navbar = () => {
             <Tooltip title="SoulsWord Game Portal">
               <a href="https://game.SoulsWord.com">
                 <Button className={classes.buttonGame} variant="contained">
-                  Game Portal
-                </Button>
-              </a>
-            </Tooltip>
-          </div>
-          <div>
-            {' '}
-            <Tooltip title="SoulsWord Staking">
-              <a href="https://stake.polkabridge.org">
-                <Button className={classes.buttonGame} variant="contained">
-                  Staking
+                  Play
                 </Button>
               </a>
             </Tooltip>
@@ -413,6 +393,7 @@ const Navbar = () => {
                     aria-haspopup="true"
                     className={classes.menuIcon}
                     onClick={toggleDrawer(anchor, true)}>
+                      background
                     <MenuIcon />
                   </IconButton>
 

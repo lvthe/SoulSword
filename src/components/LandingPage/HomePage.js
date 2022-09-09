@@ -87,7 +87,7 @@ const HomePage = () => {
   const classes = useStyles();
   return (
     <div className={classes.background}>
-      <div className="container">
+      {/* <div className="container">
         <div className="row">
           <div className="col-md-6">
             {' '}
@@ -112,7 +112,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
