@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
     //   marginTop: 0,
     //   paddingLeft: 10,
     // },
-    backgroundImage: `url(${image})`
+    backgroundImage: `url(${image})`,
+    backgroundSize: 'cover' 
   },
   heading: {
     textAlign: 'left',
