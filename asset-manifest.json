@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/SoulSword/static/css/main.0fb49025.chunk.css",
-    "main.js": "/SoulSword/static/js/main.71aacd2e.chunk.js",
-    "main.js.map": "/SoulSword/static/js/main.71aacd2e.chunk.js.map",
+    "main.css": "/SoulSword/static/css/main.1c3761fd.chunk.css",
+    "main.js": "/SoulSword/static/js/main.3477b5a5.chunk.js",
+    "main.js.map": "/SoulSword/static/js/main.3477b5a5.chunk.js.map",
     "runtime-main.js": "/SoulSword/static/js/runtime-main.b8b71db3.js",
     "runtime-main.js.map": "/SoulSword/static/js/runtime-main.b8b71db3.js.map",
     "static/js/2.7946eeb6.chunk.js": "/SoulSword/static/js/2.7946eeb6.chunk.js",
@@ -10,10 +10,9 @@
     "static/js/3.ffc0c8bc.chunk.js": "/SoulSword/static/js/3.ffc0c8bc.chunk.js",
     "static/js/3.ffc0c8bc.chunk.js.map": "/SoulSword/static/js/3.ffc0c8bc.chunk.js.map",
     "index.html": "/SoulSword/index.html",
-    "static/css/main.0fb49025.chunk.css.map": "/SoulSword/static/css/main.0fb49025.chunk.css.map",
+    "static/css/main.1c3761fd.chunk.css.map": "/SoulSword/static/css/main.1c3761fd.chunk.css.map",
     "static/js/2.7946eeb6.chunk.js.LICENSE.txt": "/SoulSword/static/js/2.7946eeb6.chunk.js.LICENSE.txt",
     "static/media/about.22d9cbd1.png": "/SoulSword/static/media/about.22d9cbd1.png",
-    "static/media/index.css": "/SoulSword/static/media/background.0c4a0158.jpg",
     "static/media/background_home.6d605668.png": "/SoulSword/static/media/background_home.6d605668.png",
     "static/media/card.720a18f8.png": "/SoulSword/static/media/card.720a18f8.png",
     "static/media/header-right.0fcec029.png": "/SoulSword/static/media/header-right.0fcec029.png",
@@ -26,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.b8b71db3.js",
     "static/js/2.7946eeb6.chunk.js",
-    "static/css/main.0fb49025.chunk.css",
-    "static/js/main.71aacd2e.chunk.js"
+    "static/css/main.1c3761fd.chunk.css",
+    "static/js/main.3477b5a5.chunk.js"
   ]
 }
