@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.css": "/SoulSword/static/css/main.aef010e5.chunk.css",
-    "main.js": "/SoulSword/static/js/main.070b0521.chunk.js",
-    "main.js.map": "/SoulSword/static/js/main.070b0521.chunk.js.map",
+    "main.css": "/SoulSword/static/css/main.0fb49025.chunk.css",
+    "main.js": "/SoulSword/static/js/main.e3600cbe.chunk.js",
+    "main.js.map": "/SoulSword/static/js/main.e3600cbe.chunk.js.map",
     "runtime-main.js": "/SoulSword/static/js/runtime-main.b8b71db3.js",
     "runtime-main.js.map": "/SoulSword/static/js/runtime-main.b8b71db3.js.map",
-    "static/js/2.d04eaf12.chunk.js": "/SoulSword/static/js/2.d04eaf12.chunk.js",
-    "static/js/2.d04eaf12.chunk.js.map": "/SoulSword/static/js/2.d04eaf12.chunk.js.map",
+    "static/js/2.7946eeb6.chunk.js": "/SoulSword/static/js/2.7946eeb6.chunk.js",
+    "static/js/2.7946eeb6.chunk.js.map": "/SoulSword/static/js/2.7946eeb6.chunk.js.map",
     "static/js/3.ffc0c8bc.chunk.js": "/SoulSword/static/js/3.ffc0c8bc.chunk.js",
     "static/js/3.ffc0c8bc.chunk.js.map": "/SoulSword/static/js/3.ffc0c8bc.chunk.js.map",
     "index.html": "/SoulSword/index.html",
-    "static/css/main.aef010e5.chunk.css.map": "/SoulSword/static/css/main.aef010e5.chunk.css.map",
-    "static/js/2.d04eaf12.chunk.js.LICENSE.txt": "/SoulSword/static/js/2.d04eaf12.chunk.js.LICENSE.txt",
+    "static/css/main.0fb49025.chunk.css.map": "/SoulSword/static/css/main.0fb49025.chunk.css.map",
+    "static/js/2.7946eeb6.chunk.js.LICENSE.txt": "/SoulSword/static/js/2.7946eeb6.chunk.js.LICENSE.txt",
     "static/media/about.22d9cbd1.png": "/SoulSword/static/media/about.22d9cbd1.png",
     "static/media/index.css": "/SoulSword/static/media/background.0c4a0158.jpg",
+    "static/media/background_bk.dd58a2c2.jpg": "/SoulSword/static/media/background_bk.dd58a2c2.jpg",
     "static/media/card.720a18f8.png": "/SoulSword/static/media/card.720a18f8.png",
     "static/media/header-right.0fcec029.png": "/SoulSword/static/media/header-right.0fcec029.png",
+    "static/media/playnow.e838a13a.png": "/SoulSword/static/media/playnow.e838a13a.png",
     "static/media/sword.74095f77.mp4": "/SoulSword/static/media/sword.74095f77.mp4",
     "static/media/sword.845e524c.png": "/SoulSword/static/media/sword.845e524c.png",
     "static/media/token.6f39484b.png": "/SoulSword/static/media/token.6f39484b.png",
@@ -23,8 +25,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b8b71db3.js",
-    "static/js/2.d04eaf12.chunk.js",
-    "static/css/main.aef010e5.chunk.css",
-    "static/js/main.070b0521.chunk.js"
+    "static/js/2.7946eeb6.chunk.js",
+    "static/css/main.0fb49025.chunk.css",
+    "static/js/main.e3600cbe.chunk.js"
   ]
 }
