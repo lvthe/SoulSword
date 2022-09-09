@@ -1,18 +1,20 @@
 import React from 'react';
 import headerRight from '../../assets/header-right.png';
 import { makeStyles, Button, Typography } from '@material-ui/core';
+import image from '../../assets/background_bk.jpg';
 
 const useStyles = makeStyles((theme) => ({
   background: {
     minHeight: '80vh',
     color: 'white',
     textShadow: '3px 4px black',
-    paddingLeft: 60,
-    [theme.breakpoints.down('md')]: {
-      minHeight: 500,
-      marginTop: 0,
-      paddingLeft: 10,
-    },
+    paddingLeft: 100,
+    // [theme.breakpoints.down('md')]: {
+    //   minHeight: 500,
+    //   marginTop: 0,
+    //   paddingLeft: 10,
+    // },
+    backgroundImage: `url(${image})`
   },
   heading: {
     textAlign: 'left',
@@ -80,6 +82,7 @@ const useStyles = makeStyles((theme) => ({
       padding: '12px 15px 12px 15px',
       fontWeight: 500,
     },
+
   },
 }));
 

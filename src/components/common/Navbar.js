@@ -21,6 +21,7 @@ import VpnLockOutlined from '@material-ui/icons/VpnLockOutlined';
 import DescriptionOutlined from '@material-ui/icons/DescriptionOutlined';
 import CategoryIcon from '@material-ui/icons/Category';
 import TimerIcon from '@material-ui/icons/Timer';
+import image from '../../assets/playnow.png';
 
 import { Link } from 'react-scroll';
 import { Typography } from '@material-ui/core';
@@ -85,10 +86,10 @@ const useStyles = makeStyles((theme) => ({
   },
   menuIcon: {
     color: '#212121',
-    [theme.breakpoints.down('md')]: {
-      color: '#e5e5e5',
-      backgroundImage: "linear-gradient(.25turn, #f00, #00f)"
-    },
+    // [theme.breakpoints.down('md')]: {
+    //   color: '#e5e5e5',
+    // },
+    backgroundImage: `url(${image})`
   },
   list: {
     width: '250px',
@@ -393,7 +394,7 @@ const Navbar = () => {
                     aria-haspopup="true"
                     className={classes.menuIcon}
                     onClick={toggleDrawer(anchor, true)}>
-                      background
+                    backgroundImage: "linear-gradient(.25turn, #f00, #00f)"
                     <MenuIcon />
                   </IconButton>
 

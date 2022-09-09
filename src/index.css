@@ -83,7 +83,7 @@ h5 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     /* url('https://cutewallpaper.org/21/street-fighter-backgrounds/Pin-on-Fighting-Game-Backgrounds.gif') fixed;  */
       /* url('D:\PROJECT\WORK\SoulSword\langdpage_bythe\src\background.jpg') fixed;   */
-      url('E:\WORK COMPANY\OUT\SoulSword\src\background.jpg') fixed;
+       url('E:\WORK COMPANY\OUT\SoulSword\src\background.jpg') fixed; 
   background-size: cover;
   background-position: center;
 }
