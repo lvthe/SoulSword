@@ -14,6 +14,7 @@ import Rules from './Rules';
 
 const LandingPage = () => {
   return (
+  
     <div className="cover">
       <section className="header-section">
         <HomePage />
@@ -49,8 +50,6 @@ const LandingPage = () => {
       <section id="tokenomics">
         <Tokenomics />
       </section>
-      
-
       <section id="roadmap">
         <Roadmap />
         <Investor />

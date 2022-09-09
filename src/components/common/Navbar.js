@@ -285,7 +285,8 @@ const Navbar = () => {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="relative" className={classes.appBarBackground}>
+      {/* <AppBar position="relative" className={classes.appBarBackground}> */}
+      <AppBar position="fixed" className={classes.appBarBackground}>
         <Toolbar className={classes.sectionDesktop}>
           <Link
             key={'0'}
