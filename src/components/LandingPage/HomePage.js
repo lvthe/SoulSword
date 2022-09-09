@@ -1,7 +1,7 @@
 import React from 'react';
 import headerRight from '../../assets/header-right.png';
 import { makeStyles, Button, Typography } from '@material-ui/core';
-import image from '../../assets/background_bk.jpg';
+import image from '../../assets/background_home.png';
 
 const useStyles = makeStyles((theme) => ({
   background: {
