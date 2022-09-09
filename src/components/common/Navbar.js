@@ -78,18 +78,21 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
     color: 'black',
     cursor: 'pointer',
-    marginRight: 5,
-    marginLeft: 5,
+    marginRight: 25,
+    marginLeft: 25,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 30,
+    },
   },
   nav: {
     marginRight: 15,
   },
   menuIcon: {
     color: '#212121',
-    // [theme.breakpoints.down('md')]: {
-    //   color: '#e5e5e5',
-    // },
-    backgroundImage: `url(${image})`
+    [theme.breakpoints.down('md')]: {
+      color: '#e5e5e5',
+    },
+    
   },
   list: {
     width: '250px',
@@ -121,7 +124,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 0,
     paddingRight: '10px',
     cursor: 'pointer',
-    fontFamily: 'Exo 2',
+    fontFamily: 'Trajan Pro',
     fontSize: '1.1vw',
     [theme.breakpoints.up('md')]: {
       display: 'block',
@@ -210,7 +213,7 @@ const useStyles = makeStyles((theme) => ({
     verticalAlign: 'baseline',
     letterSpacing: '-1px',
     margin: 0,
-    marginTop: 5,
+    marginTop: 0,
     color: '#ffffff',
     padding: '12px 16px 12px 16px',
     fontWeight: 500,
@@ -219,6 +222,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       fontSize: 18,
     },
+    backgroundImage: `url(${image})`
   },
 }));
 
@@ -348,28 +352,17 @@ const Navbar = () => {
               ROADMAP
             </Typography>{' '}
           </Link>
-
-          {/* <div style={{ paddingRight: 10 }}>
-            <Tooltip title="SoulsWord White Paper">
-              <a href="https://SoulsWord.com/docs/whitepaper.pdf">
-                <Button className={classes.buttonWhitePaper} variant="contained" startIcon={<DescriptionOutlined />}>
-                  Read white paper
-                </Button>
-              </a>
-            </Tooltip>
-          </div> */}
           <div style={{ paddingRight: 10 }}>
             {' '}
             <Tooltip title="SoulsWord Game Portal">
               <a href="https://game.SoulsWord.com">
                 <Button className={classes.buttonGame} variant="contained">
-                  Play
+                  Play Now
                 </Button>
               </a>
             </Tooltip>
           </div>
         </Toolbar>
-
         <Toolbar className={classes.sectionMobile}>
           <div className={classes.row1}>
             <div className={classes.grow} />
@@ -394,7 +387,6 @@ const Navbar = () => {
                     aria-haspopup="true"
                     className={classes.menuIcon}
                     onClick={toggleDrawer(anchor, true)}>
-                    backgroundImage: "linear-gradient(.25turn, #f00, #00f)"
                     <MenuIcon />
                   </IconButton>
 

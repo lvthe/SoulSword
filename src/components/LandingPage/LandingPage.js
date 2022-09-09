@@ -20,13 +20,13 @@ const LandingPage = () => {
         <HomePage />
       </section>
 
-      <section id="intro">
+      {/* <section id="intro">
         <About />
-      </section>
+      </section> */}
 
-      <section id="rules">
+      {/* <section id="rules">
         <Rules />
-      </section>
+      </section> */}
 
       <section id="souls">
         <Souls />
