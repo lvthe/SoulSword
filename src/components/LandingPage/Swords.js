@@ -27,6 +27,10 @@ import wing from '../../assets/sword.png';
 import monut from '../../assets/sword.png';
 import video from '../../assets/sword.mp4';
 import { Card } from '@material-ui/core';
+import background_sword from '../../assets/background_sword.png';
+import Sword_bg from '../../assets/Sword_bg.png';
+import Sword_main from   '../../assets/Sword_main.png';
+import Sword_bar  from '../../assets/Sword_bar.png';
 
 const useStyles = makeStyles((theme) => ({
   background: {
@@ -44,6 +48,12 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       justifyContent: 'center',
     },
+    backgroundImage: `url(${background_sword})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+   // width: '100vw',
+   // height: '100vh',
   },
   image: {
     marginTop: 30,
@@ -64,28 +74,49 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 30,
     flexWrap: 'wrap',
   },
+  itemsContainerSword: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    alignItems: 'flex-start',
+    paddingTop: 30,
+    flexWrap: 'wrap',
+  },
+  itemsContainerSwordBar: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    alignItems: 'flex-start',
+    flexWrap: 'wrap',
+  },
   itemGroup: {
-    maxWidth: 250,
+    // maxWidth: 600,
+    //width: '50%',
     paddingLeft: 10,
     paddingRight: 10,
+    backgroundImage: `url(${Sword_bg})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    width: "32vw",
+    height: "12vh",
   },
   heading: {
-    color: theme.palette.pbr.heading,
-    textAlign: 'left',
-    fontSize: 36,
-    fontWeight: 600,
-    verticalAlign: 'middle',
-    wordSpacing: '0px',
-    alignSelf: 'center',
-    paddingTop: 17,
-    [theme.breakpoints.down('md')]: {
-      marginBottom: 20,
-    },
-    [theme.breakpoints.down('sm')]: {
-      paddingTop: 0,
-      fontSize: 28,
-      marginTop: 5,
-    },
+    color: '#FFA800',
+    textAlign: 'center',
+    //fontSize: 80,
+    //fontWeight: 600,
+    verticalAlign: 'top',
+    //wordSpacing: '0px',
+    //alignSelf: 'center',
+    // paddingTop: 17,
+    // [theme.breakpoints.down('md')]: {
+    //   marginBottom: 20,
+    // },
+    // [theme.breakpoints.down('sm')]: {
+    //   paddingTop: 0,
+    //   fontSize: 28,
+    //   marginTop: 5,
+    // },
+   
   },
   para: {
     fontWeight: 400,
@@ -132,7 +163,27 @@ const useStyles = makeStyles((theme) => ({
     borderBottomLeftRadius: 7,
     borderBottomRightRadius: 7,
   },
-
+  sword: {
+    width: '20%',
+    marginTop: '2vh',
+    marginLeft: '80vh',
+  },
+  Sword_main:{
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingLeft:"8vw",
+    paddingTop:"3vh",
+    // width: "12vw",
+    // height: "12vh",
+  },
+  Sword_bar:{
+    justifyContent: 'space-evenly',
+    alignItems: 'flex-start',
+  },
   frameCard: {
     // background: `url(${cardFrame})`,
     backgroundRepeat: 'no-repeat',
@@ -339,7 +390,17 @@ const Swords = () => {
     //   </div>
     // </div>
     <div className={classes.background}>
-      <h1 className={classes.heading}>Swords</h1>
+      <div className={classes.itemsContainerSword}>
+        <div className={classes.itemGroup}>
+          <img className={classes.Sword_main} src={Sword_main} />
+        </div>
+      </div>
+      <div className={classes.itemsContainerSwordBar} >
+          <img className={classes.Sword_bar} src={Sword_bar} />
+      </div>
+      
+
+
       <div className={classes.itemsContainer}>
         {items.map((item) => {
           return (

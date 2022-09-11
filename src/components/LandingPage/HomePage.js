@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    width: '100vw',
+   // width: '100vw',
     height: '100vh',
     
   },

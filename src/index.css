@@ -3,7 +3,7 @@
 body {
   margin: 0;
   /* font-family: 'Work Sans'; */
-  font-family: 'Exo 2'; 
+  /* font-family: 'Exo 2';  */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -15,7 +15,7 @@ body {
 
 code {
   /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; */
-   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Exo 2', monospace;
+   /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Exo 2', monospace; */
 }
 
 a {
@@ -33,7 +33,8 @@ h5 {
 }
 h1 {
   /* font-family: 'Balsamiq Sans', cursive; */
-  font-family: 'Exo 2', cursive; 
+  /* font-family: 'Exo 2', cursive;  */
+  fontSize: 80
 }
 .slider {
   width: 100%;
@@ -43,7 +44,7 @@ h1 {
   margin: 0;
   padding: 0;
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   overflow: hidden;
 }
 .slide {

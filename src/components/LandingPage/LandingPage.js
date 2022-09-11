@@ -19,23 +19,16 @@ const LandingPage = () => {
       <section className="header-section">
         <HomePage />
       </section>
-
-      {/* <section id="intro">
-        <About />
-      </section> */}
-
-      {/* <section id="rules">
-        <Rules />
-      </section> */}
+      
+      <section id="swords">
+        <Swords />
+      </section> 
 
       <section id="souls">
         <Souls />
       </section>
 
-      <section id="swords">
-        <Swords />
-      </section> 
-
+     
      <section id="mode">
         <Mode />
       </section>
@@ -50,6 +43,14 @@ const LandingPage = () => {
       <section id="tokenomics">
         <Tokenomics />
       </section>
+      
+      {/* <section id="intro">
+        <About />
+      </section> */}
+
+      {/* <section id="rules">
+        <Rules />
+      </section> */}
       <section id="roadmap">
         <Roadmap />
         <Investor />
