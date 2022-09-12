@@ -10,11 +10,11 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     //textShadow: '3px 4px black',
     // paddingLeft: 100,
-    // [theme.breakpoints.down('md')]: {
-    //   minHeight: 500,
-    //   marginTop: 0,
-    //   paddingLeft: 10,
-    // },
+    [theme.breakpoints.down('md')]: {
+      minHeight: 500,
+      marginTop: 0,
+      paddingLeft: 10,
+    },
     backgroundImage: `url(${image})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
