@@ -22,10 +22,11 @@ import DescriptionOutlined from '@material-ui/icons/DescriptionOutlined';
 import CategoryIcon from '@material-ui/icons/Category';
 import TimerIcon from '@material-ui/icons/Timer';
 import image from '../../assets/playnow.png';
-
+import Header from './Header.css';
 import { Link } from 'react-scroll';
-import { Typography } from '@material-ui/core';
-
+import { Typography } from '@material-ui/core'; 
+import soulwordLogo from '../../assets/logo_bb.png';
+import playnowImg from '../../assets/playnow.png';
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -292,7 +293,8 @@ const Navbar = () => {
     <div className={classes.grow}>
       {/* <AppBar position="relative" className={classes.appBarBackground}> */}
       <AppBar position="fixed" className={classes.appBarBackground}>
-        <Toolbar className={classes.sectionDesktop}>
+        <Toolbar className={classes.sectionDesktop}> 
+          <a href="/" > <img src={soulwordLogo} className='navbar_img'  /> </a> 
           <Link
             key={'0'}
             exact="true"
@@ -303,7 +305,6 @@ const Navbar = () => {
             duration={400}
             delay={0}
             className={classes.home}>
-            <Avatar variant="square" src="assets/logo.png" style={{ height: 60, width: 112 }} />
           </Link>
           <div className={classes.grow} />
 
@@ -338,7 +339,7 @@ const Navbar = () => {
           </Link>
           <Link key={'6'} exact="true" to="tokenomics" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
-              TOKENS NOMIC  
+              TOKENS NOMIC
             </Typography>{' '}
           </Link>
           <Link key={'7'} exact="true" to="tokenomics" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
@@ -352,14 +353,21 @@ const Navbar = () => {
               ROADMAP
             </Typography>{' '}
           </Link>
-          <div style={{ paddingRight: 10 }}>
+          <div style={{ paddingRight: '5px' }}>
             {' '}
             <Tooltip title="SoulsWord Game Portal">
-              <a href="https://game.SoulsWord.com">
+            <a href="#" className="animated-button1">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Play Now
+            </a>
+              {/* <a href="https://game.SoulsWord.com"> 
                 <Button className={classes.buttonGame} variant="contained">
                   Play Now
-                </Button>
-              </a>
+                </Button> 
+              </a> */}
             </Tooltip>
           </div>
         </Toolbar>
@@ -375,8 +383,9 @@ const Navbar = () => {
               duration={500}
               delay={0}
               className={classes.home}>
-              <Avatar variant="square" src="assets/logo.png" style={{ height: 55, width: 110 }} />
-            </Link>
+                 
+            </Link><a href="/" className='navbar_a_mobile'> <img src={soulwordLogo} className='navbar_img_mobile'  /> </a> 
+            
 
             <div className={classes.grow} />
             <div>
