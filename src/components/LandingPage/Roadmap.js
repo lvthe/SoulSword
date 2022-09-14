@@ -5,7 +5,9 @@ import farming from '../../assets/farming.png';
 import launch from '../../assets/launch.png';
 import tokenomics from '../../assets/tokenomics.png';
 import chain from '../../assets/chain.png';
-
+import road_img from '../../assets/road_map.png';
+import road_sword from '../../assets/road_sword.png';
+import  road_map_bg from  '../../assets/road_map_bg.png';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
@@ -77,12 +79,17 @@ const useStyles = makeStyles((theme) => ({
     padding: 20,
     height: '100%',
     paddingLeft: 100,
+    backgroundImage: `url(${road_map_bg})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
     [theme.breakpoints.down('md')]: {
       paddingLeft: 15,
       padding: 0,
       paddingBottom: 15,
       paddingTop: 60,
     },
+
   },
   heading: {
     color: theme.palette.pbr.heading,
@@ -139,6 +146,18 @@ const useStyles = makeStyles((theme) => ({
       marginRight: 0,
     },
   },
+  itemsContainer: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    width: '100%',
+    marginTop: 20,
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
+  },
 }));
 
 const Roadmap = () => {
@@ -187,7 +206,13 @@ const Roadmap = () => {
 
   return (
     <div className={classes.background}>
-      <div>
+      <div className={classes.itemsContainer}>
+        <img  src={road_img} />
+      </div>
+      <div className={classes.itemsContainer}>
+        <img  src={road_sword} />
+      </div>
+      {/* <div>
         <h6 className={classes.heading}>
           SoulsWord RoadMap<strong className={classes.highlight}></strong>
         </h6>
@@ -231,7 +256,7 @@ const Roadmap = () => {
             <ArrowForwardIosIcon fontSize="large" style={{ color: '#ffffff' }} />
           </IconButton>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

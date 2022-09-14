@@ -33,13 +33,20 @@ const LandingPage = () => {
         <Mode />
       </section>
       
-      <section id="play">
+      <section id="roadmap">
+        <Roadmap />
+        <Investor />
+        <Footer />
+      </section>
+
+
+      {/* <section id="play">
         <Play />
       </section> 
 
       <section id="usecase">
         <Token />
-      </section>
+      </section> */}
       <section id="tokenomics">
         <Tokenomics />
       </section>
@@ -51,11 +58,7 @@ const LandingPage = () => {
       {/* <section id="rules">
         <Rules />
       </section> */}
-      <section id="roadmap">
-        <Roadmap />
-        <Investor />
-        <Footer />
-      </section>
+      
     </div>
   );
 };

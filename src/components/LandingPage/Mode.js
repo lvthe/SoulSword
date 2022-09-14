@@ -1,11 +1,9 @@
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import React from 'react';
-import CardGiftcardOutlined from '@material-ui/icons/CardGiftcardOutlined';
-import SportsEsportsOutlined from '@material-ui/icons/SportsEsportsOutlined';
-import TrendingUpOutlined from '@material-ui/icons/TrendingUpOutlined';
-
 import mode_bg from '../../assets/mode_bg.png';
 import mode_sword from '../../assets/mode_sword.png';
+import mode_img   from '../../assets/feature_img.png';
+import video from '../../assets/sword.mp4';
 const useStyles = makeStyles((theme) => ({
   background: {
     padding: 80,
@@ -70,9 +68,17 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   image: {
-    // width: '40%',
-    // marginTop: '18vh',
-    // marginLeft: '60vh',
+    width:"60%",
+    display:'flex',
+    flex:'2',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
   },
   subHeading: {
     color: theme.palette.pbr.textPrimary,
@@ -101,14 +107,93 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 const Feature = () => {
   const classes = useStyles();
+  let items = [
+    {
+      name: 'Sword Ice',
+      listData: (
+        <div>
+          {' '}
+          <p className={classes.para}>
+            <ul className={classes.frameList}>
+              <li>Level: 1 / 5</li>
+              <li>Base Damage: 30</li>
+              <li>Bonus: +7%</li>
+              <li>Accuracy: +5</li>
+            </ul>
+          </p>
+        </div>
+      ),
+    },
+    {
+      name: 'Sword Posion',
+      listData: (
+        <div>
+          <p className={classes.para}>
+            <ul className={classes.frameList}>
+              <li>Level: 1 / 5</li>
+              <li>Base Damage: 32</li>
+              <li>Bonus: +5%</li>
+              <li>Accuracy: +4</li>
+            </ul>
+          </p>
+        </div>
+      ),
+    },
+    {
+      name: 'Sword Fire',
+      listData: (
+        <div>
+          <p className={classes.para}>
+            <ul className={classes.frameList}>
+              <li>Level: 1 / 5</li>
+              <li>Base Damage: 26</li>
+              <li>Bonus: +8%</li>
+              <li>Accuracy: +4</li>
+            </ul>
+          </p>
+        </div>
+      ),
+    },
+    {
+      name: 'Sword Wind',
+      listData: (
+        <div>
+          <p className={classes.para}>
+            <ul className={classes.frameList}>
+              <li>Level: 1 / 5</li>
+              <li>Base Damage: 29</li>
+              <li>Bonus: +9%</li>
+              <li>Accuracy: +4</li>
+            </ul>
+          </p>
+        </div>
+      ),
+    },
+  ];
   return (
     <div className={classes.background}>
-      <h6 className={classes.heading}>SoulSword Mode</h6>
-
       <div className={classes.itemsContainer}>
-      <img className={classes.image} src={mode_sword} />
+        <img  src={mode_img} />
+      </div>
+      <div className={classes.itemsContainer}>
+        {items.map((item) => {
+          return (
+            <div className={classes.frameCard}>
+              <div className={classes.frameImage}>
+               <video width="300" height="500" autoplay muted >
+                <source src={video} type="video/mp4"/>
+              </video>
+              </div>
+              {/* <div className={classes.frameText}>
+                <h5 className={classes.title}>{item.name}</h5>
+              </div>
+              <div className={classes.frameStats}>{item.listData}</div> */}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
