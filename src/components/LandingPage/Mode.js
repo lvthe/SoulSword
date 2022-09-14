@@ -4,6 +4,8 @@ import CardGiftcardOutlined from '@material-ui/icons/CardGiftcardOutlined';
 import SportsEsportsOutlined from '@material-ui/icons/SportsEsportsOutlined';
 import TrendingUpOutlined from '@material-ui/icons/TrendingUpOutlined';
 
+import mode_bg from '../../assets/mode_bg.png';
+import mode_sword from '../../assets/mode_sword.png';
 const useStyles = makeStyles((theme) => ({
   background: {
     padding: 80,
@@ -13,7 +15,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-evenly',
     paddingLeft: 50,
     paddingRight: 50,
-
+    backgroundImage: `url(${mode_bg})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
     [theme.breakpoints.down('sm')]: {
       paddingLeft: 10,
       paddingRight: 10,
@@ -41,12 +46,12 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 400,
     marginLeft: 12,
     marginRight: 12,
-    backgroundColor: 'black',
     padding: 30,
     height: '350px',
     [theme.breakpoints.down('md')]: {
       height: '100%',
     },
+    
   },
   heading: {
     // color: theme.palette.pbr.textPrimary,
@@ -63,6 +68,11 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 24,
       marginBottom: 25,
     },
+  },
+  image: {
+    // width: '40%',
+    // marginTop: '18vh',
+    // marginLeft: '60vh',
   },
   subHeading: {
     color: theme.palette.pbr.textPrimary,
@@ -98,39 +108,7 @@ const Feature = () => {
       <h6 className={classes.heading}>SoulSword Mode</h6>
 
       <div className={classes.itemsContainer}>
-        <div className={classes.item}>
-          <h5 className={classes.subheading}>
-            <SportsEsportsOutlined fontSize="large" />
-            SoulsWord Realm
-          </h5>
-          <p className={classes.para}>
-            The NFT-based decentralized fighting game. Everyone can create or build their own characters, battle to have
-            fun and earn more profits. There will be two arenas: individual and team. There is also a mission and
-            rewards system for each level.
-          </p>
-        </div>
-
-        <div className={classes.item}>
-          <h5 className={classes.subheading}>
-            <TrendingUpOutlined fontSize="large" /> SoulsWord Marketplace
-          </h5>
-          <p className={classes.para}>
-            The NFT marketplace, where players can buy, sell and bid equipment or weapons for their character. The
-            players can acquire funds by selling their upgraded equipment and weapons, in the native PWAR token.
-          </p>
-        </div>
-
-        <div className={classes.item}>
-          <h5 className={classes.subheading}>
-            <CardGiftcardOutlined fontSize="large" /> SoulsWord Logistics
-          </h5>
-          <p className={classes.para}>
-            Logistics is a solution for those who want to own NFT in the real world. Logistics will allow conversion of
-            NFT items (equipment and weapons) to physical real-world tangible items. Through the Logistics system,
-            SoulsWord will ship the product directly to the buyer's address. This new feature promises a novel and
-            extremely attractive function in the NFT marketplace field.
-          </p>
-        </div>
+      <img className={classes.image} src={mode_sword} />
       </div>
     </div>
   );
