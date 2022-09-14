@@ -18,9 +18,12 @@ function App() {
             {/* <Route exact path="/">  className="appbar-section" */}
             <Route basename="/SoulWord">
               <section>
+                <div className='d-flex no-wrap col-s-12 col-12 col-lg-12 col-md-12 pa-0'>
                 <Navbar />
                 <LandingPage />
+                </div>
               </section>
+              
             </Route>
             <Route exact path="/api/cirsupply">
               <CirculatingSupply />
