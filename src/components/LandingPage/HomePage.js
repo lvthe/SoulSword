@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     // width: '100vw',
-    height: '100vh',
+    height: '130vh',
 
   },
   heading: {

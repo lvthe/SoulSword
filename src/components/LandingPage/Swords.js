@@ -289,7 +289,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   itemDetails: {
-    justifyContent: 'space-around',
+    // justifyContent: 'space-around',
     paddingLeft: 150,
     paddingTop: 120,
     [theme.breakpoints.down('md')]: {
@@ -524,20 +524,6 @@ const Swords = () => {
       <div className={classes.itemsContainer}>
         <img className={classes.Sword_main} src={Sword_main} />
       </div>
-
-
-      {/* <div className={classes.itemGroup}>
-         
-        </div> */}
-
-      {/* <div className={classes.itemsContainerSwordBar} >
-        <img className={classes.Sword_bar} src={Sword_bar} />
-      </div> */}
-      {/* <div className={classes.heading}>
-        <p>
-          There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.
-        </p>
-      </div> */}
       <div className={classes.itemsContainer}>
         {items.map((item) => {
           return (
@@ -551,7 +537,7 @@ const Swords = () => {
       </div>
       <div className={classes.itemsContainer}>
         <div className={classes.itemsContainer}>
-          <div className={classes.itemDetails}>
+          <div>
             <h1 className={classes.attribue_h1}> <span>Attribues</span></h1>
             <div className={classes.itemDetailsIcon}>
               <img className={classes.imageDetails} src={soul_fire} /><p className={classes.attribue_h1}>Class</p>
