@@ -45,7 +45,7 @@ import sword_detail_bonuns from '../../assets/sword_detail_bonuns.png';
 import sword_detail_dpscounter from '../../assets/sword_detail_dpscounter.png';
 import sword_effect_yellow from '../../assets/sword_effect_yellow.png';
 import sword_effect_blue from '../../assets/sword_effect_blue.png';
-import sword_effect_violet from '../../assets/sword_effect_violet.png'; 
+import sword_effect_violet from '../../assets/sword_effect_violet.png';
 import sword_bg_detail from '../../assets/sword_bg_detail.png';
 import sword_detai_icon_fire from '../../assets/sword_detai_icon_fire.png';
 import { CenterFocusStrong } from '@material-ui/icons';
@@ -76,12 +76,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 0,
     marginLeft: 10,
     width: 50,
-
     [theme.breakpoints.down('md')]: {
-      width: 150,
-      height: 150,
-      marginTop: 15,
-      marginBottom: 10,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
     },
   },
   itemsContainer: {
@@ -189,21 +187,25 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   Sword_main: {
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingLeft: "8vw",
-    paddingTop: "3vh",
-    [theme.breakpoints.down('md')]: {
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-    },
+    // backgroundPosition: 'center',
+    // backgroundSize: 'cover',
+    // backgroundRepeat: 'no-repeat',
+    // display: 'flex',
+    // alignItems: 'center',
+    // justifyContent: 'center',
+    // paddingLeft: "8vw",
+    // paddingTop: "3vh",
+    // [theme.breakpoints.down('md')]: {
+    //   display: 'flex',
+    //   flexDirection: 'column',
+    //   justifyContent: 'center',
+    // },
     // width: "12vw",
     // height: "12vh",
+    // backgroundImage: `url(${Sword_bg})`,
+    // backgroundPosition: 'center',
+    // backgroundSize: 'cover',
+    // backgroundRepeat: 'no-repeat',
   },
   Sword_bar: {
     justifyContent: 'space-evenly',
@@ -410,7 +412,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 0,
     marginLeft: 0,
     width: 140,
-
     [theme.breakpoints.down('sm')]: {
       width: 150,
       height: 150,
@@ -518,19 +519,23 @@ const Swords = () => {
   return (
 
     <div className={classes.background}>
-      <div className={classes.itemsContainerSword}>
-        <div className={classes.itemGroup}>
-          <img className={classes.Sword_main} src={Sword_main} />
-        </div>
+      <div className={classes.itemsContainer}>
+        <img className={classes.Sword_main} src={Sword_main} />
       </div>
-      <div className={classes.itemsContainerSwordBar} >
+
+
+      {/* <div className={classes.itemGroup}>
+         
+        </div> */}
+
+      {/* <div className={classes.itemsContainerSwordBar} >
         <img className={classes.Sword_bar} src={Sword_bar} />
-      </div>
-      <div className={classes.heading}>
+      </div> */}
+      {/* <div className={classes.heading}>
         <p>
           There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.
         </p>
-      </div>
+      </div> */}
       <div className={classes.itemsContainer}>
         {items.map((item) => {
           return (
@@ -542,9 +547,9 @@ const Swords = () => {
           );
         })}
       </div>
-      <div className={classes.itemsContainerDetails}>
-        <div className={classes.itemMaster}>
-          <div className={classes.itemDetails}>
+      <div className={classes.itemsContainer}>
+        <div className={classes.itemsContainer}>
+          <div className={classes.itemsContainer}>
             <h1 className={classes.attribue_h1}> <span>Attribues</span></h1>
             <div className={classes.itemDetailsIcon}>
               <img className={classes.imageDetails} src={soul_fire} /><p className={classes.attribue_h1}>Class</p>
@@ -566,15 +571,10 @@ const Swords = () => {
               <img className={classes.imageDetails} src={sword_detail_dpscounter} /><p className={classes.attribue_h1}>Damage Counter</p>
             </div>
           </div>
-          <div>
-            <img className={classes.imageEffect} src={sword_effect_yellow} />
-          </div>
         </div>
-
-        <div className={classes.itemMaster}>
-          <div className={classes.itemDetailsIcon}>
-            <img className={classes.imageSwordDetails} src={sword_detail_metal} />
-        </div></div>
+        <div className={classes.itemsContainer}>
+          <img className={classes.imageSwordDetails} src={sword_detail_metal} />
+        </div>
 
         <div className={classes.itemMaster}>
           <div className={classes.itemDetailsIcon}>
@@ -593,7 +593,7 @@ const Swords = () => {
           return (
             <div key={item.id} className={classes.frameCardBottom}>
               <div className={classes.frameImageBottom}>
-               <img className={classes.imageDetailBottom} src={item.imageDetail} />
+                <img className={classes.imageDetailBottom} src={item.imageDetail} />
               </div>
             </div>
           );

@@ -4,6 +4,7 @@ import { makeStyles, Button, Typography } from '@material-ui/core';
 import image from '../../assets/background_home.png';
 import wellcome from '../../assets/WELCOMETO.png';
 import soulword from '../../assets/SOULSWORD.png';
+import imgButton  from '../../assets/playnow.png';
 const useStyles = makeStyles((theme) => ({
   background: {
     //minHeight: '80vh',
@@ -11,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     //textShadow: '3px 4px black',
     // paddingLeft: 100,
     [theme.breakpoints.down('md')]: {
-      minHeight: 500,
+      minHeight: 350,
       marginTop: 0,
       paddingLeft: 10,
     },
@@ -19,9 +20,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-   // width: '100vw',
+    // width: '100vw',
     height: '100vh',
-    
+
   },
   heading: {
     textAlign: 'left',
@@ -40,11 +41,23 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: 80,
     },
   },
+  itemsContainer: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    width: '100%',
+    marginTop: 20,
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
+  },
   image: {
     width: '40%',
-    //margin: auto,
+    margin: "auto",
     marginTop: '18vh',
-    marginLeft: '60vh',
+    // marginLeft: '60vh',
 
     // [theme.breakpoints.down('md')]: {
     //   width: 350,
@@ -57,13 +70,19 @@ const useStyles = makeStyles((theme) => ({
   wellcome: {
     width: '20%',
     marginTop: '2vh',
-    marginLeft: '80vh',
+    //marginLeft: '80vh',
   },
   soulword: {
     width: '35%',
+    marginTop: '2vh',
     //margin: auto,
+    //marginTop: '5vh',
+    //marginLeft: '65vh',
+  },
+
+  imgButton:{
     marginTop: '5vh',
-    marginLeft: '65vh',
+    width: '35%',
   },
   subheading: {
     textAlign: 'center',
@@ -103,7 +122,18 @@ const useStyles = makeStyles((theme) => ({
       padding: '12px 15px 12px 15px',
       fontWeight: 500,
     },
-
+  },
+  itemsContainer: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    width: '100%',
+    marginTop: 0,
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
   },
 }));
 
@@ -111,28 +141,20 @@ const HomePage = () => {
   const classes = useStyles();
   return (
     <div className={classes.background}>
-       {/* <div className="container"> */}
-        <div className="row">
-          <div className="col-md-12">
-          </div>
-          <div className="col-md-12">
-            <div>
-              <img className={classes.image} src={headerRight} />
-            </div>
-          </div>
-          <div className="col-md-12">
-            <div>
-              <img className={classes.wellcome} src={wellcome} />
-            </div>
-          </div>
-          <div className="col-md-12">
-            <div>
-              <img className={classes.soulword} src={soulword} />
-            </div>
-          </div>
-          </div>
-        </div>
-    // </div>
+      <div className={classes.itemsContainer}>
+        <img className={classes.image} src={headerRight} />
+      </div>
+
+      <div className={classes.itemsContainer}>
+        <img className={classes.wellcome} src={wellcome} />
+      </div>
+      <div className={classes.itemsContainer}>
+        <img className={classes.soulword} src={soulword} />
+      </div>
+      <div className={classes.itemsContainer}>
+        <img className={classes.imgButton} src={imgButton} />
+      </div>
+    </div>
   );
 };
 
