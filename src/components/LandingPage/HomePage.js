@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     // width: '100vw',
     height: '130vh',
-
+ 
   },
   heading: {
     textAlign: 'left',

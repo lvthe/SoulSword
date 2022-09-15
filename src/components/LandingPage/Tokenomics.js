@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     height: '90%',
     display: 'flex',
     flexDirection: 'column',
-    paddingLeft: 50,
+    paddingLeft: 50, 
     paddingRight: 50,
     justifyContent: 'center',
     [theme.breakpoints.down('md')]: {

@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 50,
     backgroundImage: `url(${mode_bg})`,
     backgroundPosition: 'center',
-    backgroundSize: 'cover',
+    backgroundSize: 'cover', 
     backgroundRepeat: 'no-repeat',
     [theme.breakpoints.down('sm')]: {
       paddingLeft: 10,

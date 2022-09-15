@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
       paddingBottom: 35,
       paddingTop: 60,
       display: 'flex',
-      justifyContent: 'center',
+      justifyContent: 'center', 
     },
     backgroundImage: `url(${background_sword})`,
     backgroundPosition: 'center',

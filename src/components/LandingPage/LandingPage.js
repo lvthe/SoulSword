@@ -31,7 +31,7 @@ const LandingPage = () => {
      
      <section id="mode">
         <Mode />
-      </section>
+      </section> 
       
       <section id="tokenomics">
         <Tokenomics />

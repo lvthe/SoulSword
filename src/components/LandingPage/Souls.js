@@ -519,7 +519,7 @@ const Swords = () => {
       <div className={classes.itemsContainerSwordBar} >
         <h2 className={classes.text_h}>SOUL</h2>
       </div>
-      {/* <div className={classes.itemsContainer}>
+      {/* <div className={classes.itemsContainer}> 
         <img className={classes.Sword_main} src={Sword_main} />
       </div> */}
       <img className={classes.sword_bar} src={Sword_bar} />
