@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SoulSword/static/css/main.bba1ebc2.chunk.css",
-    "main.js": "/SoulSword/static/js/main.ec83ed07.chunk.js",
-    "main.js.map": "/SoulSword/static/js/main.ec83ed07.chunk.js.map",
+    "main.js": "/SoulSword/static/js/main.fb7788bc.chunk.js",
+    "main.js.map": "/SoulSword/static/js/main.fb7788bc.chunk.js.map",
     "runtime-main.js": "/SoulSword/static/js/runtime-main.b8b71db3.js",
     "runtime-main.js.map": "/SoulSword/static/js/runtime-main.b8b71db3.js.map",
     "static/js/2.826c6a4f.chunk.js": "/SoulSword/static/js/2.826c6a4f.chunk.js",
@@ -36,12 +36,14 @@
     "static/media/sword_effect_violet.5a34b4c7.png": "/SoulSword/static/media/sword_effect_violet.5a34b4c7.png",
     "static/media/sword_effect_yellow.5e37aa64.png": "/SoulSword/static/media/sword_effect_yellow.5e37aa64.png",
     "static/media/token.6f39484b.png": "/SoulSword/static/media/token.6f39484b.png",
-    "static/media/tokenomics_back.441e8152.png": "/SoulSword/static/media/tokenomics_back.441e8152.png"
+    "static/media/tokennomic_bg.f00c9f01.png": "/SoulSword/static/media/tokennomic_bg.f00c9f01.png",
+    "static/media/tokenomics_content.686681f4.png": "/SoulSword/static/media/tokenomics_content.686681f4.png",
+    "static/media/tokenomics_table.ca9b960b.png": "/SoulSword/static/media/tokenomics_table.ca9b960b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b8b71db3.js",
     "static/js/2.826c6a4f.chunk.js",
     "static/css/main.bba1ebc2.chunk.css",
-    "static/js/main.ec83ed07.chunk.js"
+    "static/js/main.fb7788bc.chunk.js"
   ]
 }
