@@ -52,7 +52,7 @@ import { CenterFocusStrong } from '@material-ui/icons';
 const useStyles = makeStyles((theme) => ({
   background: {
     padding: 80,
-    height: '100%',
+    height: '90%',
     display: 'flex',
     flexDirection: 'column',
     paddingLeft: 50,
@@ -206,6 +206,12 @@ const useStyles = makeStyles((theme) => ({
     // backgroundPosition: 'center',
     // backgroundSize: 'cover',
     // backgroundRepeat: 'no-repeat',
+    [theme.breakpoints.down('md')]: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        width: 400,
+      },
   },
   Sword_bar: {
     justifyContent: 'space-evenly',
@@ -358,11 +364,9 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 20,
     width: 30,
     [theme.breakpoints.down('md')]: {
-      width: 150,
-      height: 150,
-      marginTop: 15,
-      marginBottom: 10,
-      marginRight: 10
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
     },
   },
   imageEffect: {
@@ -371,9 +375,9 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 20,
     // width: 60,
     [theme.breakpoints.down('md')]: {
-      marginTop: 0,
-      marginLeft: 5,
-      marginRight: 10
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
     },
   },
   imageEffectBlue: {
@@ -382,9 +386,9 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 20,
     // width: 60,
     [theme.breakpoints.down('md')]: {
-      marginTop: 0,
-      marginLeft: 5,
-      marginRight: 10
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
     },
   },
   imageSwordDetails: {
@@ -395,10 +399,9 @@ const useStyles = makeStyles((theme) => ({
     // width: 30,
 
     [theme.breakpoints.down('md')]: {
-      width: 150,
-      height: 150,
-      marginTop: 15,
-      marginBottom: 10,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
     },
   },
   subheading: {
@@ -413,10 +416,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 0,
     width: 140,
     [theme.breakpoints.down('sm')]: {
-      width: 150,
-      height: 150,
-      marginTop: 15,
-      marginBottom: 10,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
     },
   },
 }));
@@ -549,7 +551,7 @@ const Swords = () => {
       </div>
       <div className={classes.itemsContainer}>
         <div className={classes.itemsContainer}>
-          <div className={classes.itemsContainer}>
+          <div className={classes.itemDetails}>
             <h1 className={classes.attribue_h1}> <span>Attribues</span></h1>
             <div className={classes.itemDetailsIcon}>
               <img className={classes.imageDetails} src={soul_fire} /><p className={classes.attribue_h1}>Class</p>
@@ -578,7 +580,7 @@ const Swords = () => {
 
         <div className={classes.itemMaster}>
           <div className={classes.itemDetailsIcon}>
-            <img className={classes.imageEffectBlue} src={sword_effect_blue} /> <h1 className={classes.attribue_text}> <span>Tizona</span></h1>
+            <h1 className={classes.attribue_text}> <span>Tizona</span></h1>
           </div>
           <p className={classes.attribue_story}>
             There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and  Each SWORD will become unique and worthwhile in your collection.
