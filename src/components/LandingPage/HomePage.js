@@ -4,7 +4,7 @@ import { makeStyles, Button, Typography } from '@material-ui/core';
 import image from '../../assets/background_home.png';
 import wellcome from '../../assets/WELCOMETO.png';
 import soulword from '../../assets/SOULSWORD.png';
-import imgButton  from '../../assets/playnow.png';
+import imgButton  from '../../assets/home_button .png';
 const useStyles = makeStyles((theme) => ({
   background: {
     //minHeight: '80vh',
@@ -12,16 +12,21 @@ const useStyles = makeStyles((theme) => ({
     //textShadow: '3px 4px black',
     // paddingLeft: 100,
     [theme.breakpoints.down('md')]: {
-      minHeight: 350,
-      marginTop: 0,
-      paddingLeft: 10,
+      // minHeight: 350,
+      //marginTop: 0,
+      //paddingLeft: 10,
+      // height:"120%",
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
     },
+    height:"120%",
     backgroundImage: `url(${image})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     // width: '100vw',
-    height: '130vh',
+    // height: '110vh',
  
   },
   heading: {
@@ -81,8 +86,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   imgButton:{
-    marginTop: '5vh',
-    width: '35%',
+    marginTop: '10vh',
+    width: '20%',
   },
   subheading: {
     textAlign: 'center',
@@ -135,6 +140,36 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: 'center',
     },
   },
+  text_h1:{
+    fontFamily: "Trajan-Pro",
+    lineHeight: "1.22em",
+    textAlign:"center",
+    color:"#FFA800",
+    
+    backgroundImage: `url(${imgButton})`,
+    bzackgroundPosition: 'center',
+    // backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+  },
+  margin: {
+    fontFamily: "Trajan-Pro",
+    lineHeight: "1.22em",
+    textAlign:"center",
+    color:"#FFA800",
+    fontSize:"25px",
+    margin: theme.spacing(5),
+    backgroundImage: `url(${imgButton})`,
+    bzackgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
+    // width:400,
+    // height:100
+  },
 }));
 
 const HomePage = () => {
@@ -152,7 +187,12 @@ const HomePage = () => {
         <img className={classes.soulword} src={soulword} />
       </div>
       <div className={classes.itemsContainer}>
-        <img className={classes.imgButton} src={imgButton} />
+        {/* <h1 className={classes.text_h1}>PLAY NOW</h1>
+        <img className={classes.imgButton} src={imgButton} /> */}
+        <Button variant="contained" color="primary" className={classes.margin}>
+          PLAY NOW
+        </Button>
+
       </div>
     </div>
   );

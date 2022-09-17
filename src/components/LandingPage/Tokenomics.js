@@ -52,6 +52,14 @@ const useStyles = makeStyles((theme) => ({
       padding: 10,
     },
   },
+  tokenomics_content:{
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      width: 400,
+    },
+  },
   listText: {
     color: theme.palette.pbr.textSecondary,
     fontSize: 24,
@@ -73,16 +81,36 @@ const useStyles = makeStyles((theme) => ({
       marginTop: 10,
     },
   },
-  tokenomics_content:{
-    
+  tokenomics_table:{
+    margin: 0,
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      width:"100%",
+      // margin: "auto",
+    },
   },
+  // itemsContainer: {
+  //   display: 'flex',
+  //   justifyContent: 'space-evenly',
+  //   alignItems: 'flex-start',
+  //   // paddingTop: 30,
+  //   flexWrap: 'wrap',
+  // },
   itemsContainer: {
-   display: 'flex',
-   justifyContent: 'space-around',
-    alignItems: 'flex-start',
-    paddingTop: 30,
-    flexWrap: 'wrap',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    marginTop: 0,
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
   },
+
   itemsContainerDetails: {
     display: 'flex',
     // justifyContent: 'space-around',

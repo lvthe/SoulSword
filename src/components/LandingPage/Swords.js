@@ -304,7 +304,6 @@ const useStyles = makeStyles((theme) => ({
   itemDetailsIcon: {
     verticalAlign: 'middle',
     display: 'flex',
-
   },
   attribue_h1: {
     color: 'white'
@@ -394,10 +393,9 @@ const useStyles = makeStyles((theme) => ({
   imageSwordDetails: {
     marginTop: 0,
     marginLeft: 10,
-    display: 'flex',
+    // display: 'flex',
     backgroundPosition: 'center',
     // width: 30,
-
     [theme.breakpoints.down('md')]: {
       display: 'flex',
       flexDirection: 'column',
@@ -571,9 +569,6 @@ const Swords = () => {
           <p className={classes.attribue_story}>
             There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and  Each SWORD will become unique and worthwhile in your collection.
           </p>
-          <div>
-            <img className={classes.imageEffect} src={sword_effect_violet} />
-          </div>
         </div>
       </div>
       <div className={classes.itemsContainer}>
@@ -581,7 +576,8 @@ const Swords = () => {
           return (
             <div key={item.id} className={classes.frameCardBottom}>
               <div className={classes.frameImageBottom}>
-                <img className={classes.imageDetailBottom} src={item.imageDetail} />
+                {/* <img className={classes.imageDetailBottom} src={item.imageDetail} /> */}
+                <img className={classes.imageDetailBottom}  /> 
               </div>
             </div>
           );

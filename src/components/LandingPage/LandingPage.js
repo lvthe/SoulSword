@@ -8,7 +8,7 @@ import Play from './Play';
 import Roadmap from './Roadmap';
 import HomePage from './HomePage';
 import Footer from '../common/Footer';
-import Token from './Token';
+import Backer from './Backer';
 import Tokenomics from './Tokenomics';
 import Rules from './Rules';
 
@@ -28,16 +28,20 @@ const LandingPage = () => {
         <Souls />
       </section>
 
-     
      <section id="mode">
         <Mode />
       </section> 
-      
-      <section id="tokenomics">
-        <Tokenomics />
-      </section>
+
       <section id="roadmap">
-        <Roadmap />
+      <Roadmap />
+      </section> 
+
+      <section id="tokenomics">
+      <Tokenomics />
+      </section>
+
+      <section id="backer">
+        <Backer />
         <Investor />
         <Footer />
       </section>

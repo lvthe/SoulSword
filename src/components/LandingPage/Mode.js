@@ -4,6 +4,10 @@ import mode_bg from '../../assets/mode_bg.png';
 import mode_sword from '../../assets/mode_sword.png';
 import mode_img   from '../../assets/feature_img.png';
 import video from '../../assets/sword.mp4';
+import mode_battle from '../../assets/mode_battle.png';
+import mode_boss from '../../assets/mode_boss.png';
+import mode_stacking from '../../assets/mode_stacking.png';
+import mode_combat from '../../assets/mode_combat.png';
 const useStyles = makeStyles((theme) => ({
   background: {
     padding: 80,
@@ -27,17 +31,24 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: 'center',
     },
   },
+  // itemsContainer: {
+  //   display: 'flex',
+  //   justifyContent: 'space-around',
+  //   alignItems: 'center',
+  //   width: '50%',
+  //   marginTop: 20,
+  //   [theme.breakpoints.down('md')]: {
+  //     display: 'flex',
+  //     flexDirection: 'column',
+  //     justifyContent: 'center',
+  //   },
+  // },
   itemsContainer: {
     display: 'flex',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    width: '100%',
-    marginTop: 20,
-    [theme.breakpoints.down('md')]: {
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-    },
+    justifyContent: 'space-evenly',
+    alignItems: 'flex-start',
+    paddingTop: 30,
+    flexWrap: 'wrap',
   },
   item: {
     marginBottom: 40,
@@ -68,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   image: {
-    width:"60%",
+    // width:"60%",
     display:'flex',
     flex:'2',
     display: 'flex',
@@ -78,6 +89,17 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
+      padding:'10px'
+    },
+  },
+  mode_img:{
+    width:"45%",
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      width:"100%",
+      
     },
   },
   subHeading: {
@@ -112,7 +134,8 @@ const Feature = () => {
   const classes = useStyles();
   let items = [
     {
-      name: 'Sword Ice',
+      name: 'Battle',
+      image: mode_battle,
       listData: (
         <div>
           {' '}
@@ -128,7 +151,8 @@ const Feature = () => {
       ),
     },
     {
-      name: 'Sword Posion',
+      name: 'Boss',
+      image: mode_boss,
       listData: (
         <div>
           <p className={classes.para}>
@@ -143,7 +167,8 @@ const Feature = () => {
       ),
     },
     {
-      name: 'Sword Fire',
+      name: 'Combat',
+      image: mode_combat,
       listData: (
         <div>
           <p className={classes.para}>
@@ -158,7 +183,8 @@ const Feature = () => {
       ),
     },
     {
-      name: 'Sword Wind',
+      name: 'Stacking',
+      image: mode_stacking,
       listData: (
         <div>
           <p className={classes.para}>
@@ -176,24 +202,18 @@ const Feature = () => {
   return (
     <div className={classes.background}>
       <div className={classes.itemsContainer}>
-        <img  src={mode_img} />
+        <img  className={classes.mode_img} src={mode_img} />
       </div>
       <div className={classes.itemsContainer}>
-        {items.map((item) => {
-          return (
-            <div className={classes.frameCard}>
-              <div className={classes.frameImage}>
-               <video width="300" height="500" autoplay muted >
-                <source src={video} type="video/mp4"/>
-              </video>
+          {items.map((item) => {
+            return (
+              <div key={item.id} className={classes.frameCard}>
+                <div className={classes.frameImage}>
+                  <img className={classes.image} src={item.image} />
+                </div>
               </div>
-              {/* <div className={classes.frameText}>
-                <h5 className={classes.title}>{item.name}</h5>
-              </div>
-              <div className={classes.frameStats}>{item.listData}</div> */}
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
     </div>
   );

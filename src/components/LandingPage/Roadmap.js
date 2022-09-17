@@ -158,6 +158,14 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: 'center',
     },
   },
+  road_img:{
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      width: 400,
+    },
+  }
 }));
 
 const Roadmap = () => {
@@ -207,7 +215,7 @@ const Roadmap = () => {
   return (
     <div className={classes.background}>
       <div className={classes.itemsContainer}>
-        <img  src={road_img} />
+        <img  className={classes.road_img}  src={road_img} />
       </div>
       <div className={classes.itemsContainer}>
         <img  src={road_sword} />
