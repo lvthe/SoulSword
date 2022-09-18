@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/SoulSword/static/css/main.bba1ebc2.chunk.css",
-    "main.js": "/SoulSword/static/js/main.8ec02c2a.chunk.js",
-    "main.js.map": "/SoulSword/static/js/main.8ec02c2a.chunk.js.map",
-    "runtime-main.js": "/SoulSword/static/js/runtime-main.63f9d024.js",
-    "runtime-main.js.map": "/SoulSword/static/js/runtime-main.63f9d024.js.map",
-    "static/js/2.dc0d61bb.chunk.js": "/SoulSword/static/js/2.dc0d61bb.chunk.js",
-    "static/js/2.dc0d61bb.chunk.js.map": "/SoulSword/static/js/2.dc0d61bb.chunk.js.map",
-    "static/js/3.27396f27.chunk.js": "/SoulSword/static/js/3.27396f27.chunk.js",
-    "static/js/3.27396f27.chunk.js.map": "/SoulSword/static/js/3.27396f27.chunk.js.map",
+    "main.js": "/SoulSword/static/js/main.101de818.chunk.js",
+    "main.js.map": "/SoulSword/static/js/main.101de818.chunk.js.map",
+    "runtime-main.js": "/SoulSword/static/js/runtime-main.b63d6061.js",
+    "runtime-main.js.map": "/SoulSword/static/js/runtime-main.b63d6061.js.map",
+    "static/js/2.ad1bf055.chunk.js": "/SoulSword/static/js/2.ad1bf055.chunk.js",
+    "static/js/2.ad1bf055.chunk.js.map": "/SoulSword/static/js/2.ad1bf055.chunk.js.map",
+    "static/js/3.104af6d7.chunk.js": "/SoulSword/static/js/3.104af6d7.chunk.js",
+    "static/js/3.104af6d7.chunk.js.map": "/SoulSword/static/js/3.104af6d7.chunk.js.map",
     "index.html": "/SoulSword/index.html",
     "static/css/main.bba1ebc2.chunk.css.map": "/SoulSword/static/css/main.bba1ebc2.chunk.css.map",
-    "static/js/2.dc0d61bb.chunk.js.LICENSE.txt": "/SoulSword/static/js/2.dc0d61bb.chunk.js.LICENSE.txt",
+    "static/js/2.ad1bf055.chunk.js.LICENSE.txt": "/SoulSword/static/js/2.ad1bf055.chunk.js.LICENSE.txt",
     "static/media/Footer.bea47818.png": "/SoulSword/static/media/Footer.bea47818.png",
     "static/media/Sword_bar.62e9e0bf.png": "/SoulSword/static/media/Sword_bar.62e9e0bf.png",
     "static/media/Sword_main.67506415.png": "/SoulSword/static/media/Sword_main.67506415.png",
@@ -54,9 +54,9 @@
     "static/media/tokenomics_table.ca9b960b.png": "/SoulSword/static/media/tokenomics_table.ca9b960b.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.63f9d024.js",
-    "static/js/2.dc0d61bb.chunk.js",
+    "static/js/runtime-main.b63d6061.js",
+    "static/js/2.ad1bf055.chunk.js",
     "static/css/main.bba1ebc2.chunk.css",
-    "static/js/main.8ec02c2a.chunk.js"
+    "static/js/main.101de818.chunk.js"
   ]
 }
