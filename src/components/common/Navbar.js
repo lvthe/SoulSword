@@ -84,6 +84,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       fontSize: 30,
     },
+    '&:hover': {
+      backgroundColor: '#fff',
+      color: '#3c52b2',
+  },
   },
   nav: {
     marginRight: 15,
@@ -226,11 +230,14 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url(${image})`
   },
 }));
+// const [isHover, setIsHover] = useState(false);
+
+
 
 const Navbar = () => {
   const classes = useStyles();
 
-  const [state, setState] = React.useState({
+  const [state, setState, isHover,setIsHover] = React.useState({
     right: false,
   });
 
@@ -238,6 +245,12 @@ const Navbar = () => {
     setState({ ...state, [anchor]: open });
   };
 
+  const handleMouseEnter = () => {
+    setIsHover(true);
+ };
+ const handleMouseLeave = () => {
+    setIsHover(false);
+ };
   const list = (anchor) => (
     <div
       className={clsx(classes.list, {
@@ -248,7 +261,7 @@ const Navbar = () => {
       onKeyDown={toggleDrawer(anchor, false)}>
       <List key={'99'}>
         {[
-          { name: 'HOME', id: 'intro', icon: <TouchAppOutlined /> },
+          { name: 'HOME', id: 'home', icon: <TouchAppOutlined /> },
           { name: 'SOUL', id: 'souls',  icon: <PeopleAltOutlined />, },
           { name: 'SWORD', id: 'words', icon: <VpnLockOutlined /> },
           { name: 'FEATURE', id: 'mode', icon: <FlareOutlined /> },
@@ -264,7 +277,7 @@ const Navbar = () => {
           </Link>
         ))}
         <Divider />
-        <ListItem key={'0'} button>
+        {/* <ListItem key={'0'} button>
           <a href="https://SoulsWord.com/docs/whitepaper.pdf" style={{ textDecoration: 'none' }}>
             <Button variant="outlined" className={classes.outlinedWhitepaper}>
               Read White paper
@@ -284,7 +297,7 @@ const Navbar = () => {
               Staking
             </Button>
           </a>
-        </ListItem>
+        </ListItem> */}
       </List>
     </div>
   );
@@ -292,7 +305,7 @@ const Navbar = () => {
   return (
     <div className={classes.grow}>
       {/* <AppBar position="relative" className={classes.appBarBackground}> */}
-      <AppBar position="fixed" className={classes.appBarBackground}>
+      <AppBar position="fixed" className={classes.appBarBackground} >
         <Toolbar className={classes.sectionDesktop}> 
           <a href="/" > <img src={soulwordLogo} className='navbar_img'  /> </a> 
           <Link
@@ -353,7 +366,7 @@ const Navbar = () => {
               ROADMAP
             </Typography>{' '}
           </Link>
-          <div style={{ paddingRight: '5px' }}>
+          {/* <div style={{ paddingRight: '5px' }}>
             {' '}
             <Tooltip title="SoulsWord Game Portal">
             <a href="#" className="animated-button1">
@@ -363,13 +376,13 @@ const Navbar = () => {
               <span></span>
               Play Now
             </a>
-              {/* <a href="https://game.SoulsWord.com"> 
+              <a href="https://game.SoulsWord.com"> 
                 <Button className={classes.buttonGame} variant="contained">
                   Play Now
                 </Button> 
-              </a> */}
+              </a>
             </Tooltip>
-          </div>
+          </div> */}
         </Toolbar>
         <Toolbar className={classes.sectionMobile}>
           <div className={classes.row1}>

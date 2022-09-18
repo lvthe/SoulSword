@@ -16,7 +16,7 @@ const LandingPage = () => {
   return (
   
     <div className="cover">
-      <section className="header-section">
+      <section className="header-section" id="home">
         <HomePage />
       </section>
       
