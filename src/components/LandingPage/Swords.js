@@ -49,6 +49,12 @@ import sword_effect_violet from '../../assets/sword_effect_violet.png';
 import sword_bg_detail from '../../assets/sword_bg_detail.png';
 import sword_detai_icon_fire from '../../assets/sword_detai_icon_fire.png';
 import { CenterFocusStrong } from '@material-ui/icons';
+import sword_farme_metal from  '../../assets/sword_farme_metal.png';
+import sword_farme_wood from  '../../assets/sword_farme_wood.png';
+import sword_farme_water from  '../../assets/sword_farme_water.png';
+import sword_farme_fire from  '../../assets/sword_farme_fire.png';
+import sword_farme_earth from  '../../assets/sword_farme_earth.png';
+import transitions from '@material-ui/core/styles/transitions';
 const useStyles = makeStyles((theme) => ({
   background: {
     padding: 80,
@@ -63,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
       paddingBottom: 35,
       paddingTop: 60,
       display: 'flex',
-      justifyContent: 'center', 
+      justifyContent: 'center',
     },
     backgroundImage: `url(${background_sword})`,
     backgroundPosition: 'center',
@@ -81,6 +87,7 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: 'column',
       justifyContent: 'center',
     },
+    
   },
   itemsContainer: {
     display: 'flex',
@@ -187,31 +194,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   Sword_main: {
-    // backgroundPosition: 'center',
-    // backgroundSize: 'cover',
-    // backgroundRepeat: 'no-repeat',
-    // display: 'flex',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-    // paddingLeft: "8vw",
-    // paddingTop: "3vh",
-    // [theme.breakpoints.down('md')]: {
-    //   display: 'flex',
-    //   flexDirection: 'column',
-    //   justifyContent: 'center',
-    // },
-    // width: "12vw",
-    // height: "12vh",
-    // backgroundImage: `url(${Sword_bg})`,
-    // backgroundPosition: 'center',
-    // backgroundSize: 'cover',
-    // backgroundRepeat: 'no-repeat',
     [theme.breakpoints.down('md')]: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        width: 400,
-      },
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      width: 400,
+    },
   },
   Sword_bar: {
     justifyContent: 'space-evenly',
@@ -225,6 +213,9 @@ const useStyles = makeStyles((theme) => ({
   frameCard: {
     background: `url(${cardFrame})`,
     backgroundRepeat: 'no-repeat',
+    bzackgroundPosition: 'bottom',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
     height: 80,
     width: 90,
     backgroundSize: 'contain',
@@ -234,11 +225,30 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: 'column',
       justifyContent: 'center',
     },
+    '&:hover': {
+      //backgroundColor: '#17E3E0',
+      // background-color: ${theme.palette.secondary.main},
+      transform: "scale(1.3)"
+      },
   },
   frameCardBottom: {
-    background: `url(${sword_bg_detail})`,
+    // background: `url(${sword_bg_detail})`,
     backgroundRepeat: 'no-repeat',
     height: 300,
+    width: 250,
+    backgroundSize: 'contain',
+    position: 'relative',
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
+  },
+  frameCardDetails: {
+    background: `url(${sword_bg_detail})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    height: 450,
     width: 250,
     backgroundSize: 'contain',
     position: 'relative',
@@ -262,12 +272,26 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     top: '5%',
     left: '5%',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems:"center",
     [theme.breakpoints.down('md')]: {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
     },
   },
+  frameImageDetails: {
+    // position: 'absolute',
+    // // top: '5%',
+    // // left: '5%',
+    // [theme.breakpoints.down('md')]: {
+    //   display: 'flex',
+    //   flexDirection: 'column',
+    //   justifyContent: 'center',
+    // },
+  },
+  
   listItems: {},
   listItem: {
     marginBottom: 10,
@@ -361,7 +385,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 0,
     marginLeft: 10,
     marginRight: 20,
-    width: 30,
+    top:1,
+    width: 40,
     [theme.breakpoints.down('md')]: {
       display: 'flex',
       flexDirection: 'column',
@@ -413,6 +438,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 0,
     marginLeft: 0,
     width: 140,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems:"center",
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
       flexDirection: 'column',
@@ -428,7 +456,16 @@ const Swords = () => {
       id: '1',
       name: 'Metal',
       image: soul_metal,
-      imageDetail: sword_detai_icon_fire,
+      imageDetail: sword_farme_metal,
+      frameCardBottom:{
+       background: `url(${sword_bg_detail})`,
+        backgroundRepeat: 'no-repeat',
+        height: 300,
+        width: 250,
+        backgroundSize: 'contain',
+        position: 'relative',
+ 
+      },
       listData: (
         <div>
           {' '}
@@ -447,7 +484,15 @@ const Swords = () => {
       id: '2',
       name: 'Posion',
       image: soul_poison,
-      imageDetail: sword_detai_icon_fire,
+      imageDetail: sword_farme_wood,
+      frameCardBottom:{
+        // background: `url(${sword_bg_detail})`,
+       backgroundRepeat: 'no-repeat',
+       height: 300,
+       width: 250,
+       backgroundSize: 'contain',
+       position: 'relative',
+     },
       listData: (
         <div>
           <p className={classes.para}>
@@ -465,7 +510,16 @@ const Swords = () => {
       id: '3',
       name: 'Fire',
       image: soul_fire,
-      imageDetail: sword_detai_icon_fire,
+      imageDetail: sword_farme_fire,
+      frameCardBottom:{
+        // background: `url(${sword_bg_detail})`,
+       backgroundRepeat: 'no-repeat',
+       height: 300,
+       width: 250,
+       backgroundSize: 'contain',
+       position: 'relative',
+  
+     },
       listData: (
         <div>
           <p className={classes.para}>
@@ -483,7 +537,16 @@ const Swords = () => {
       id: '4',
       name: 'Water',
       image: soul_water,
-      imageDetail: sword_detai_icon_fire,
+      imageDetail: sword_farme_water,
+      frameCardBottom:{
+        // background: `url(${sword_bg_detail})`,
+       backgroundRepeat: 'no-repeat',
+       height: 300,
+       width: 250,
+       backgroundSize: 'contain',
+       position: 'relative',
+  
+     },
       listData: (
         <div>
           <p className={classes.para}>
@@ -501,7 +564,15 @@ const Swords = () => {
       id: '5',
       name: 'Earth',
       image: soul_earth,
-      imageDetail: sword_detai_icon_fire,
+      imageDetail: sword_farme_earth,
+      frameCardBottom:{
+        // background: `url(${sword_bg_detail})`,
+       backgroundRepeat: 'no-repeat',
+       height: 300,
+       width: 250,
+       backgroundSize: 'contain',
+       position: 'relative',
+     },
       listData: (
         <div>
           <p className={classes.para}>
@@ -534,6 +605,7 @@ const Swords = () => {
         })}
       </div>
       <div className={classes.itemsContainer}>
+      <div className={classes.itemMaster}>
         <div className={classes.itemsContainer}>
           <div>
             <h1 className={classes.attribue_h1}> <span>Attribues</span></h1>
@@ -558,9 +630,17 @@ const Swords = () => {
             </div>
           </div>
         </div>
-        <div className={classes.itemsContainer}>
-          <img className={classes.imageSwordDetails} src={sword_detail_metal} />
         </div>
+        <div className={classes.itemMaster}>
+        <div className={classes.itemsContainer}>
+          <div className={classes.frameCardDetails}>
+              <div className={classes.frameImageDetails}>
+                <img className={classes.imageSwordDetails}  />
+              </div>
+            </div>
+        </div>
+        </div>
+        
 
         <div className={classes.itemMaster}>
           <div className={classes.itemDetailsIcon}>
@@ -574,10 +654,10 @@ const Swords = () => {
       <div className={classes.itemsContainer}>
         {items.map((item) => {
           return (
-            <div key={item.id} className={classes.frameCardBottom}>
+            <div key={item.id} className={item.frameCardBottom}>
               <div className={classes.frameImageBottom}>
-                {/* <img className={classes.imageDetailBottom} src={item.imageDetail} /> */}
-                <img className={classes.imageDetailBottom}  /> 
+                <img className={classes.imageDetailBottom} src={item.imageDetail} />
+                {/* <img className={classes.imageDetailBottom} /> */}
               </div>
             </div>
           );

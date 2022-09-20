@@ -84,10 +84,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       fontSize: 30,
     },
-    '&:hover': {
-      backgroundColor: '#fff',
-      color: '#3c52b2',
-  },
+  //   '&:hover': {
+  //     backgroundColor: '#17E3E0',
+  //     color: '#17E3E0',
+  //     // fontSize:'25px'
+  // },
   },
   nav: {
     marginRight: 15,
@@ -121,7 +122,6 @@ const useStyles = makeStyles((theme) => ({
   tabs: {
     color: '#fbfbfb',
     display: 'none',
-
     fontWeight: 500,
     lineHeight: '24px',
     verticalAlign: 'baseline',
@@ -134,6 +134,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('md')]: {
       display: 'block',
     },
+    '&:hover': {
+      // backgroundColor: '#17E3E0',
+      color: '#17E3E0',
+      // fontSize:'25px'
+    }
   },
   navbarShareIcons: {
     marginRight: 15,
@@ -267,7 +272,7 @@ const Navbar = () => {
           { name: 'FEATURE', id: 'mode', icon: <FlareOutlined /> },
           { name: 'TOKENS NOMIC', id: 'tokenomics', icon: <TimelineOutlined />},
           { name: 'ROADMAP', id: 'roadmap', icon: <CategoryIcon /> },
-          { name: 'PARTNER & ADVISOR', id: 'partner',  icon: <PeopleAltOutlined />, },
+          { name: 'PARTNER & ADVISOR', id: 'backer',  icon: <PeopleAltOutlined />, },
          
         ].map((tab) => (
           <Link key={tab.id}  activeClass="active" to = {tab.id} smooth={true} offset={0} duration={500} delay={0}>
@@ -325,12 +330,13 @@ const Navbar = () => {
             key={'1'}
             exact="true"
             activeClass="active"
-            to="intro"
+            to="home"
             smooth={true}
             offset={0}
             duration={400}
             delay={0}
             className={classes.home}>
+              
             <Typography className={classes.tabs} variant="body1">
               HOME
             </Typography>
@@ -355,7 +361,7 @@ const Navbar = () => {
               TOKENS NOMIC
             </Typography>{' '}
           </Link>
-          <Link key={'7'} exact="true" to="tokenomics" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
+          <Link key={'7'} exact="true" to="backer" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
               PARTNER&VISOR 
             </Typography>{' '}

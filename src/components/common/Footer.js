@@ -1,22 +1,36 @@
+import React from 'react';
 import { IconButton, Tooltip } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import ListItemText from '@material-ui/core/ListItemText';
+import Avatar from '@material-ui/core/Avatar';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import FolderIcon from '@material-ui/icons/Folder';
+import DeleteIcon from '@material-ui/icons/Delete';
+
 import { Twitter, Telegram, GitHub, Email, Instagram } from '@material-ui/icons';
 import footer from '../../assets/Footer.png';
-import footer_bg from '../../assets/investor_bg.png';
+import footer_bg from '../../assets/footer_bg.png';
+import footer_logo	from '../../assets/footer_logo.png';
+import footer_button from '../../assets/footer_button.png';
 const useStyles = makeStyles((theme) => ({
 	background: {
 		// marginTop: 150,
-		// height: '400px',
+		height: '400px',
 		backgroundImage: `url(${footer_bg})`,
 		backgroundPosition: 'center',
 		backgroundSize: 'cover',
 		backgroundRepeat: 'no-repeat',
 		[theme.breakpoints.down('sm')]: {
-			// padding: 5,
-			// paddingTop: 0,
-			// paddingBottom: 25,
-			// paddingLeft: 20,
-			// paddingRight: 20,
 			display: 'flex',
 			flexDirection: 'column',
 			justifyContent: 'center',
@@ -85,12 +99,29 @@ const useStyles = makeStyles((theme) => ({
 	  },
 	  footer:{
 		width:"100%"
+	  },
+	  footer_button:{
+		paddingTop:10,
+		top:"5%"
 	  }
 }));
 
+
+  function generate(element) {
+	return [0, 1, 2].map((value) =>
+	  React.cloneElement(element, {
+		key: value,
+	  }),
+	);
+  }
 const Footer = () => {
 	const classes = useStyles();
-
+	const [dense, setDense] = React.useState({
+		right: false,
+	  });
+	const [secondary, setSecondary] = React.useState({
+		right: false,
+	  });
 // 	return (
 // 		<div className={classes.background}>
 // 			<div className="text-center ">
@@ -195,8 +226,50 @@ const Footer = () => {
 // };
 return (
     <div className={classes.background}>
+		<div className={classes.itemsContainer}>
+			<img  className={classes.footer_button} src={footer_button} />
+			
+		</div>
+		<div className={classes.itemsContainer}>Back top top</div>
       <div className={classes.itemsContainer}>
-        <img  className={classes.footer} src={footer} />
+		<div>
+			<img  className={classes.footer} src={footer_logo} />
+		</div>
+		<div>
+			<h1> QUICK LINK </h1>
+			<div className={classes.itemsContainer}></div>
+            <List dense={dense}>
+              {generate(
+                <ListItem>
+                  <ListItemIcon>
+                    <FolderIcon />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Single-line item"
+                    secondary={secondary ? 'Secondary text' : null}
+                  />
+                </ListItem>,
+              )}
+            </List>
+			<List dense={dense}>
+              {generate(
+                <ListItem>
+                  <ListItemIcon>
+                    <FolderIcon />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Single-line item"
+                    secondary={secondary ? 'Secondary text' : null}
+                  />
+                </ListItem>,
+              )}
+            </List>
+			<div className={classes.itemsContainer}></div>
+		</div>
+		<div>
+			<h1> Follow us on social media </h1>
+		</div>
+        
       </div>
     </div>
   );
