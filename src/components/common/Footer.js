@@ -1,6 +1,6 @@
 import React from 'react';
 import { IconButton, Tooltip } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -16,11 +16,14 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import FolderIcon from '@material-ui/icons/Folder';
 import DeleteIcon from '@material-ui/icons/Delete';
-
+import InputBase from '@material-ui/core/InputBase';
+import InputLabel from '@material-ui/core/InputLabel';
+import TextField from '@material-ui/core/TextField';
+import FormControl from '@material-ui/core/FormControl';
 import { Twitter, Telegram, GitHub, Email, Instagram } from '@material-ui/icons';
 import footer from '../../assets/Footer.png';
 import footer_bg from '../../assets/footer_bg.png';
-import footer_logo	from '../../assets/footer_logo.png';
+import footer_logo from '../../assets/footer_logo.png';
 import footer_button from '../../assets/footer_button.png';
 const useStyles = makeStyles((theme) => ({
 	background: {
@@ -96,182 +99,313 @@ const useStyles = makeStyles((theme) => ({
 		alignItems: 'flex-start',
 		// paddingTop: -30,
 		flexWrap: 'wrap',
+	},
+	itemsContainerLine:{
+		display: 'flex',
+		justifyContent: 'space-evenly',
+		alignItems: 'flex-start',
+		paddingTop: "-30",
+		flexWrap: 'wrap',
+		borderTop:"0.721511px solid #C6C6C6"
+	},
+	footer: {
+		width: "100%"
+	},
+	footer_button: {
+		paddingTop: 10,
+		top: "5%"
+	},
+	margin: {
+		margin: theme.spacing(1),
+		boxSizing: "border-box",
+		position: "absolute",
+		width: "392px",
+		height: "40.72px",
+		// left: "0px",
+		// top: "0px",
+		border: "0.721511px solid #C6C6C6",
+		borderRadius: "21.6453px",
 	  },
-	  footer:{
-		width:"100%"
-	  },
-	  footer_button:{
-		paddingTop:10,
-		top:"5%"
+	  footerLine:{
+		// borderTop:"0.721511px solid #C6C6C6"
+		top:""
 	  }
 }));
 
 
-  function generate(element) {
+function generate(element) {
 	return [0, 1, 2].map((value) =>
-	  React.cloneElement(element, {
-		key: value,
-	  }),
+		React.cloneElement(element, {
+			key: value,
+		}),
 	);
-  }
+}
+const CssTextField = withStyles({
+	root: {
+	  '& label.Mui-focused': {
+		color: 'green',
+	  },
+	  '& .MuiInput-underline:after': {
+		borderBottomColor: 'green',
+	  },
+	  '& .MuiOutlinedInput-root': {
+		'& fieldset': {
+		  borderColor: 'red',
+		},
+		'&:hover fieldset': {
+		  borderColor: 'yellow',
+		},
+		'&.Mui-focused fieldset': {
+		  borderColor: 'green',
+		},
+	  },
+	},
+  })(TextField);
+  
 const Footer = () => {
 	const classes = useStyles();
 	const [dense, setDense] = React.useState({
 		right: false,
-	  });
+	});
 	const [secondary, setSecondary] = React.useState({
 		right: false,
-	  });
-// 	return (
-// 		<div className={classes.background}>
-// 			<div className="text-center ">
-// 				<div>
-// 					<h6 className={classes.heading}>
-// 						Follow SoulsWord<span className={classes.highlight} />
-// 					</h6>
-// 					<p className={classes.para}>To Get latest updates on SoulsWord join!</p>
-// 					<div className="d-flex justify-content-center mt-4">
-// 						<div className={classes.iconWrapper}>
-// 							<Tooltip title="Twitter" aria-label="add1">
-// 								<a href="https://twitter.com/SoulsWordnft">
-// 									<IconButton aria-label="Twitter" className={classes.iconButton}>
-// 										<Twitter className={classes.icon} />
-// 									</IconButton>
-// 								</a>
-// 							</Tooltip>
-// 						</div>
-// 						<div className={classes.iconWrapper}>
-// 							<Tooltip title="Telegram">
-// 								<a href="https://t.me/SoulsWordchat">
-// 									<IconButton aria-label="Telegram" className={classes.iconButton}>
-// 										<Telegram className={classes.icon} />
-// 									</IconButton>
-// 								</a>
-// 							</Tooltip>
-// 						</div>
-// 						<div className={classes.iconWrapper}>
-// 							<Tooltip title="Instagram">
-// 								<a href="https://www.instagram.com/SoulsWordnft/">
-// 									<IconButton aria-label="Instagram" className={classes.iconButton}>
-// 										<Instagram className={classes.icon} />
-// 									</IconButton>
-// 								</a>
-// 							</Tooltip>
-// 						</div>
-// 						<div className={classes.iconWrapper}>
-// 							<Tooltip title="Github">
-// 								<a href="https://github.com/SoulsWord">
-// 									<IconButton aria-label="Github" className={classes.iconButton}>
-// 										<GitHub className={classes.icon} />
-// 									</IconButton>
-// 								</a>
-// 							</Tooltip>
-// 						</div>
+	});
+	// 	return (
+	// 		<div className={classes.background}>
+	// 			<div className="text-center ">
+	// 				<div>
+	// 					<h6 className={classes.heading}>
+	// 						Follow SoulsWord<span className={classes.highlight} />
+	// 					</h6>
+	// 					<p className={classes.para}>To Get latest updates on SoulsWord join!</p>
+	// 					<div className="d-flex justify-content-center mt-4">
+	// 						<div className={classes.iconWrapper}>
+	// 							<Tooltip title="Twitter" aria-label="add1">
+	// 								<a href="https://twitter.com/SoulsWordnft">
+	// 									<IconButton aria-label="Twitter" className={classes.iconButton}>
+	// 										<Twitter className={classes.icon} />
+	// 									</IconButton>
+	// 								</a>
+	// 							</Tooltip>
+	// 						</div>
+	// 						<div className={classes.iconWrapper}>
+	// 							<Tooltip title="Telegram">
+	// 								<a href="https://t.me/SoulsWordchat">
+	// 									<IconButton aria-label="Telegram" className={classes.iconButton}>
+	// 										<Telegram className={classes.icon} />
+	// 									</IconButton>
+	// 								</a>
+	// 							</Tooltip>
+	// 						</div>
+	// 						<div className={classes.iconWrapper}>
+	// 							<Tooltip title="Instagram">
+	// 								<a href="https://www.instagram.com/SoulsWordnft/">
+	// 									<IconButton aria-label="Instagram" className={classes.iconButton}>
+	// 										<Instagram className={classes.icon} />
+	// 									</IconButton>
+	// 								</a>
+	// 							</Tooltip>
+	// 						</div>
+	// 						<div className={classes.iconWrapper}>
+	// 							<Tooltip title="Github">
+	// 								<a href="https://github.com/SoulsWord">
+	// 									<IconButton aria-label="Github" className={classes.iconButton}>
+	// 										<GitHub className={classes.icon} />
+	// 									</IconButton>
+	// 								</a>
+	// 							</Tooltip>
+	// 						</div>
 
-// 						<div className={classes.iconWrapper}>
-// 							<Tooltip title="Discord">
-// 								<a href="https://discord.gg/NQFjXkMqgk">
-// 									<IconButton aria-label="Discord" className={classes.iconButton}>
-// 										<img
-// 											src="assets/discord.png"
-// 											height="30px"
-// 											width="30px"
-// 											style={{ opacity: 0.75, marginTop: 2 }}
-// 											alt="discord"
-// 										/>
-// 									</IconButton>
-// 								</a>
-// 							</Tooltip>
-// 						</div>
+	// 						<div className={classes.iconWrapper}>
+	// 							<Tooltip title="Discord">
+	// 								<a href="https://discord.gg/NQFjXkMqgk">
+	// 									<IconButton aria-label="Discord" className={classes.iconButton}>
+	// 										<img
+	// 											src="assets/discord.png"
+	// 											height="30px"
+	// 											width="30px"
+	// 											style={{ opacity: 0.75, marginTop: 2 }}
+	// 											alt="discord"
+	// 										/>
+	// 									</IconButton>
+	// 								</a>
+	// 							</Tooltip>
+	// 						</div>
 
-// 						<div className={classes.iconWrapper}>
-// 							<Tooltip title="Medium">
-// 								<a href="https://medium.com/@SoulsWord">
-// 									<IconButton aria-label="Discord" className={classes.iconButton}>
-// 										<img
-// 											src="assets/medium.png"
-// 											height="30px"
-// 											width="30px"
-// 											style={{ opacity: 0.75, marginTop: 2 }}
-// 											alt="medium"
-// 										/>
-// 									</IconButton>
-// 								</a>
-// 							</Tooltip>
-// 						</div>
+	// 						<div className={classes.iconWrapper}>
+	// 							<Tooltip title="Medium">
+	// 								<a href="https://medium.com/@SoulsWord">
+	// 									<IconButton aria-label="Discord" className={classes.iconButton}>
+	// 										<img
+	// 											src="assets/medium.png"
+	// 											height="30px"
+	// 											width="30px"
+	// 											style={{ opacity: 0.75, marginTop: 2 }}
+	// 											alt="medium"
+	// 										/>
+	// 									</IconButton>
+	// 								</a>
+	// 							</Tooltip>
+	// 						</div>
 
-// 						<div className={classes.iconWrapper}>
-// 							<Tooltip title="Email">
-// 								<a href="mailto:hello@SoulsWord.com">
-// 									<IconButton aria-label="Email" className={classes.iconButton}>
-// 										<Email className={classes.icon} />
-// 									</IconButton>
-// 								</a>
-// 							</Tooltip>
-// 						</div>
-// 					</div>
+	// 						<div className={classes.iconWrapper}>
+	// 							<Tooltip title="Email">
+	// 								<a href="mailto:hello@SoulsWord.com">
+	// 									<IconButton aria-label="Email" className={classes.iconButton}>
+	// 										<Email className={classes.icon} />
+	// 									</IconButton>
+	// 								</a>
+	// 							</Tooltip>
+	// 						</div>
+	// 					</div>
 
-// 					<div className="text-center" style={{ marginTop: 100 }}>
-// 						<div>
-// 							{/* <img src="assets/logo.png" alt="logo" height="50px" /> */}
-// 						</div>
-// 						<p className={classes.para}>
-// 							Copyright 2021 <span className={classes.highlight}>SoulsWord</span>. All Rights Reserved.
-// 						</p>
-// 					</div>
-// 				</div>
-// 			</div>
-// 		</div>
-// 	);
-// };
-return (
-    <div className={classes.background}>
-		<div className={classes.itemsContainer}>
-			<img  className={classes.footer_button} src={footer_button} />
-			
+	// 					<div className="text-center" style={{ marginTop: 100 }}>
+	// 						<div>
+	// 							{/* <img src="assets/logo.png" alt="logo" height="50px" /> */}
+	// 						</div>
+	// 						<p className={classes.para}>
+	// 							Copyright 2021 <span className={classes.highlight}>SoulsWord</span>. All Rights Reserved.
+	// 						</p>
+	// 					</div>
+	// 				</div>
+	// 			</div>
+	// 		</div>
+	// 	);
+	// };
+	return (
+		<div className={classes.background}>
+			<div className={classes.itemsContainer}>
+				<img className={classes.footer_button} src={footer_button} />
+
+			</div>
+			<div className={classes.itemsContainer}>Back top top</div>
+			<div className={classes.itemsContainer}>
+				<div>
+					<img className={classes.footer} src={footer_logo} />
+				</div>
+				<div>
+					<h1> QUICK LINK </h1>
+					<div className={classes.itemsContainer}></div>
+					<List dense={dense}>
+						{generate(
+							<ListItem>
+								<ListItemIcon>
+									<FolderIcon />
+								</ListItemIcon>
+								<ListItemText
+									primary="Single-line item"
+									secondary={secondary ? 'Secondary text' : null}
+								/>
+							</ListItem>,
+						)}
+					</List>
+
+					<div className={classes.itemsContainer}></div>
+				</div>
+				<div>
+					<h1> Follow us on social media </h1>
+					<div className={classes.itemsContainer}>
+
+						<div >
+							<Tooltip title="Twitter" aria-label="add1">
+								<a href="https://twitter.com/SoulsWordnft">
+									<IconButton aria-label="Twitter" className={classes.iconButton}>
+										<Twitter className={classes.icon} />
+									</IconButton>
+								</a>
+							</Tooltip>
+						</div>
+						<div >
+							<Tooltip title="Telegram">
+								<a href="https://t.me/SoulsWordchat">
+									<IconButton aria-label="Telegram" className={classes.iconButton}>
+										<Telegram className={classes.icon} />
+									</IconButton>
+								</a>
+							</Tooltip>
+						</div>
+						<div >
+							<Tooltip title="Instagram">
+								<a href="https://www.instagram.com/SoulsWordnft/">
+									<IconButton aria-label="Instagram" className={classes.iconButton}>
+										<Instagram className={classes.icon} />
+									</IconButton>
+								</a>
+							</Tooltip>
+						</div>
+						<div >
+							<Tooltip title="Github">
+								<a href="https://github.com/SoulsWord">
+									<IconButton aria-label="Github" className={classes.iconButton}>
+										<GitHub className={classes.icon} />
+									</IconButton>
+								</a>
+							</Tooltip>
+						</div>
+
+						<div >
+							<Tooltip title="Discord">
+								<a href="https://discord.gg/NQFjXkMqgk">
+									<IconButton aria-label="Discord" className={classes.iconButton}>
+										<img
+											src="assets/discord.png"
+											height="30px"
+											width="30px"
+											style={{ opacity: 0.75, marginTop: 2 }}
+											alt="discord"
+										/>
+									</IconButton>
+								</a>
+							</Tooltip>
+						</div>
+
+						<div >
+							<Tooltip title="Medium">
+								<a href="https://medium.com/@SoulsWord">
+									<IconButton aria-label="Discord" className={classes.iconButton}>
+										<img
+											src="assets/medium.png"
+											height="30px"
+											width="30px"
+											style={{ opacity: 0.75, marginTop: 2 }}
+											alt="medium"
+										/>
+									</IconButton>
+								</a>
+							</Tooltip>
+						</div>
+
+						<div >
+							<Tooltip title="Email">
+								<a href="mailto:hello@SoulsWord.com">
+									<IconButton aria-label="Email" className={classes.iconButton}>
+										<Email className={classes.icon} />
+									</IconButton>
+								</a>
+							</Tooltip>
+						</div>
+					</div>
+					<div>
+						<h1> JOIN WITH US </h1>
+						{/* <InputBase
+        					className={classes.margin}
+								label="Email address"
+								// variant="outlined"
+								id="custom-css-input"
+							/> */}
+							 <InputBase
+							className={classes.margin}
+							defaultValue="Email address"
+							inputProps={{ 'aria-label': 'naked' }}
+					/>
+					</div>
+				</div>
+				
+			</div>
+			<div className={classes.itemsContainerLine}>
+					<h1 className={classes.footerLine}> Copyright © 2022 SOUL SWORD All rights reserved </h1>
+			</div>
 		</div>
-		<div className={classes.itemsContainer}>Back top top</div>
-      <div className={classes.itemsContainer}>
-		<div>
-			<img  className={classes.footer} src={footer_logo} />
-		</div>
-		<div>
-			<h1> QUICK LINK </h1>
-			<div className={classes.itemsContainer}></div>
-            <List dense={dense}>
-              {generate(
-                <ListItem>
-                  <ListItemIcon>
-                    <FolderIcon />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary="Single-line item"
-                    secondary={secondary ? 'Secondary text' : null}
-                  />
-                </ListItem>,
-              )}
-            </List>
-			<List dense={dense}>
-              {generate(
-                <ListItem>
-                  <ListItemIcon>
-                    <FolderIcon />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary="Single-line item"
-                    secondary={secondary ? 'Secondary text' : null}
-                  />
-                </ListItem>,
-              )}
-            </List>
-			<div className={classes.itemsContainer}></div>
-		</div>
-		<div>
-			<h1> Follow us on social media </h1>
-		</div>
-        
-      </div>
-    </div>
-  );
+	);
 };
 export default Footer;

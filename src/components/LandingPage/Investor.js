@@ -103,6 +103,16 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'flex-start',
     paddingTop: 30,
     flexWrap: 'wrap',
+    
+  },
+  itemsContainerBody: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    alignItems: 'flex-start',
+    paddingTop: 30,
+    flexWrap: 'wrap',
+    border:"0.721511px solid #C6C6C6",
+    borderRadius: "8.37971px"
   },
   investor_content:{
     [theme.breakpoints.down('md')]: {
@@ -122,8 +132,17 @@ const Investor = () => {
       <div className={classes.itemsContainer}>
         <img  className={classes.investor_content}  src={investor_content} />
       </div>
-      <div className={classes.itemsContainer}>
-        <img className={classes.investor_content}                 src={investor_details} />
+      <div className={classes.itemsContainerBody}>
+        {/* <img className={classes.investor_content} src={investor_details} /> */}
+          <div>
+
+          </div>
+          <div>
+
+          </div>
+          <div>
+            
+          </div>
       </div>
     </div>
   );
