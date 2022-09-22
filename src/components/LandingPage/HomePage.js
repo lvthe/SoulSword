@@ -4,7 +4,7 @@ import { makeStyles, Button, Typography } from '@material-ui/core';
 import image from '../../assets/background_home.png';
 import wellcome from '../../assets/WELCOMETO.png';
 import soulword from '../../assets/SOULSWORD.png';
-import imgButton  from '../../assets/home_button .png';
+import imgButton  from '../../assets/playnow.png';
 const useStyles = makeStyles((theme) => ({
   background: {
     //minHeight: '80vh',
@@ -12,10 +12,10 @@ const useStyles = makeStyles((theme) => ({
     //textShadow: '3px 4px black',
     // paddingLeft: 100,
     [theme.breakpoints.down('md')]: {
-      // minHeight: 350,
+       minHeight: 350,
       //marginTop: 0,
       //paddingLeft: 10,
-      // height:"120%",
+      // height:"140%",
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -87,7 +87,11 @@ const useStyles = makeStyles((theme) => ({
 
   imgButton:{
     marginTop: '10vh',
-    width: '20%',
+    paddingBottom: 20,
+    width: '15%',
+    '&:hover': {
+    transform: "scale(1.02)"
+    }
   },
   subheading: {
     textAlign: 'center',
@@ -140,13 +144,20 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: 'center',
     },
   },
+  itemsContainerDetails: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    alignItems: 'flex-start',
+    paddingTop: 30,
+    flexWrap: 'wrap',
+  },
   text_h1:{
     fontFamily: "Trajan-Pro",
     lineHeight: "1.22em",
     textAlign:"center",
     color:"#FFA800",
     
-    backgroundImage: `url(${imgButton})`,
+    // backgroundImage: `url(${imgButton})`,
     bzackgroundPosition: 'center',
     // backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -186,13 +197,8 @@ const HomePage = () => {
       <div className={classes.itemsContainer}>
         <img className={classes.soulword} src={soulword} />
       </div>
-      <div className={classes.itemsContainer}>
-        {/* <h1 className={classes.text_h1}>PLAY NOW</h1>
-        <img className={classes.imgButton} src={imgButton} /> */}
-        <Button variant="contained" color="primary" className={classes.margin}>
-          PLAY NOW
-        </Button>
-
+      <div className={classes.itemsContainerDetails}>
+         <img className={classes.imgButton} src={imgButton} />
       </div>
     </div>
   );
