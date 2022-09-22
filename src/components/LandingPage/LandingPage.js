@@ -22,7 +22,7 @@ const LandingPage = () => {
       
       <section id="swords">
         <Swords />
-      </section> 
+      </section>  
 
       <section id="souls">
         <Souls />

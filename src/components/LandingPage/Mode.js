@@ -137,11 +137,7 @@ const useStyles = makeStyles((theme) => ({
     // left: '20%',
     // width: 170,
     '&:hover': {
-        
-        
-        // transition
         transform: "scale(1.05)",
-        // backgroundColor: "#FFA800",
         color: '#FFA800',
         opacity: 1
     },
