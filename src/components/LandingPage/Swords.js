@@ -1,34 +1,18 @@
-import Box from '@material-ui/core/Box';
+
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import SportsEsportsOutlined from '@material-ui/icons/SportsEsportsOutlined';
-import CardGiftcardOutlined from '@material-ui/icons/CardGiftcardOutlined';
-import TrendingUpOutlined from '@material-ui/icons/TrendingUpOutlined';
+import { List } from '@material-ui/core';
+import { Link } from '@material-ui/core';
+import { ListItem } from '@material-ui/core';
+import { ListItemText } from '@material-ui/core';
 import React from 'react';
-// import sword from '../../assets/sword.png';
-// import bigknife from '../../assets/bigknife.png';
-// import tessen from '../../assets/tessen.png';
-// import bow from '../../assets/bow.png';
-// import gun from '../../assets/gun.png';
-// import sceptre from '../../assets/sceptre.png';
-// import magicvase from '../../assets/magicvase.png';
-// import armor from '../../assets/armor1.png';
-// import helmet from '../../assets/helmet3.png';
-// import wing from '../../assets/wing3.png';
-// import monut from '../../assets/mount.jpg';
 import cardFrame from '../../assets/sword_soul_bg.png';
-import sword from '../../assets/sword.png';
-import bigknife from '../../assets/sword.png';
-import tessen from '../../assets/sword.png';
-import bow from '../../assets/sword.png';
-import gun from '../../assets/sword.png';
-import sceptre from '../../assets/sword.png';
-import magicvase from '../../assets/sword.png';
-import armor from '../../assets/sword.png';
-import helmet from '../../assets/sword.png';
-import wing from '../../assets/sword.png';
-import monut from '../../assets/sword.png';
-import video from '../../assets/sword.mp4';
-import { Card } from '@material-ui/core';
+
+import sword_bg_metal from '../../assets/sword_bg_metal.png';
+import sword_bg_wood from '../../assets/sword_bg_wood.png';
+import sword_bg_fire from '../../assets/sword_bg_fire.png';
+import sword_bg_water from '../../assets/sword_bg_water.png';
+import sword_bg_earth from '../../assets/sword_bg_earth.png';
+
 import background_sword from '../../assets/background_sword.png';
 import Sword_bg from '../../assets/Sword_bg.png';
 import Sword_main from '../../assets/Sword_main.png';
@@ -49,12 +33,13 @@ import sword_effect_violet from '../../assets/sword_effect_violet.png';
 import sword_bg_detail from '../../assets/sword_bg_detail.png';
 import sword_detai_icon_fire from '../../assets/sword_detai_icon_fire.png';
 import { CenterFocusStrong } from '@material-ui/icons';
-import sword_farme_metal from  '../../assets/sword_farme_metal.png';
-import sword_farme_wood from  '../../assets/sword_farme_wood.png';
-import sword_farme_water from  '../../assets/sword_farme_water.png';
-import sword_farme_fire from  '../../assets/sword_farme_fire.png';
-import sword_farme_earth from  '../../assets/sword_farme_earth.png';
+import sword_farme_metal from '../../assets/sword_farme_metal.png';
+import sword_farme_wood from '../../assets/sword_farme_wood.png';
+import sword_farme_water from '../../assets/sword_farme_water.png';
+import sword_farme_fire from '../../assets/sword_farme_fire.png';
+import sword_farme_earth from '../../assets/sword_farme_earth.png';
 import transitions from '@material-ui/core/styles/transitions';
+
 const useStyles = makeStyles((theme) => ({
   background: {
     padding: 80,
@@ -87,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: 'column',
       justifyContent: 'center',
     },
-    
+
   },
   itemsContainer: {
     display: 'flex',
@@ -229,7 +214,7 @@ const useStyles = makeStyles((theme) => ({
       //backgroundColor: '#17E3E0',
       // background-color: ${theme.palette.secondary.main},
       transform: "scale(1.3)"
-      },
+    },
   },
   frameCardBottom: {
     // background: `url(${sword_bg_detail})`,
@@ -274,7 +259,7 @@ const useStyles = makeStyles((theme) => ({
     left: '5%',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems:"center",
+    alignItems: "center",
     [theme.breakpoints.down('md')]: {
       display: 'flex',
       flexDirection: 'column',
@@ -291,7 +276,7 @@ const useStyles = makeStyles((theme) => ({
     //   justifyContent: 'center',
     // },
   },
-  
+
   listItems: {},
   listItem: {
     marginBottom: 10,
@@ -385,7 +370,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 0,
     marginLeft: 10,
     marginRight: 20,
-    top:1,
+    top: 1,
     width: 40,
     [theme.breakpoints.down('md')]: {
       display: 'flex',
@@ -440,7 +425,7 @@ const useStyles = makeStyles((theme) => ({
     width: 140,
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems:"center",
+    alignItems: "center",
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
       flexDirection: 'column',
@@ -451,219 +436,305 @@ const useStyles = makeStyles((theme) => ({
 
 const Swords = () => {
   const classes = useStyles();
-  let items = [
+
+  let masters = [
     {
-      id: '1',
-      name: 'Metal',
-      image: soul_metal,
-      imageDetail: sword_farme_metal,
-      frameCardBottom:{
-       background: `url(${sword_bg_detail})`,
-        backgroundRepeat: 'no-repeat',
-        height: 300,
-        width: 250,
-        backgroundSize: 'contain',
-        position: 'relative',
- 
-      },
-      listData: (
-        <div>
-          {' '}
-          <p className={classes.para}>
-            <ul className={classes.frameList}>
-              <li>Level: 1 / 5</li>
-              <li>Base Damage: 30</li>
-              <li>Bonus: +7%</li>
-              <li>Accuracy: +5</li>
-            </ul>
-          </p>
-        </div>
-      ),
-    },
-    {
-      id: '2',
-      name: 'Posion',
-      image: soul_poison,
-      imageDetail: sword_farme_wood,
-      frameCardBottom:{
-        // background: `url(${sword_bg_detail})`,
-       backgroundRepeat: 'no-repeat',
-       height: 300,
-       width: 250,
-       backgroundSize: 'contain',
-       position: 'relative',
-     },
-      listData: (
-        <div>
-          <p className={classes.para}>
-            <ul className={classes.frameList}>
-              <li>Level: 1 / 5</li>
-              <li>Base Damage: 32</li>
-              <li>Bonus: +5%</li>
-              <li>Accuracy: +4</li>
-            </ul>
-          </p>
-        </div>
-      ),
-    },
-    {
-      id: '3',
-      name: 'Fire',
-      image: soul_fire,
-      imageDetail: sword_farme_fire,
-      frameCardBottom:{
-        // background: `url(${sword_bg_detail})`,
-       backgroundRepeat: 'no-repeat',
-       height: 300,
-       width: 250,
-       backgroundSize: 'contain',
-       position: 'relative',
-  
-     },
-      listData: (
-        <div>
-          <p className={classes.para}>
-            <ul className={classes.frameList}>
-              <li>Level: 1 / 5</li>
-              <li>Base Damage: 26</li>
-              <li>Bonus: +8%</li>
-              <li>Accuracy: +4</li>
-            </ul>
-          </p>
-        </div>
-      ),
-    },
-    {
-      id: '4',
-      name: 'Water',
-      image: soul_water,
-      imageDetail: sword_farme_water,
-      frameCardBottom:{
-        // background: `url(${sword_bg_detail})`,
-       backgroundRepeat: 'no-repeat',
-       height: 300,
-       width: 250,
-       backgroundSize: 'contain',
-       position: 'relative',
-  
-     },
-      listData: (
-        <div>
-          <p className={classes.para}>
-            <ul className={classes.frameList}>
-              <li>Level: 1 / 5</li>
-              <li>Base Damage: 29</li>
-              <li>Bonus: +9%</li>
-              <li>Accuracy: +4</li>
-            </ul>
-          </p>
-        </div>
-      ),
-    },
-    {
-      id: '5',
-      name: 'Earth',
-      image: soul_earth,
-      imageDetail: sword_farme_earth,
-      frameCardBottom:{
-        // background: `url(${sword_bg_detail})`,
-       backgroundRepeat: 'no-repeat',
-       height: 300,
-       width: 250,
-       backgroundSize: 'contain',
-       position: 'relative',
-     },
-      listData: (
-        <div>
-          <p className={classes.para}>
-            <ul className={classes.frameList}>
-              <li>Level: 1 / 5</li>
-              <li>Base Damage: 36</li>
-              <li>Bonus: +5%</li>
-              <li>Accuracy: +3</li>
-            </ul>
-          </p>
-        </div>
-      ),
+      id: "999",
+      bg_defautl: background_sword,
+      items: [
+        {
+          id: '1',
+          name: 'Metal',
+          image: soul_metal,
+          active: true,
+          imageDetailBG: sword_bg_metal,
+          imageClass:soul_metal,
+          imageClassCounter:soul_poison,
+          frameCardBottom: {
+            backgroundRepeat: 'no-repeat',
+            height: 300,
+            width: 250,
+            backgroundSize: 'contain',
+            position: 'relative',
+
+          },
+        },
+        {
+          id: '2',
+          name: 'Posion',
+          image: soul_poison,
+          active: true,
+          imageDetailBG: sword_bg_wood,
+          imageClass:soul_poison,
+          imageClassCounter:soul_earth,
+          frameCardBottom: {
+            backgroundRepeat: 'no-repeat',
+            height: 300,
+            width: 250,
+            backgroundSize: 'contain',
+            position: 'relative',
+          },
+        },
+        {
+          id: '3',
+          name: 'Fire',
+          image: soul_fire,
+          active: true,
+          imageDetailBG: sword_bg_fire,
+          imageClass:soul_fire,
+          imageClassCounter:soul_metal,
+          frameCardBottom: {
+            backgroundRepeat: 'no-repeat',
+            height: 300,
+            width: 250,
+            backgroundSize: 'contain',
+            position: 'relative',
+
+          },
+        },
+        {
+          id: '4',
+          name: 'Water',
+          image: soul_water,
+          active: true,
+          imageDetailBG: sword_bg_water,
+          imageClass:soul_water,
+          imageClassCounter:soul_fire,
+          frameCardBottom: {
+            backgroundRepeat: 'no-repeat',
+            height: 300,
+            width: 250,
+            backgroundSize: 'contain',
+            position: 'relative',
+
+          },
+        },
+        {
+          id: '5',
+          name: 'Earth',
+          image: soul_earth,
+          active: true,
+          imageDetailBG: sword_bg_earth,
+          imageClass:soul_earth,
+          imageClassCounter:soul_water,
+          frameCardBottom: {
+            backgroundRepeat: 'no-repeat',
+            height: 300,
+            width: 250,
+            backgroundSize: 'contain',
+            position: 'relative',
+          },
+        }
+      ]
     }
+
   ];
+  const [activeLinkId, setActiveLinkId] = React.useState(false);
+  const [active, setActive] = React.useState(false);
+  const [visible, setVisible] = React.useState(true);
+  const createCss = (id: number, bgI: string, bgI_df: string, imgClass: String, imgClassCounter) => {
+    // if(bgI === undefined){
+    //   bgI = bgI_df;
+    // }
+    // if (id === active) {
+    //   console.log("  isActive  " + activeLinkId + " bgI:   " + bgI);
+    //   return {
+    //     backgroundImage: `url(${bgI})`,
+    //     backgroundSize: "cover",
+    //     backgroundRepeat: "no-repeat"
+    //   };
+    //  } else return {};
+    document.getElementById("sword_bg_master").style.backgroundImage = `url(${bgI})`;
+    // var img = document.createElement('sword_img_class');
+    // img.src = `url(${imgClass})`;
+    // document.getElementById('sword_img_class').appendChild(img);
+
+
+    // document.getElementById("sword_img_class").style.backgroundImage = `url(${imgClass})`;
+    // document.getElementById("sword_img_class_counter").style.backgroundImage = `url(${imgClassCounter})`;
+
+  };
+
   return (
-
-    <div className={classes.background}>
-      <div className={classes.itemsContainer}>
-        <img className={classes.Sword_main} src={Sword_main} />
-      </div>
-      <div className={classes.itemsContainer}>
-        {items.map((item) => {
-          return (
-            <div key={item.id} className={classes.frameCard}>
-              <div className={classes.frameImage}>
-                <img className={classes.image} src={item.image} />
+    <div>
+      {masters.map((master, id) => {
+        return (
+          <div key={master.items.id} id="sword_bg_master" className={classes.background}  >
+            <div className={classes.itemsContainer}>
+              <img className={classes.Sword_main} src={Sword_main} />
+            </div>
+            <div className={classes.itemsContainer}>
+              {master.items.map((item) => {
+                return (
+                  <div className={classes.itemsContainer}>
+                    <div key={item.id} className={classes.frameCard} onClick={() => { createCss(  item.id, 
+                                                                                                  item.imageDetailBG, 
+                                                                                                  master.items.bg_defautl,
+                                                                                                  item.imageClass, 
+                                                                                                  item.imageClassCounter, 
+                                                                                                ) }}  >
+                      <div className={classes.frameImage}>
+                        <img className={classes.image} src={item.image} />
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className={classes.itemsContainer}>
+              <div className={classes.itemMaster}>
+                <div className={classes.itemsContainer}>
+                  <div>
+                    <h1 className={classes.attribue_h1}> <span>Attribues</span></h1>
+                    <div className={classes.itemDetailsIcon}>
+                      <img id="sword_img_class" className={classes.imageDetails} src={soul_fire} /><p className={classes.attribue_h1}>Class</p>
+                    </div>
+                    <div className={classes.itemDetailsIcon}>
+                      <img id="sword_img_class_counter" className={classes.imageDetails} src={soul_metal} /><p className={classes.attribue_h1}>Class Counter</p>
+                    </div>
+                    <h1 className={classes.attribue_h1}> <span>Stength state:</span></h1>
+                    <div className={classes.itemDetailsIcon}>
+                      <img className={classes.imageDetails} src={sword_detail_dps} /><p className={classes.attribue_h1}>Damage</p>
+                    </div>
+                    <div className={classes.itemDetailsIcon}>
+                      <img className={classes.imageDetails} src={sword_detail_end} /><p className={classes.attribue_h1}>Endurace</p>
+                    </div >
+                    <div className={classes.itemDetailsIcon}>
+                      <img className={classes.imageDetails} src={sword_detail_bonuns} /><p className={classes.attribue_h1}>Bonus Rewara</p>
+                    </div>
+                    <div className={classes.itemDetailsIcon}>
+                      <img className={classes.imageDetails} src={sword_detail_dpscounter} /><p className={classes.attribue_h1}>Damage Counter</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-      <div className={classes.itemsContainer}>
-      <div className={classes.itemMaster}>
-        <div className={classes.itemsContainer}>
-          <div>
-            <h1 className={classes.attribue_h1}> <span>Attribues</span></h1>
-            <div className={classes.itemDetailsIcon}>
-              <img className={classes.imageDetails} src={soul_fire} /><p className={classes.attribue_h1}>Class</p>
-            </div>
-            <div className={classes.itemDetailsIcon}>
-              <img className={classes.imageDetails} src={soul_metal} /><p className={classes.attribue_h1}>Class Counter</p>
-            </div>
-            <h1 className={classes.attribue_h1}> <span>Stength state:</span></h1>
-            <div className={classes.itemDetailsIcon}>
-              <img className={classes.imageDetails} src={sword_detail_dps} /><p className={classes.attribue_h1}>Damage</p>
-            </div>
-            <div className={classes.itemDetailsIcon}>
-              <img className={classes.imageDetails} src={sword_detail_end} /><p className={classes.attribue_h1}>Endurace</p>
-            </div >
-            <div className={classes.itemDetailsIcon}>
-              <img className={classes.imageDetails} src={sword_detail_bonuns} /><p className={classes.attribue_h1}>Bonus Rewara</p>
-            </div>
-            <div className={classes.itemDetailsIcon}>
-              <img className={classes.imageDetails} src={sword_detail_dpscounter} /><p className={classes.attribue_h1}>Damage Counter</p>
+              <div className={classes.itemMaster}>
+                <div className={classes.itemsContainer}>
+                  <div className={classes.frameCardDetails}>
+                    <div className={classes.frameImageDetails}>
+                      <img className={classes.imageSwordDetails} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div className={classes.itemMaster}>
+                <div className={classes.itemDetailsIcon}>
+                  <h1 className={classes.attribue_text}> <span>Tizona</span></h1>
+                </div>
+                <p className={classes.attribue_story}>
+                  There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and  Each SWORD will become unique and worthwhile in your collection.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        </div>
-        <div className={classes.itemMaster}>
-        <div className={classes.itemsContainer}>
-          <div className={classes.frameCardDetails}>
-              <div className={classes.frameImageDetails}>
-                <img className={classes.imageSwordDetails}  />
-              </div>
-            </div>
-        </div>
-        </div>
-        
 
-        <div className={classes.itemMaster}>
-          <div className={classes.itemDetailsIcon}>
-            <h1 className={classes.attribue_text}> <span>Tizona</span></h1>
-          </div>
-          <p className={classes.attribue_story}>
-            There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and  Each SWORD will become unique and worthwhile in your collection.
-          </p>
-        </div>
-      </div>
-      <div className={classes.itemsContainer}>
-        {items.map((item) => {
-          return (
-            <div key={item.id} className={item.frameCardBottom}>
-              <div className={classes.frameImageBottom}>
-                <img className={classes.imageDetailBottom} src={item.imageDetail} />
-                {/* <img className={classes.imageDetailBottom} /> */}
-              </div>
-            </div>
-          );
-        })}
-      </div>
+        );
+      })}
     </div>
+
+
+
+
+
+
+
+
+    // <div className={classes.background}>
+    //   <div className={classes.itemsContainer}>
+    //     <img className={classes.Sword_main} src={Sword_main} />
+    //   </div>
+    //   <div className={classes.itemsContainer}>
+    //     {items.map((item) => {
+    //       return (
+    //         <div key={item.id} className={classes.frameCard} onClick={() => setActiveLinkId(item.id)} style={createCss(item.id, item.imageDetail)} >
+    //           <div className={classes.frameImage}>
+    //             <img className={classes.image} src={item.image} />
+    //           </div>
+    //         </div>
+    //       );
+    //     })}
+    //   </div>
+    //   <div className={classes.itemsContainer}>
+    //     <div className={classes.itemMaster}>
+    //       <div className={classes.itemsContainer}>
+    //         <div>
+    //           <h1 className={classes.attribue_h1}> <span>Attribues</span></h1>
+    //           <div className={classes.itemDetailsIcon}>
+    //             <img className={classes.imageDetails} src={soul_fire} /><p className={classes.attribue_h1}>Class</p>
+    //           </div>
+    //           <div className={classes.itemDetailsIcon}>
+    //             <img className={classes.imageDetails} src={soul_metal} /><p className={classes.attribue_h1}>Class Counter</p>
+    //           </div>
+    //           <h1 className={classes.attribue_h1}> <span>Stength state:</span></h1>
+    //           <div className={classes.itemDetailsIcon}>
+    //             <img className={classes.imageDetails} src={sword_detail_dps} /><p className={classes.attribue_h1}>Damage</p>
+    //           </div>
+    //           <div className={classes.itemDetailsIcon}>
+    //             <img className={classes.imageDetails} src={sword_detail_end} /><p className={classes.attribue_h1}>Endurace</p>
+    //           </div >
+    //           <div className={classes.itemDetailsIcon}>
+    //             <img className={classes.imageDetails} src={sword_detail_bonuns} /><p className={classes.attribue_h1}>Bonus Rewara</p>
+    //           </div>
+    //           <div className={classes.itemDetailsIcon}>
+    //             <img className={classes.imageDetails} src={sword_detail_dpscounter} /><p className={classes.attribue_h1}>Damage Counter</p>
+    //           </div>
+    //         </div>
+    //       </div>
+    //     </div>
+    //     <div className={classes.itemMaster}>
+    //       <div className={classes.itemsContainer}>
+    //         <div className={classes.frameCardDetails}>
+    //           <div className={classes.frameImageDetails}>
+    //             <img className={classes.imageSwordDetails} />
+    //           </div>
+    //         </div>
+    //       </div>
+    //     </div>
+
+
+    //     <div className={classes.itemMaster}>
+    //       <div className={classes.itemDetailsIcon}>
+    //         <h1 className={classes.attribue_text}> <span>Tizona</span></h1>
+    //       </div>
+    //       <p className={classes.attribue_story}>
+    //         There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and  Each SWORD will become unique and worthwhile in your collection.
+    //       </p>
+    //     </div>
+    //   </div>
+    //   <div className={classes.itemsContainer}>
+    //     <List
+    //       component="nav"
+    //       aria-labelledby="main-navigation"
+    //       className={classes.navDisplayFlex}
+    //     >
+    //       {navLinks.map(({ title, path, bgI, id }) => (
+    //         <Link
+    //           to={path}
+    //           key={title}
+    //           className={classes.linkText}
+    //           onClick={() => setActiveLinkId(id)}
+    //           style={createCss(id, bgI)}
+    //         >
+    //           <ListItem disableGutters={true}>
+    //             <ListItemText primary={title} />
+    //           </ListItem>
+    //         </Link>
+    //       ))}
+    //     </List>
+    //     {/* {items.map((item) => {
+    //       return (
+    //         <div key={item.id} className={item.frameCardBottom}>
+    //           <div className={classes.frameImageBottom}>
+    //             <img className={classes.imageDetailBottom} src={item.imageDetail} />
+    //             <img className={classes.imageDetailBottom} />
+    //           </div>
+    //         </div>
+    //       );
+    //     })} */}
+    //   </div>
+    // </div>
   );
 };
 
