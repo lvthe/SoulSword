@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SoulSword/static/css/main.bba1ebc2.chunk.css",
-    "main.js": "/SoulSword/static/js/main.1099533c.chunk.js",
-    "main.js.map": "/SoulSword/static/js/main.1099533c.chunk.js.map",
+    "main.js": "/SoulSword/static/js/main.f2a896be.chunk.js",
+    "main.js.map": "/SoulSword/static/js/main.f2a896be.chunk.js.map",
     "runtime-main.js": "/SoulSword/static/js/runtime-main.be161c73.js",
     "runtime-main.js.map": "/SoulSword/static/js/runtime-main.be161c73.js.map",
     "static/js/2.34204cfc.chunk.js": "/SoulSword/static/js/2.34204cfc.chunk.js",
@@ -24,6 +24,10 @@
     "static/media/footer_bg.1eaef68f.png": "/SoulSword/static/media/footer_bg.1eaef68f.png",
     "static/media/footer_logo.24ef035b.png": "/SoulSword/static/media/footer_logo.24ef035b.png",
     "static/media/header-right.0fcec029.png": "/SoulSword/static/media/header-right.0fcec029.png",
+    "static/media/investor_1.8e6b012e.png": "/SoulSword/static/media/investor_1.8e6b012e.png",
+    "static/media/investor_2.b0847834.png": "/SoulSword/static/media/investor_2.b0847834.png",
+    "static/media/investor_3.6e745150.png": "/SoulSword/static/media/investor_3.6e745150.png",
+    "static/media/investor_4.4c3440bb.png": "/SoulSword/static/media/investor_4.4c3440bb.png",
     "static/media/investor_bg.4e748bde.png": "/SoulSword/static/media/investor_bg.4e748bde.png",
     "static/media/investor_content.7f7f5f24.png": "/SoulSword/static/media/investor_content.7f7f5f24.png",
     "static/media/investor_details.6f828ec1.png": "/SoulSword/static/media/investor_details.6f828ec1.png",
@@ -57,6 +61,8 @@
     "static/media/sword_farme_water.21770ae8.png": "/SoulSword/static/media/sword_farme_water.21770ae8.png",
     "static/media/sword_farme_wood.63c62fd6.png": "/SoulSword/static/media/sword_farme_wood.63c62fd6.png",
     "static/media/tokennomic_bg.f00c9f01.png": "/SoulSword/static/media/tokennomic_bg.f00c9f01.png",
+    "static/media/tokennomic_bg_detail.15a2ce67.png": "/SoulSword/static/media/tokennomic_bg_detail.15a2ce67.png",
+    "static/media/tokennomic_logo.b1529d01.png": "/SoulSword/static/media/tokennomic_logo.b1529d01.png",
     "static/media/tokenomics_content.686681f4.png": "/SoulSword/static/media/tokenomics_content.686681f4.png",
     "static/media/tokenomics_table.ca9b960b.png": "/SoulSword/static/media/tokenomics_table.ca9b960b.png"
   },
@@ -64,6 +70,6 @@
     "static/js/runtime-main.be161c73.js",
     "static/js/2.34204cfc.chunk.js",
     "static/css/main.bba1ebc2.chunk.css",
-    "static/js/main.1099533c.chunk.js"
+    "static/js/main.f2a896be.chunk.js"
   ]
 }
