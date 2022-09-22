@@ -127,6 +127,34 @@ const useStyles = makeStyles((theme) => ({
   subheading: {
     color: theme.palette.pbr.textPrimary,
   },
+  frameImage: {
+    // background: `url(${cardFrame})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    // position: 'absolute',
+    // top: '8%',
+    // left: '20%',
+    // width: 170,
+    '&:hover': {
+        
+        
+        // transition
+        transform: "scale(1.05)",
+        // backgroundColor: "#FFA800",
+        color: '#FFA800',
+        opacity: 1
+    },
+    '&:disabled': {
+        backgroundColor: "#A7A9AC",
+    },
+
+    
+
+    [theme.breakpoints.down('md')]: {
+      width: 160
+    },
+  },
 }));
 
 
