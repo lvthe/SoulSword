@@ -353,7 +353,7 @@ const Navbar = () => {
           </Link>
           <Link key={'5'} exact="true" to="mode" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
-              FEARTUE
+              FEARTURE
             </Typography>{' '}
           </Link>
           <Link key={'6'} exact="true" to="tokenomics" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
@@ -363,7 +363,7 @@ const Navbar = () => {
           </Link>
           <Link key={'7'} exact="true" to="backer" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
-              PARTNER&VISOR 
+            ADVISOR
             </Typography>{' '}
           </Link>
 

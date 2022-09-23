@@ -20,6 +20,11 @@ import sword_effect_blue from '../../assets/sword_effect_blue.png';
 import sword_effect_violet from '../../assets/sword_effect_violet.png'; 
 import sword_detai_icon_fire from '../../assets/sword_detai_icon_fire.png';
 import soul_bg_details from '../../assets/soul_bg_details.png';
+import soul_m_metal from '../../assets/soul_m_metal.gif';
+import soul_m_fire from '../../assets/soul_m_fire.gif';
+import soul_m_earth from '../../assets/soul_m_earth.gif';
+import soul_m_water from '../../assets/soul_m_water.gif';
+import soul_m_wood from '../../assets/soul_m_wood.gif';
 const useStyles = makeStyles((theme) => ({
   background: {
     padding: 80,
@@ -45,8 +50,8 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     marginTop: 0,
-    marginLeft: 10,
-    width: 50,
+    marginLeft: 0,
+    width: 100,
     [theme.breakpoints.down('md')]: {
       display: 'flex',
       flexDirection: 'column',
@@ -189,12 +194,15 @@ const useStyles = makeStyles((theme) => ({
     alignSelf: 'center',
   },
   frameCard: {
-    //background: `url(${cardFrame})`,
+    // background: `url(${cardFrame})`,
     backgroundRepeat: 'no-repeat',
     height: 80,
     width: 90,
     backgroundSize: 'contain',
     position: 'relative',
+    '&:hover': {
+      transform: "scale(1.05)"
+    },
     [theme.breakpoints.down('md')]: {
       // height: 40,
       // width: 45,
@@ -341,7 +349,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 0,
     marginLeft: 10,
     marginRight: 20,
-    width: 30,
+    width: 40,
+    height:40,
     [theme.breakpoints.down('md')]: {
       display: 'flex',
       flexDirection: 'column',
@@ -432,12 +441,34 @@ const useStyles = makeStyles((theme) => ({
 
 const Swords = () => {
   const classes = useStyles();
+  const createCss = (bgI: string) => {
+
+    // document.getElementById("sword_bg_master").style.backgroundImage = `url(${bgI})`;
+    // let i_imgClass = document.querySelector("#sword_img_class");
+    // i_imgClass.setAttribute("src", imgClass)
+
+    // let i_imgClassCounter = document.querySelector("#sword_img_class_counter");
+    // i_imgClassCounter.setAttribute("src", imgClassCounter)
+    
+    // //document.getElementById("backgroundFrame").style.backgroundImage = `url(${bgMainI})`;
+    
+    // document.getElementById("text_main").innerHTML = text_m;  
+    // document.getElementById("text_detail").innerHTML = text_d;  
+
+    let i_img_main_souls = document.querySelector("#soul_main");
+    i_img_main_souls.setAttribute("src", bgI)
+    
+
+    //backgroundFrame  
+
+
+  };
   let items = [
     {
       id: '1',
       name: 'Metal',
       image: soul_metal,
-      imageDetail: sword_detai_icon_fire,
+      imageDetail: soul_m_metal,
       listData: (
         <div>
           {' '}
@@ -456,7 +487,7 @@ const Swords = () => {
       id: '2',
       name: 'Posion',
       image: soul_poison,
-      imageDetail: sword_detai_icon_fire,
+      imageDetail: soul_m_wood,
       listData: (
         <div>
           <p className={classes.para}>
@@ -474,7 +505,7 @@ const Swords = () => {
       id: '3',
       name: 'Fire',
       image: soul_fire,
-      imageDetail: sword_detai_icon_fire,
+      imageDetail: soul_m_fire,
       listData: (
         <div>
           <p className={classes.para}>
@@ -492,7 +523,7 @@ const Swords = () => {
       id: '4',
       name: 'Water',
       image: soul_water,
-      imageDetail: sword_detai_icon_fire,
+      imageDetail: soul_m_water,
       listData: (
         <div>
           <p className={classes.para}>
@@ -510,7 +541,7 @@ const Swords = () => {
       id: '5',
       name: 'Earth',
       image: soul_earth,
-      imageDetail: sword_detai_icon_fire,
+      imageDetail: soul_m_earth,
       listData: (
         <div>
           <p className={classes.para}>
@@ -543,9 +574,11 @@ const Swords = () => {
       <div className={classes.itemsContainer}>
         {items.map((item) => {
           return (
-            <div key={item.id} className={classes.frameCard}>
+            <div  key={item.id} className={classes.frameCard}   onClick={() => { createCss(  item.imageDetail
+                                                                                      
+                                                                                          ) }}  >
               <div className={classes.frameImage}>
-                <img className={classes.image} src={item.image} />
+                <img  className={classes.image} src={item.image}  />
               </div>
             </div>
           );
@@ -569,7 +602,7 @@ const Swords = () => {
         <div className={classes.itemsContainer}>
           <div  className={classes.frameCardBottom}>
               <div className={classes.frameImageBottom}>
-                <img className={classes.imageSwordDetails} src={soul_detail_fire} />
+                <img id="soul_main" className={classes.imageSwordDetails} src={soul_detail_fire} />
               </div>
             </div>
         </div>

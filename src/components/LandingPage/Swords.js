@@ -39,6 +39,13 @@ import sword_farme_water from '../../assets/sword_farme_water.png';
 import sword_farme_fire from '../../assets/sword_farme_fire.png';
 import sword_farme_earth from '../../assets/sword_farme_earth.png';
 import transitions from '@material-ui/core/styles/transitions';
+import sword_m_fire from '../../assets/sword_m_fire.gif';
+import sword_m_metal from '../../assets/sword_m_metal.gif';
+import sword_m_water from '../../assets/sword_m_water.gif';
+import sword_m_wood from '../../assets/sword_m_wood.gif';
+import sword_m_earth from '../../assets/sword_m_earth.gif';
+
+
 
 const useStyles = makeStyles((theme) => ({
   background: {
@@ -68,6 +75,8 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 10,
     width: 50,
     [theme.breakpoints.down('md')]: {
+      width: 25,
+      marginLeft: 5,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -206,9 +215,14 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'contain',
     position: 'relative',
     [theme.breakpoints.down('md')]: {
+      height: 50,
+      width: 45,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
+      '&:hover': {
+        transform: "scale(1.05)"
+      },
     },
     '&:hover': {
       //backgroundColor: '#17E3E0',
@@ -230,7 +244,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   frameCardDetails: {
-    background: `url(${sword_bg_detail})`,
+    //background: `url(${sword_bg_detail})`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     height: 450,
@@ -238,6 +252,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'contain',
     position: 'relative',
     [theme.breakpoints.down('md')]: {
+      height: 300,
+    // width: 250,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -315,7 +331,13 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
   },
   attribue_h1: {
-    color: 'white'
+    color: 'white',
+    [theme.breakpoints.down('md')]: {
+      fontSize:10,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
   },
   attribue_text: {
     fontFamily: 'Exo',
@@ -326,6 +348,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "CenterFocusStrong",
     textTransform: "capitalize",
     color: "#FCA733",
+    [theme.breakpoints.down('md')]: {
+      fontSize:25,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
   },
   attribue_story: {
     fontFamily: 'Trajan Pro',
@@ -336,6 +364,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'right',
     letterSpacing: '0.05em',
     color: '#FFFFFF',
+    [theme.breakpoints.down('md')]: {
+      fontSize:10,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
   },
   frameText: {
     position: 'relative',
@@ -372,7 +406,10 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 20,
     top: 1,
     width: 50,
+    height: 50,
     [theme.breakpoints.down('md')]: {
+      width: 25,
+      height:25,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -402,14 +439,14 @@ const useStyles = makeStyles((theme) => ({
   },
   imageSwordDetails: {
     marginTop: 0,
-    marginLeft: 10,
-    // display: 'flex',
     backgroundPosition: 'center',
-    // width: 30,
+    height: 400,
     [theme.breakpoints.down('md')]: {
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
+      height: 200,
+      
+      // display: 'flex',
+      // flexDirection: 'column',
+       justifyContent: 'top',
     },
   },
   subheading: {
@@ -444,12 +481,15 @@ const Swords = () => {
       items: [
         {
           id: '1',
-          name: 'Metal',
+          name: 'Backbiter',
           image: soul_metal,
           active: true,
           imageDetailBG: sword_bg_metal,
           imageClass:soul_metal,
           imageClassCounter:soul_poison,
+          backgroundMain : sword_farme_metal,
+          textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
+          img_m:sword_m_metal,
           frameCardBottom: {
             backgroundRepeat: 'no-repeat',
             height: 300,
@@ -461,12 +501,15 @@ const Swords = () => {
         },
         {
           id: '2',
-          name: 'Posion',
+          name: 'Grimsever',
           image: soul_poison,
           active: true,
           imageDetailBG: sword_bg_wood,
           imageClass:soul_poison,
           imageClassCounter:soul_earth,
+          backgroundMain : sword_farme_wood,
+          textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
+          img_m:sword_m_wood,
           frameCardBottom: {
             backgroundRepeat: 'no-repeat',
             height: 300,
@@ -477,12 +520,15 @@ const Swords = () => {
         },
         {
           id: '3',
-          name: 'Fire',
+          name: 'Tizona',
           image: soul_fire,
           active: true,
           imageDetailBG: sword_bg_fire,
           imageClass:soul_fire,
           imageClassCounter:soul_metal,
+          backgroundMain : sword_farme_fire,
+          textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
+          img_m:sword_m_fire,
           frameCardBottom: {
             backgroundRepeat: 'no-repeat',
             height: 300,
@@ -494,12 +540,15 @@ const Swords = () => {
         },
         {
           id: '4',
-          name: 'Water',
+          name: 'Shisui',
           image: soul_water,
           active: true,
           imageDetailBG: sword_bg_water,
           imageClass:soul_water,
           imageClassCounter:soul_fire,
+          backgroundMain : sword_farme_water,
+          textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
+          img_m:sword_m_water,
           frameCardBottom: {
             backgroundRepeat: 'no-repeat',
             height: 300,
@@ -511,12 +560,15 @@ const Swords = () => {
         },
         {
           id: '5',
-          name: 'Earth',
+          name: 'Caliburn',
           image: soul_earth,
           active: true,
           imageDetailBG: sword_bg_earth,
           imageClass:soul_earth,
           imageClassCounter:soul_water,
+          backgroundMain : sword_farme_earth,
+          textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
+          img_m:sword_m_earth,
           frameCardBottom: {
             backgroundRepeat: 'no-repeat',
             height: 300,
@@ -532,26 +584,26 @@ const Swords = () => {
   const [activeLinkId, setActiveLinkId] = React.useState(false);
   const [active, setActive] = React.useState(false);
   const [visible, setVisible] = React.useState(true);
-  const createCss = (id: number, bgI: string, bgI_df: string, imgClass: String, imgClassCounter) => {
-    // if(bgI === undefined){
-    //   bgI = bgI_df;
-    // }
-    // if (id === active) {
-    //   console.log("  isActive  " + activeLinkId + " bgI:   " + bgI);
-    //   return {
-    //     backgroundImage: `url(${bgI})`,
-    //     backgroundSize: "cover",
-    //     backgroundRepeat: "no-repeat"
-    //   };
-    //  } else return {};
+  const createCss = (id: number, bgI: string, bgI_df: string, imgClass: String, imgClassCounter, bgMainI: string, text_m: string, text_d: string, img_m:string) => {
+
     document.getElementById("sword_bg_master").style.backgroundImage = `url(${bgI})`;
-    // var img = document.createElement('sword_img_class');
-    // img.src = `url(${imgClass})`;
-    // document.getElementById('sword_img_class').appendChild(img);
+    let i_imgClass = document.querySelector("#sword_img_class");
+    i_imgClass.setAttribute("src", imgClass)
 
+    let i_imgClassCounter = document.querySelector("#sword_img_class_counter");
+    i_imgClassCounter.setAttribute("src", imgClassCounter)
+    
+    //document.getElementById("backgroundFrame").style.backgroundImage = `url(${bgMainI})`;
+    
+    document.getElementById("text_main").innerHTML = text_m;  
+    document.getElementById("text_detail").innerHTML = text_d;  
 
-    // document.getElementById("sword_img_class").style.backgroundImage = `url(${imgClass})`;
-    // document.getElementById("sword_img_class_counter").style.backgroundImage = `url(${imgClassCounter})`;
+    let i_img_main_sword = document.querySelector("#img_main_sword");
+    i_img_main_sword.setAttribute("src", img_m)
+    
+
+    //backgroundFrame  
+
 
   };
 
@@ -572,6 +624,10 @@ const Swords = () => {
                                                                                                   master.items.bg_defautl,
                                                                                                   item.imageClass, 
                                                                                                   item.imageClassCounter, 
+                                                                                                  item.backgroundMain,
+                                                                                                  item.name,
+                                                                                                  item.textDetail,
+                                                                                                  item.img_m
                                                                                                 ) }}  >
                       <div className={classes.frameImage}>
                         <img className={classes.image} src={item.image} />
@@ -610,9 +666,9 @@ const Swords = () => {
               </div>
               <div className={classes.itemMaster}>
                 <div className={classes.itemsContainer}>
-                  <div className={classes.frameCardDetails}>
+                  <div  className={classes.frameCardDetails}>
                     <div className={classes.frameImageDetails}>
-                      <img className={classes.imageSwordDetails} />
+                      <img id="img_main_sword" className={classes.imageSwordDetails} src={sword_m_fire} />
                     </div>
                   </div>
                 </div>
@@ -621,9 +677,9 @@ const Swords = () => {
 
               <div className={classes.itemMaster}>
                 <div className={classes.itemDetailsIcon}>
-                  <h1 className={classes.attribue_text}> <span>Tizona</span></h1>
+                  <h1 id="text_main" className={classes.attribue_text}><span>Tizona</span></h1>
                 </div>
-                <p className={classes.attribue_story}>
+                <p id="text_detail" className={classes.attribue_story}>
                   There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and  Each SWORD will become unique and worthwhile in your collection.
                 </p>
               </div>
