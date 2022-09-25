@@ -8,6 +8,9 @@ import mode_battle from '../../assets/mode_battle.png';
 import mode_boss from '../../assets/mode_boss.png';
 import mode_stacking from '../../assets/mode_stacking.png';
 import mode_combat from '../../assets/mode_combat.png';
+import cardFrame from '../../assets/mode_bg_detail.png';
+
+
 const useStyles = makeStyles((theme) => ({
   background: {
     padding: 80,
@@ -78,18 +81,16 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: 25,
     },
   },
-  image: {
-    // width:"60%",
-    display:'flex',
-    flex:'2',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+  imageD: {
+    marginTop: 4,
+    marginLeft: 5,
+    width: 238,
+    
     [theme.breakpoints.down('md')]: {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
-      padding:'10px'
+      // padding:'10px'
     },
   },
   mode_img:{
@@ -128,14 +129,21 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.pbr.textPrimary,
   },
   frameImage: {
-    // background: `url(${cardFrame})`,
+    background: `url(${cardFrame})`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
-    // position: 'absolute',
-    // top: '8%',
-    // left: '20%',
-    // width: 170,
+    height:370,
+    width:250,
+    position: 'relative',
+    //left:"3%",
+    //top:"8%",
+    // top: '5%',
+    // left: '10%',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
     '&:hover': {
         transform: "scale(1.05)",
         color: '#FFA800',
@@ -144,12 +152,29 @@ const useStyles = makeStyles((theme) => ({
     '&:disabled': {
         backgroundColor: "#A7A9AC",
     },
-
     
-
-    [theme.breakpoints.down('md')]: {
-      width: 160
+  },
+  frameCard: {
+    // background: `url(${cardFrame})`,
+    // backgroundRepeat: 'no-repeat',
+    // backgroundPosition: 'center',
+    // backgroundSize: 'cover',
+    position: 'relative',
+    '&:hover': {
+      transform: "scale(1.05)"
     },
+    [theme.breakpoints.down('md')]: {
+      // height: 40,
+      // width: 45,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
+  },
+  
+
+  [theme.breakpoints.down('md')]: {
+    width: 160
   },
 }));
 
@@ -231,16 +256,15 @@ const Feature = () => {
       <div className={classes.itemsContainer}>
           {items.map((item) => {
             return (
-              <div key={item.id} className={classes.frameCard}>
-                <div className={classes.frameImage}>
-                  <img className={classes.image} src={item.image} />
+                <div key={item.id} className={classes.frameCard}>
+                  <div className={classes.frameImage}>
+                    <img className={classes.imageD} src={item.image} />
+                  </div>
                 </div>
-              </div>
             );
           })}
       </div>
     </div>
   );
 };
-
 export default Feature;

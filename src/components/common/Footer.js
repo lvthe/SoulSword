@@ -25,6 +25,7 @@ import footer from '../../assets/Footer.png';
 import footer_bg from '../../assets/footer_bg.png';
 import footer_logo from '../../assets/footer_logo.png';
 import footer_button from '../../assets/footer_button.png';
+import Tumblr from '../../assets/Tumblr.png'; 
 const useStyles = makeStyles((theme) => ({
 	background: {
 		// marginTop: 150,
@@ -109,7 +110,14 @@ const useStyles = makeStyles((theme) => ({
 		borderTop:"0.721511px solid #C6C6C6"
 	},
 	footer: {
-		width: "100%"
+		width: "100%",
+		[theme.breakpoints.down('md')]: {
+			paddingTop:50,
+			width:"50%",
+			display: 'flex',
+			flexDirection: 'column',
+			justifyContent: 'center',
+		  },
 	},
 	footer_button: {
 		paddingTop: 10,
@@ -286,20 +294,30 @@ const Footer = () => {
 				<div>
 					<h1> QUICK LINK </h1>
 					<div className={classes.itemsContainer}></div>
-					<List dense={dense}>
-						{generate(
-							<ListItem>
-								<ListItemIcon>
-									<FolderIcon />
-								</ListItemIcon>
-								<ListItemText
-									primary="Single-line item"
-									secondary={secondary ? 'Secondary text' : null}
-								/>
-							</ListItem>,
-						)}
-					</List>
-
+					
+					
+					<div className={classes.itemsContainer}>
+					<div>
+						<p className={classes.para}>
+							<ul className={classes.frameList}>
+								<li>Level: 1 / 5</li>
+								<li>Base Damage: 36</li>
+								<li>Bonus: +5%</li>
+								<li>Accuracy: +3</li>
+							</ul>
+						</p>
+					</div>
+					<div>
+						<p className={classes.para}>
+							<ul className={classes.frameList}>
+								<li>Level: 1 / 5</li>
+								<li>Base Damage: 36</li>
+								<li>Bonus: +5%</li>
+								<li>Accuracy: +3</li>
+							</ul>
+						</p>
+					</div>
+					</div>
 					<div className={classes.itemsContainer}></div>
 				</div>
 				<div>
@@ -325,56 +343,20 @@ const Footer = () => {
 							</Tooltip>
 						</div>
 						<div >
-							<Tooltip title="Instagram">
-								<a href="https://www.instagram.com/SoulsWordnft/">
-									<IconButton aria-label="Instagram" className={classes.iconButton}>
-										<Instagram className={classes.icon} />
-									</IconButton>
-								</a>
-							</Tooltip>
-						</div>
-						<div >
-							<Tooltip title="Github">
-								<a href="https://github.com/SoulsWord">
-									<IconButton aria-label="Github" className={classes.iconButton}>
-										<GitHub className={classes.icon} />
-									</IconButton>
-								</a>
-							</Tooltip>
-						</div>
-
-						<div >
-							<Tooltip title="Discord">
+							<Tooltip title="Tumblr">
 								<a href="https://discord.gg/NQFjXkMqgk">
-									<IconButton aria-label="Discord" className={classes.iconButton}>
+									<IconButton aria-label="Tumblr" className={classes.iconButton}>
 										<img
-											src="assets/discord.png"
+											src={Tumblr}
 											height="30px"
 											width="30px"
 											style={{ opacity: 0.75, marginTop: 2 }}
-											alt="discord"
+											alt="Tumblr"
 										/>
 									</IconButton>
 								</a>
 							</Tooltip>
 						</div>
-
-						<div >
-							<Tooltip title="Medium">
-								<a href="https://medium.com/@SoulsWord">
-									<IconButton aria-label="Discord" className={classes.iconButton}>
-										<img
-											src="assets/medium.png"
-											height="30px"
-											width="30px"
-											style={{ opacity: 0.75, marginTop: 2 }}
-											alt="medium"
-										/>
-									</IconButton>
-								</a>
-							</Tooltip>
-						</div>
-
 						<div >
 							<Tooltip title="Email">
 								<a href="mailto:hello@SoulsWord.com">

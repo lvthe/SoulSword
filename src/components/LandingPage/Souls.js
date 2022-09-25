@@ -25,6 +25,8 @@ import soul_m_fire from '../../assets/soul_m_fire.gif';
 import soul_m_earth from '../../assets/soul_m_earth.gif';
 import soul_m_water from '../../assets/soul_m_water.gif';
 import soul_m_wood from '../../assets/soul_m_wood.gif';
+
+import soul_content_text from '../../assets/soul_content_text.png';
 const useStyles = makeStyles((theme) => ({
   background: {
     padding: 80,
@@ -53,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 0,
     width: 100,
     [theme.breakpoints.down('md')]: {
+      width:50,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -170,9 +173,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingLeft: "8vw",
-    paddingTop: "3vh",
+    // paddingLeft: "8vw",
+    // paddingTop: "3vh",
     [theme.breakpoints.down('md')]: {
+      width:"100%",
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -204,8 +208,8 @@ const useStyles = makeStyles((theme) => ({
       transform: "scale(1.05)"
     },
     [theme.breakpoints.down('md')]: {
-      // height: 40,
-      // width: 45,
+      //  height: 40,
+      //  width: 45,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -223,6 +227,8 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     display: 'flex',
     [theme.breakpoints.down('md')]: {
+      height: 150,
+      width: 100,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -233,6 +239,7 @@ const useStyles = makeStyles((theme) => ({
     top: '5%',
     left: '10%',
     [theme.breakpoints.down('md')]: {
+      // width:45,
       flexDirection: 'column',
       justifyContent: 'center',
     },
@@ -288,7 +295,12 @@ const useStyles = makeStyles((theme) => ({
 
   },
   attribue_h1: {
-    color: 'white'
+    color: 'white',
+    [theme.breakpoints.down('md')]: {
+      // marginTop:30,
+      fontSize:"12px",
+      textAlign:"left"
+    },
   },
    attribue_text: {
     fontFamily: 'Exo',
@@ -302,7 +314,7 @@ const useStyles = makeStyles((theme) => ({
     margin:0,
     [theme.breakpoints.down('md')]: {
       marginTop:10,
-      fontSize:"25px",
+      fontSize:"15px",
       textAlign:"right"
     },
   },
@@ -315,6 +327,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'right',
     letterSpacing: '0.05em',
     color: '#FFFFFF',
+    [theme.breakpoints.down('md')]: {
+      marginTop:10,
+      fontSize:"10px",
+      textAlign:"right"
+    },
   },
   frameText: {
     position: 'relative',
@@ -350,8 +367,10 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 10,
     marginRight: 20,
     width: 40,
-    height:40,
+    // height:40,
     [theme.breakpoints.down('md')]: {
+      width:20,
+      height:20,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -392,6 +411,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     [theme.breakpoints.down('md')]: {
+      width:85,
+      height: 135,
       display: 'flex',
        flexDirection: 'column',
       justifyContent: 'center',
@@ -559,24 +580,23 @@ const Swords = () => {
   return (
 
     <div className={classes.background}>
-      <div className={classes.itemsContainerSwordBar} >
+       <div className={classes.itemsContainer}> 
+        <img className={classes.Sword_main} src={soul_content_text} />
+      </div>
+      {/* <div className={classes.itemsContainerSwordBar} >
         <h2 className={classes.text_h}>SOUL</h2>
       </div>
-      {/* <div className={classes.itemsContainer}> 
-        <img className={classes.Sword_main} src={Sword_main} />
-      </div> */}
+     
       <img className={classes.sword_bar} src={Sword_bar} />
       <div className={classes.heading}>
         <p>
           There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.
         </p>
-      </div>
+      </div> */}
       <div className={classes.itemsContainer}>
         {items.map((item) => {
           return (
-            <div  key={item.id} className={classes.frameCard}   onClick={() => { createCss(  item.imageDetail
-                                                                                      
-                                                                                          ) }}  >
+            <div  key={item.id} className={classes.frameCard}   onClick={() => { createCss(  item.imageDetail) }}  >
               <div className={classes.frameImage}>
                 <img  className={classes.image} src={item.image}  />
               </div>

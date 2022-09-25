@@ -16,7 +16,6 @@ import sword_bg_earth from '../../assets/sword_bg_earth.png';
 import background_sword from '../../assets/background_sword.png';
 import Sword_bg from '../../assets/Sword_bg.png';
 import Sword_main from '../../assets/Sword_main.png';
-import Sword_bar from '../../assets/Sword_bar.png';
 import soul_fire from '../../assets/sword_soul_fire.png';
 import soul_metal from '../../assets/sword_soul_metal.png';
 import soul_earth from '../../assets/sword_soul_earth.png';
@@ -31,21 +30,22 @@ import sword_effect_yellow from '../../assets/sword_effect_yellow.png';
 import sword_effect_blue from '../../assets/sword_effect_blue.png';
 import sword_effect_violet from '../../assets/sword_effect_violet.png';
 import sword_bg_detail from '../../assets/sword_bg_detail.png';
-import sword_detai_icon_fire from '../../assets/sword_detai_icon_fire.png';
-import { CenterFocusStrong } from '@material-ui/icons';
 import sword_farme_metal from '../../assets/sword_farme_metal.png';
 import sword_farme_wood from '../../assets/sword_farme_wood.png';
 import sword_farme_water from '../../assets/sword_farme_water.png';
 import sword_farme_fire from '../../assets/sword_farme_fire.png';
 import sword_farme_earth from '../../assets/sword_farme_earth.png';
-import transitions from '@material-ui/core/styles/transitions';
 import sword_m_fire from '../../assets/sword_m_fire.gif';
 import sword_m_metal from '../../assets/sword_m_metal.gif';
 import sword_m_water from '../../assets/sword_m_water.gif';
 import sword_m_wood from '../../assets/sword_m_wood.gif';
 import sword_m_earth from '../../assets/sword_m_earth.gif';
-
-
+import sword_bg_soul_ac from '../../assets/sword_bg_soul_ac.png';
+import sword_d_fire from '../../assets/sword_d_fire.gif';
+import sword_d_metal from '../../assets/sword_d_metal.gif';
+import sword_d_water from '../../assets/sword_d_water.gif';
+import sword_d_wood from '../../assets/sword_d_wood.gif';
+import sword_d_earth from '../../assets/sword_d_earth.gif';
 
 const useStyles = makeStyles((theme) => ({
   background: {
@@ -73,10 +73,28 @@ const useStyles = makeStyles((theme) => ({
   image: {
     marginTop: 0,
     marginLeft: 10,
-    width: 50,
+    width: 75,
     [theme.breakpoints.down('md')]: {
       width: 25,
-      marginLeft: 5,
+      marginLeft: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
+
+  },
+  imageD: {
+    marginTop: 0,
+    marginLeft: 10,
+    width: 85,
+    height: 140,
+    //top:"5%",
+    '&:hover': {
+      transform: "scale(1.05)",
+    },
+    [theme.breakpoints.down('md')]: {
+       width: 55,
+       height: 89,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -205,39 +223,49 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   frameCard: {
-    background: `url(${cardFrame})`,
+    //background: `url(${cardFrame})`,
     backgroundRepeat: 'no-repeat',
     bzackgroundPosition: 'bottom',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     height: 80,
     width: 90,
+    //left: "58%",
     backgroundSize: 'contain',
     position: 'relative',
     [theme.breakpoints.down('md')]: {
-      height: 50,
-      width: 45,
+      height: 27,
+      width: 25,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       '&:hover': {
-        transform: "scale(1.05)"
+        transform: "scale(1.05)",
+        backgroundImage: `url(${sword_bg_soul_ac})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
       },
     },
     '&:hover': {
-      //backgroundColor: '#17E3E0',
-      // background-color: ${theme.palette.secondary.main},
-      transform: "scale(1.3)"
+      transform: "scale(1.3)",
+      backgroundImage: `url(${sword_bg_soul_ac})`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
     },
   },
   frameCardBottom: {
-    // background: `url(${sword_bg_detail})`,
-    backgroundRepeat: 'no-repeat',
-    height: 300,
-    width: 250,
-    backgroundSize: 'contain',
-    position: 'relative',
+     background: `url(${sword_bg_detail})`,
+     backgroundRepeat: 'no-repeat',
+     backgroundPosition: 'center',
+     backgroundSize: 'cover',
+     height: 200,
+     width: 100,
+     backgroundSize: 'contain',
+     position: 'relative',
     [theme.breakpoints.down('md')]: {
+      height: 100,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -261,14 +289,29 @@ const useStyles = makeStyles((theme) => ({
   },
   frameImage: {
     position: 'absolute',
-    top: '5%',
-    left: '10%',
+     top: '5%',
+     left: '-2%',
     [theme.breakpoints.down('md')]: {
+      with:25,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
     },
   },
+  frameImageD: {
+    position: 'absolute',
+     top: '14%',
+     left: '-2%',
+     
+    [theme.breakpoints.down('md')]: {
+      top: '6%',
+      left: '12%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
+  },
+
   frameImageBottom: {
     position: 'absolute',
     top: '5%',
@@ -480,7 +523,7 @@ const Swords = () => {
       bg_defautl: background_sword,
       items: [
         {
-          id: '1',
+          id: 'btn-metal',
           name: 'Backbiter',
           image: soul_metal,
           active: true,
@@ -490,17 +533,11 @@ const Swords = () => {
           backgroundMain : sword_farme_metal,
           textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
           img_m:sword_m_metal,
-          frameCardBottom: {
-            backgroundRepeat: 'no-repeat',
-            height: 300,
-            width: 250,
-            backgroundSize: 'contain',
-            position: 'relative',
-
-          },
+          img_sword_d:sword_d_metal,
+          img_farme:sword_bg_detail
         },
         {
-          id: '2',
+          id: 'btn-wood',
           name: 'Grimsever',
           image: soul_poison,
           active: true,
@@ -510,16 +547,12 @@ const Swords = () => {
           backgroundMain : sword_farme_wood,
           textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
           img_m:sword_m_wood,
-          frameCardBottom: {
-            backgroundRepeat: 'no-repeat',
-            height: 300,
-            width: 250,
-            backgroundSize: 'contain',
-            position: 'relative',
-          },
+          img_sword_d:sword_d_wood,
+          img_farme:sword_bg_detail
+          
         },
         {
-          id: '3',
+          id: 'btn-fire',
           name: 'Tizona',
           image: soul_fire,
           active: true,
@@ -529,17 +562,11 @@ const Swords = () => {
           backgroundMain : sword_farme_fire,
           textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
           img_m:sword_m_fire,
-          frameCardBottom: {
-            backgroundRepeat: 'no-repeat',
-            height: 300,
-            width: 250,
-            backgroundSize: 'contain',
-            position: 'relative',
-
-          },
+          img_sword_d:sword_d_fire,
+          img_farme:sword_bg_detail
         },
         {
-          id: '4',
+          id: 'btn-water',
           name: 'Shisui',
           image: soul_water,
           active: true,
@@ -549,17 +576,12 @@ const Swords = () => {
           backgroundMain : sword_farme_water,
           textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
           img_m:sword_m_water,
-          frameCardBottom: {
-            backgroundRepeat: 'no-repeat',
-            height: 300,
-            width: 250,
-            backgroundSize: 'contain',
-            position: 'relative',
-
-          },
+          img_sword_d:sword_d_water,
+          img_farme:sword_bg_detail
+          
         },
         {
-          id: '5',
+          id: 'btn-earth',
           name: 'Caliburn',
           image: soul_earth,
           active: true,
@@ -569,13 +591,9 @@ const Swords = () => {
           backgroundMain : sword_farme_earth,
           textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
           img_m:sword_m_earth,
-          frameCardBottom: {
-            backgroundRepeat: 'no-repeat',
-            height: 300,
-            width: 250,
-            backgroundSize: 'contain',
-            position: 'relative',
-          },
+          img_sword_d:sword_d_earth,
+          img_farme:sword_bg_detail
+          
         }
       ]
     }
@@ -584,6 +602,7 @@ const Swords = () => {
   const [activeLinkId, setActiveLinkId] = React.useState(false);
   const [active, setActive] = React.useState(false);
   const [visible, setVisible] = React.useState(true);
+  const [hover, setHover] = React.useState(false);
   const createCss = (id: number, bgI: string, bgI_df: string, imgClass: String, imgClassCounter, bgMainI: string, text_m: string, text_d: string, img_m:string) => {
 
     document.getElementById("sword_bg_master").style.backgroundImage = `url(${bgI})`;
@@ -601,6 +620,9 @@ const Swords = () => {
     let i_img_main_sword = document.querySelector("#img_main_sword");
     i_img_main_sword.setAttribute("src", img_m)
     
+    console.log("id " , id );
+    const btn = document.querySelector("#btn-metal");
+			btn.classList.add('hover');
 
     //backgroundFrame  
 
@@ -629,7 +651,7 @@ const Swords = () => {
                                                                                                   item.textDetail,
                                                                                                   item.img_m
                                                                                                 ) }}  >
-                      <div className={classes.frameImage}>
+                      <div id={item.id} className={classes.frameImage}>
                         <img className={classes.image} src={item.image} />
                       </div>
                     </div>
@@ -653,10 +675,10 @@ const Swords = () => {
                       <img className={classes.imageDetails} src={sword_detail_dps} /><p className={classes.attribue_h1}>Damage</p>
                     </div>
                     <div className={classes.itemDetailsIcon}>
-                      <img className={classes.imageDetails} src={sword_detail_end} /><p className={classes.attribue_h1}>Endurace</p>
+                      <img className={classes.imageDetails} src={sword_detail_end} /><p className={classes.attribue_h1}>Endurance</p>
                     </div >
                     <div className={classes.itemDetailsIcon}>
-                      <img className={classes.imageDetails} src={sword_detail_bonuns} /><p className={classes.attribue_h1}>Bonus Rewara</p>
+                      <img className={classes.imageDetails} src={sword_detail_bonuns} /><p className={classes.attribue_h1}>Bonus Reward</p>
                     </div>
                     <div className={classes.itemDetailsIcon}>
                       <img className={classes.imageDetails} src={sword_detail_dpscounter} /><p className={classes.attribue_h1}>Damage Counter</p>
@@ -684,113 +706,32 @@ const Swords = () => {
                 </p>
               </div>
             </div>
+            <div className={classes.itemsContainer}>
+              {master.items.map((item) => {
+                return (
+                  <div className={classes.itemsContainer}>
+                    <div key={item.id} className={classes.frameCardBottom} onClick={() => { createCss(  item.id, 
+                                                                                                  item.imageDetailBG, 
+                                                                                                  master.items.bg_defautl,
+                                                                                                  item.imageClass, 
+                                                                                                  item.imageClassCounter, 
+                                                                                                  item.backgroundMain,
+                                                                                                  item.name,
+                                                                                                  item.textDetail,
+                                                                                                  item.img_m
+                                                                                                ) }}>
+                      <div className={classes.frameImageD}>
+                        <img className={classes.imageD} src={item.img_sword_d} />
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>    
           </div>
-
         );
       })}
     </div>
-
-
-
-
-
-
-
-
-    // <div className={classes.background}>
-    //   <div className={classes.itemsContainer}>
-    //     <img className={classes.Sword_main} src={Sword_main} />
-    //   </div>
-    //   <div className={classes.itemsContainer}>
-    //     {items.map((item) => {
-    //       return (
-    //         <div key={item.id} className={classes.frameCard} onClick={() => setActiveLinkId(item.id)} style={createCss(item.id, item.imageDetail)} >
-    //           <div className={classes.frameImage}>
-    //             <img className={classes.image} src={item.image} />
-    //           </div>
-    //         </div>
-    //       );
-    //     })}
-    //   </div>
-    //   <div className={classes.itemsContainer}>
-    //     <div className={classes.itemMaster}>
-    //       <div className={classes.itemsContainer}>
-    //         <div>
-    //           <h1 className={classes.attribue_h1}> <span>Attribues</span></h1>
-    //           <div className={classes.itemDetailsIcon}>
-    //             <img className={classes.imageDetails} src={soul_fire} /><p className={classes.attribue_h1}>Class</p>
-    //           </div>
-    //           <div className={classes.itemDetailsIcon}>
-    //             <img className={classes.imageDetails} src={soul_metal} /><p className={classes.attribue_h1}>Class Counter</p>
-    //           </div>
-    //           <h1 className={classes.attribue_h1}> <span>Stength state:</span></h1>
-    //           <div className={classes.itemDetailsIcon}>
-    //             <img className={classes.imageDetails} src={sword_detail_dps} /><p className={classes.attribue_h1}>Damage</p>
-    //           </div>
-    //           <div className={classes.itemDetailsIcon}>
-    //             <img className={classes.imageDetails} src={sword_detail_end} /><p className={classes.attribue_h1}>Endurace</p>
-    //           </div >
-    //           <div className={classes.itemDetailsIcon}>
-    //             <img className={classes.imageDetails} src={sword_detail_bonuns} /><p className={classes.attribue_h1}>Bonus Rewara</p>
-    //           </div>
-    //           <div className={classes.itemDetailsIcon}>
-    //             <img className={classes.imageDetails} src={sword_detail_dpscounter} /><p className={classes.attribue_h1}>Damage Counter</p>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //     <div className={classes.itemMaster}>
-    //       <div className={classes.itemsContainer}>
-    //         <div className={classes.frameCardDetails}>
-    //           <div className={classes.frameImageDetails}>
-    //             <img className={classes.imageSwordDetails} />
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </div>
-
-
-    //     <div className={classes.itemMaster}>
-    //       <div className={classes.itemDetailsIcon}>
-    //         <h1 className={classes.attribue_text}> <span>Tizona</span></h1>
-    //       </div>
-    //       <p className={classes.attribue_story}>
-    //         There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and  Each SWORD will become unique and worthwhile in your collection.
-    //       </p>
-    //     </div>
-    //   </div>
-    //   <div className={classes.itemsContainer}>
-    //     <List
-    //       component="nav"
-    //       aria-labelledby="main-navigation"
-    //       className={classes.navDisplayFlex}
-    //     >
-    //       {navLinks.map(({ title, path, bgI, id }) => (
-    //         <Link
-    //           to={path}
-    //           key={title}
-    //           className={classes.linkText}
-    //           onClick={() => setActiveLinkId(id)}
-    //           style={createCss(id, bgI)}
-    //         >
-    //           <ListItem disableGutters={true}>
-    //             <ListItemText primary={title} />
-    //           </ListItem>
-    //         </Link>
-    //       ))}
-    //     </List>
-    //     {/* {items.map((item) => {
-    //       return (
-    //         <div key={item.id} className={item.frameCardBottom}>
-    //           <div className={classes.frameImageBottom}>
-    //             <img className={classes.imageDetailBottom} src={item.imageDetail} />
-    //             <img className={classes.imageDetailBottom} />
-    //           </div>
-    //         </div>
-    //       );
-    //     })} */}
-    //   </div>
-    // </div>
   );
 };
 
