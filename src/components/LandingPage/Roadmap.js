@@ -150,16 +150,47 @@ const useStyles = makeStyles((theme) => ({
       marginRight: 0,
     },
   },
+  // itemsContainer: {
+  //   display: 'flex',
+  //   justifyContent: 'space-around',
+  //   alignItems: 'center',
+  //   width: '100%',
+  //   marginTop: 20,
+  //   [theme.breakpoints.down('md')]: {
+  //     display: 'flex',
+  //     flexDirection: 'column',
+  //     justifyContent: 'center',
+  //   },
+  // },
   itemsContainer: {
     display: 'flex',
-    justifyContent: 'space-around',
-    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    alignItems: 'flex-start',
+    paddingTop: 30,
+    flexWrap: 'wrap',
+  },
+
+  itemsContainer_text_l:{
+    display: 'flex',
+    justifyContent: 'flex-start',
+   
     width: '100%',
-    marginTop: 20,
+ 
     [theme.breakpoints.down('md')]: {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
+    },
+  },
+  itemsContainer_text_r:{
+    display: 'flex',
+    justifyContent: 'flex-end',
+    width: '100%',
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-end',
+      textAlign:"right"
     },
   },
   body: {
@@ -168,7 +199,21 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     height: 700,
-    width: 550
+    width: 550,
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-around',
+      width: 400,
+    },
+  },
+  body_d: {
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      // width: 400,
+    },
   },
   road_img: {
     [theme.breakpoints.down('md')]: {
@@ -184,9 +229,15 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     position: "relative",
     // justifyContent: 'flex-start',
-    right: "18%",
+    right: "22%",
     paddingTop: 35,
     height: 100,
+    [theme.breakpoints.down('md')]: {
+      // right: "18%",
+      position: "relative",
+      justifyContent: 'center',
+    },
+  
 
   },
   line2: {
@@ -195,9 +246,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     position: "relative",
     // justifyContent: 'flex-start',
-    left: "18%",
-    paddingTop: 20,
-    // height: 100,
+    left: "21%",
 
   },
   line1_text: {
@@ -210,20 +259,80 @@ const useStyles = makeStyles((theme) => ({
     verticalAlign: "top",
     letterSpacing: "5%",
     fill: "Solid",
-    color:  "#FF8A00"
+    color:  "#FF8A00",
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      fontSize: "15px",
+    },
+
+  },
+  line2_text: {
+    margin: 0,
+    fontFamily: "Trajan Pro",
+    fontStyle: "Bold",
+    fontSize: "32px",
+    lineHeight: "50px",
+    align: "center",
+    verticalAlign: "top",
+    letterSpacing: "5%",
+    fill: "Solid",
+    color:  "#FF8A00",
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      fontSize: "15px",
+    },
+
+  },
+  line1_d: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    position: "relative",
+    display: 'flex',
+    right: "18%"
+  },
+  line1_d_text: {
+    fontFamily: "Exo 2",
+    fontStyle: "Medium",
+    fontSize: "16px",
+    lineHeight: "29px",
+    lineHeight: "183%",
+    align: "left",
+    verticalAlign: "Top",
+    letterSpacing: "5%",
+    color:"#FFFFFF",
+    margin:0,
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      fontSize: "10px",
+      margin:0,
+    },
+    
   },
   line1_space: {
     width: 200
   },
+  line2_img:{
+    [theme.breakpoints.down('md')]: {
+      width:150,
+    },
+  },
+
   line3: {
     display: 'flex',
     justifyContent: 'space-around',
     alignItems: 'center',
     position: "relative",
     // justifyContent: 'flex-start',
-    right: "18%",
-    paddingTop: 80,
-    height: 100,
+    right: "22%",
+    paddingTop: 50,
+    // height: 100,
   },
   line4: {
     display: 'flex',
@@ -231,10 +340,15 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     position: "relative",
     // justifyContent: 'flex-start',
-    left: "15%",
-    paddingTop: 60,
+    left: "18%",
+    paddingTop: 40,
     // height: 100,
-
+    [theme.breakpoints.down('md')]: {
+      // display: 'flex',
+      // flexDirection: 'column',
+      // justifyContent: 'flex-start',
+      margin:0,
+    },
   },
 }));
 
@@ -289,42 +403,61 @@ const Roadmap = () => {
       </div>
       <div className={classes.itemsContainer}>
         <div className={classes.body}>
-          <div className={classes.itemsContainer}>
-            <div className={classes.line1} >
-              <h1 className={classes.line1_text}>PHASE 1 </h1> <img src={line1} />
-              
-            </div>
-            <div>
-              <h1>&ensp;</h1>
-            </div>
-          </div>
-          <div className={classes.itemsContainer}>
-            <div>
-              <h1>&ensp;</h1>
-            </div>
-            <div className={classes.line2}>
-              <img src={line2} />  <h1 className={classes.line1_text}>PHASE 2 </h1>
-            </div>
-          </div>
-          <div>
+          <div className={classes.body_d}>
             <div className={classes.itemsContainer}>
-              <div className={classes.line3}>
-                <h1 className={classes.line1_text}>PHASE 3</h1> <img src={line3} />
+              <div className={classes.line1} >
+                <h1 className={classes.line1_text}>PHASE 1 </h1> <img src={line1} className={classes.line2_img } />
               </div>
               <div>
                 <h1>&ensp;</h1>
               </div>
             </div>
-
+            <div className={classes.itemsContainer_text_l}>
+               <h1 className={classes.line1_d_text}>Lorem ipsum dolor sit </h1>
+            </div>
           </div>
+
+          <div>
+            <div className={classes.itemsContainer}>
+              <div>
+                <h1>&ensp;</h1>
+              </div>
+              <div className={classes.line2}>
+                <img className={classes.line2_img } src={line2} />  <h1 className={classes.line2_text}>PHASE 2 </h1>
+              </div>
+            </div>
+            <div className={classes.itemsContainer_text_r}>
+               <h1 className={classes.line1_d_text}>Lorem ipsum dolor sit </h1>
+            </div>
+          </div>
+          
+          <div>
+            <div className={classes.itemsContainer}>
+              <div className={classes.line3}>
+                <h1 className={classes.line1_text}>PHASE 3</h1> <img src={line3} className={classes.line2_img } />
+              </div>
+              <div>
+                <h1>&ensp;</h1>
+              </div>
+            </div>
+            <div className={classes.itemsContainer_text_l}>
+               <h1 className={classes.line1_d_text}>Lorem ipsum dolor sit </h1>
+            </div>
+          </div>
+          <div>
           <div className={classes.itemsContainer}>
             <div>
               <h1>&ensp;</h1>
             </div>
             <div className={classes.line4}>
-              <img src={line4} /><h1 className={classes.line1_text}>PHASE 4</h1>
+              <img src={line4}  className={classes.line2_img }/><h1 className={classes.line1_text}>PHASE 4</h1>
             </div>
           </div>
+          <div className={classes.itemsContainer_text_r}>
+               <h1 className={classes.line1_d_text}>Lorem ipsum dolor sit </h1>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>

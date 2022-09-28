@@ -269,16 +269,16 @@ const Tokenomics = () => {
             <div className={classes.itemsContainer}>
               <div className={classes.itemsContainerMaster}>
                 <h1 className={classes.text_h1}>TOKEN</h1>
-                <h0 className={classes.text_h0}>TEXT 111</h0>
+                <h0 className={classes.text_h0}>Lorem ipsum</h0>
                 <h1 className={classes.text_h1}>MAX SUPPLY</h1>
                 <di>
-                  <img lassName={classes.tokennomic_icon} src={tokennomic_icon} /> <h0 className={classes.text_h0} >TEXT 111</h0>
+                  <img lassName={classes.tokennomic_icon} src={tokennomic_icon} /> <h0 className={classes.text_h0} >Lorem ipsum</h0>
                 </di>
                 <h1 className={classes.text_h1}>USE CASE</h1>
                 <div className={classes.frameStats}><ul className={classes.frameList}>
-                  <li className={classes.text_h0}>Text 1</li>
-                  <li className={classes.text_h0}>Text 1</li>
-                  <li className={classes.text_h0}>Text 2</li>
+                  <li className={classes.text_h0}>Lorem ipsum</li>
+                  <li className={classes.text_h0}>Lorem ipsum</li>
+                  <li className={classes.text_h0}>Lorem ipsum</li>
                 </ul></div>
                 <h1 className={classes.text_h1}>CONTRACT ADDRESS</h1>
                 <h0 className={classes.text_h0}>TEXT 999</h0>
@@ -289,16 +289,16 @@ const Tokenomics = () => {
               </div>
               <div className={classes.itemsContainerMaster}>
                 <h1 className={classes.text_h1}>TOKEN</h1>
-                <h0 className={classes.text_h0}>TEXT 111</h0>
+                <h0 className={classes.text_h0}>Lorem ipsum</h0>
                 <h1 className={classes.text_h1}>MAX SUPPLY</h1>
                 <di>
-                  <img lassName={classes.tokennomic_icon} src={tokennomic_icon} /> <h0 className={classes.text_h0}>TEXT 111</h0>
+                  <img lassName={classes.tokennomic_icon} src={tokennomic_icon} /> <h0 className={classes.text_h0}>Lorem ipsum</h0>
                 </di>
                 <h1 className={classes.text_h1}>USE CASE</h1>
                 <div className={classes.frameStats}><ul className={classes.frameList}>
-                  <li className={classes.text_h0}>Text 1</li>
-                  <li className={classes.text_h0}>Text 2</li>
-                  <li className={classes.text_h0}>Text 2</li>
+                  <li className={classes.text_h0}>Lorem ipsum</li>
+                  <li className={classes.text_h0}>Lorem ipsum</li>
+                  <li className={classes.text_h0}>Lorem ipsum</li>
                 </ul>
                 </div>
                 <h1 className={classes.text_h1}>CONTRACT ADDRESS</h1>
