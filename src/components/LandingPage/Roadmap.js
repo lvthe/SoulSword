@@ -6,11 +6,15 @@ import launch from '../../assets/launch.png';
 import tokenomics from '../../assets/tokenomics.png';
 import chain from '../../assets/chain.png';
 import road_img from '../../assets/road_map.png';
-import road_sword from '../../assets/road_sword.png';
-import  road_map_bg from  '../../assets/road_map_bg.png';
+import road_map_bg from '../../assets/road_map_bg.png';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-
+import line1 from '../../assets/road_map_line_1.png';
+import line2 from '../../assets/road_map_line_2.png';
+import line3 from '../../assets/road_map_line_3.png';
+import line4 from '../../assets/road_map_line_4.png';
+import road_sword from '../../assets/road_sword.png';
+import road_map_sword_light from '../../assets/road_map_sword_light.png';
 const getStepsData = () => {
   return [
     {
@@ -158,14 +162,80 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: 'center',
     },
   },
-  road_img:{
+  body: {
+    backgroundImage: `url(${road_sword})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    height: 700,
+    width: 550
+  },
+  road_img: {
     [theme.breakpoints.down('md')]: {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       width: 400,
     },
-  }
+  },
+  line1: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    position: "relative",
+    // justifyContent: 'flex-start',
+    right: "18%",
+    paddingTop: 35,
+    height: 100,
+
+  },
+  line2: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    position: "relative",
+    // justifyContent: 'flex-start',
+    left: "18%",
+    paddingTop: 20,
+    // height: 100,
+
+  },
+  line1_text: {
+    margin: 0,
+    fontFamily: "Trajan Pro",
+    fontStyle: "Bold",
+    fontSize: "32px",
+    lineHeight: "50px",
+    align: "center",
+    verticalAlign: "top",
+    letterSpacing: "5%",
+    fill: "Solid",
+    color:  "#FF8A00"
+  },
+  line1_space: {
+    width: 200
+  },
+  line3: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    position: "relative",
+    // justifyContent: 'flex-start',
+    right: "18%",
+    paddingTop: 80,
+    height: 100,
+  },
+  line4: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    position: "relative",
+    // justifyContent: 'flex-start',
+    left: "15%",
+    paddingTop: 60,
+    // height: 100,
+
+  },
 }));
 
 const Roadmap = () => {
@@ -215,56 +285,48 @@ const Roadmap = () => {
   return (
     <div className={classes.background}>
       <div className={classes.itemsContainer}>
-        <img  className={classes.road_img}  src={road_img} />
+        <img className={classes.road_img} src={road_img} />
       </div>
       <div className={classes.itemsContainer}>
-        <img  src={road_sword} />
-      </div>
-      {/* <div>
-        <h6 className={classes.heading}>
-          SoulsWord RoadMap<strong className={classes.highlight}></strong>
-        </h6>
-      </div>
-
-      <div className="row g-0 align-items-center ">
-        <div className="col-2 col-md-1">
-          <IconButton className="c--right" onClick={handleLeftCarouselScroll}>
-            <ArrowBackIosIcon fontSize="large" style={{ color: '#ffffff' }} />
-          </IconButton>
-        </div>
-
-        <div className="col-8 col-md-10">
-          <div className="slider">
-            {steps.map((stepData, index) => (
-              <div
-                key={index}
-                className="slide"
-                style={{
-                  transform: `translateX(${x}%)`,
-                }}>
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
-                  <Avatar src={stepData.icon} variant="rounded" />
-                  <hr style={{ width: '95%', marginTop: 1, marginBottom: 3 }} />
-                  <h3 style={{ color: '#e5e5e5', fontWeight: 700 }}>{stepData.title}</h3>
-                  <h5 style={{ fontSize: 14, color: '#e5e5e5', fontWeight: 600 }}>{stepData.heading}</h5>
-                  <ul style={{ borderLeft: '1px solid grey	' }}>
-                    {stepData.subheadings.map((subheading, index) => (
-                      <li key={index} style={{ marginRight: -5, color: '#e5e5e5' }}>
-                        <p style={{ fontSize: 14, fontWeight: 500 }}>{subheading}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+        <div className={classes.body}>
+          <div className={classes.itemsContainer}>
+            <div className={classes.line1} >
+              <h1 className={classes.line1_text}>PHASE 1 </h1> <img src={line1} />
+              
+            </div>
+            <div>
+              <h1>&ensp;</h1>
+            </div>
+          </div>
+          <div className={classes.itemsContainer}>
+            <div>
+              <h1>&ensp;</h1>
+            </div>
+            <div className={classes.line2}>
+              <img src={line2} />  <h1 className={classes.line1_text}>PHASE 2 </h1>
+            </div>
+          </div>
+          <div>
+            <div className={classes.itemsContainer}>
+              <div className={classes.line3}>
+                <h1 className={classes.line1_text}>PHASE 3</h1> <img src={line3} />
               </div>
-            ))}
+              <div>
+                <h1>&ensp;</h1>
+              </div>
+            </div>
+
+          </div>
+          <div className={classes.itemsContainer}>
+            <div>
+              <h1>&ensp;</h1>
+            </div>
+            <div className={classes.line4}>
+              <img src={line4} /><h1 className={classes.line1_text}>PHASE 4</h1>
+            </div>
           </div>
         </div>
-        <div className="col-2 col-md-1">
-          <IconButton className="c--right" onClick={handleRightCarouselScroll}>
-            <ArrowForwardIosIcon fontSize="large" style={{ color: '#ffffff' }} />
-          </IconButton>
-        </div>
-      </div> */}
+      </div>
     </div>
   );
 };

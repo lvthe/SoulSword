@@ -29,7 +29,7 @@ import Tumblr from '../../assets/Tumblr.png';
 const useStyles = makeStyles((theme) => ({
 	background: {
 		// marginTop: 150,
-		height: '400px',
+		height: 280,//'300px',
 		backgroundImage: `url(${footer_bg})`,
 		backgroundPosition: 'center',
 		backgroundSize: 'cover',
@@ -124,11 +124,12 @@ const useStyles = makeStyles((theme) => ({
 		top: "5%"
 	},
 	margin: {
-		margin: theme.spacing(1),
+		// margin: theme.spacing(1),
 		boxSizing: "border-box",
-		position: "absolute",
+		// position: "absolute",
 		width: "392px",
-		height: "40.72px",
+		padding: 0,
+		// height: "40.72px",
 		// left: "0px",
 		// top: "0px",
 		border: "0.721511px solid #C6C6C6",
@@ -300,10 +301,10 @@ const Footer = () => {
 					<div>
 						<p className={classes.para}>
 							<ul className={classes.frameList}>
-								<li>Level: 1 / 5</li>
-								<li>Base Damage: 36</li>
-								<li>Bonus: +5%</li>
-								<li>Accuracy: +3</li>
+								<li>HOME</li>
+								<li>SOUL</li>
+								<li>SWORD</li>
+								<li>FEARTURE</li>
 							</ul>
 						</p>
 					</div>
@@ -368,13 +369,7 @@ const Footer = () => {
 						</div>
 					</div>
 					<div>
-						<h1> JOIN WITH US </h1>
-						{/* <InputBase
-        					className={classes.margin}
-								label="Email address"
-								// variant="outlined"
-								id="custom-css-input"
-							/> */}
+						<h1> JOIN WITH US </h1> 
 							 <InputBase
 							className={classes.margin}
 							defaultValue="Email address"

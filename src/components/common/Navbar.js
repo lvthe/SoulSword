@@ -353,7 +353,7 @@ const Navbar = () => {
           </Link>
           <Link key={'5'} exact="true" to="mode" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
             <Typography className={classes.tabs} variant="body1">
-              FEARTURE
+              FEATURE
             </Typography>{' '}
           </Link>
           <Link key={'6'} exact="true" to="tokenomics" smooth={true} offset={0} duration={400} delay={0} className={classes.home}>
@@ -372,23 +372,6 @@ const Navbar = () => {
               ROADMAP
             </Typography>{' '}
           </Link>
-          {/* <div style={{ paddingRight: '5px' }}>
-            {' '}
-            <Tooltip title="SoulsWord Game Portal">
-            <a href="#" className="animated-button1">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Play Now
-            </a>
-              <a href="https://game.SoulsWord.com"> 
-                <Button className={classes.buttonGame} variant="contained">
-                  Play Now
-                </Button> 
-              </a>
-            </Tooltip>
-          </div> */}
         </Toolbar>
         <Toolbar className={classes.sectionMobile}>
           <div className={classes.row1}>
@@ -432,6 +415,9 @@ const Navbar = () => {
           </div>
         </Toolbar>
       </AppBar>
+      <div height="500px" >
+
+      </div>
     </div>
   );
 };
