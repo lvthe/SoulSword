@@ -46,6 +46,11 @@ import sword_d_metal from '../../assets/sword_d_metal.gif';
 import sword_d_water from '../../assets/sword_d_water.gif';
 import sword_d_wood from '../../assets/sword_d_wood.gif';
 import sword_d_earth from '../../assets/sword_d_earth.gif';
+import soul_a_fire from '../../assets/sword_a_fire.png';
+import soul_a_metal from '../../assets/sword_a_metal.png';
+import soul_a_water from '../../assets/sword_a_water.png';
+import soul_a_wood from '../../assets/sword_a_wood.png';
+import soul_a_earth from '../../assets/sword_a_earth.png';
 
 const useStyles = makeStyles((theme) => ({
   background: {
@@ -528,8 +533,8 @@ const Swords = () => {
           image: soul_metal,
           active: true,
           imageDetailBG: sword_bg_metal,
-          imageClass:soul_metal,
-          imageClassCounter:soul_poison,
+          imageClass:soul_a_metal,
+          imageClassCounter:soul_a_wood,
           backgroundMain : sword_farme_metal,
           textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
           img_m:sword_m_metal,
@@ -542,8 +547,8 @@ const Swords = () => {
           image: soul_poison,
           active: true,
           imageDetailBG: sword_bg_wood,
-          imageClass:soul_poison,
-          imageClassCounter:soul_earth,
+          imageClass:soul_a_wood,
+          imageClassCounter:soul_a_earth,
           backgroundMain : sword_farme_wood,
           textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
           img_m:sword_m_wood,
@@ -557,8 +562,8 @@ const Swords = () => {
           image: soul_fire,
           active: true,
           imageDetailBG: sword_bg_fire,
-          imageClass:soul_fire,
-          imageClassCounter:soul_metal,
+          imageClass:soul_a_fire,
+          imageClassCounter:soul_a_metal,
           backgroundMain : sword_farme_fire,
           textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
           img_m:sword_m_fire,
@@ -571,8 +576,8 @@ const Swords = () => {
           image: soul_water,
           active: true,
           imageDetailBG: sword_bg_water,
-          imageClass:soul_water,
-          imageClassCounter:soul_fire,
+          imageClass:soul_a_water,
+          imageClassCounter:soul_a_fire,
           backgroundMain : sword_farme_water,
           textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
           img_m:sword_m_water,
@@ -586,8 +591,8 @@ const Swords = () => {
           image: soul_earth,
           active: true,
           imageDetailBG: sword_bg_earth,
-          imageClass:soul_earth,
-          imageClassCounter:soul_water,
+          imageClass:soul_a_earth,
+          imageClassCounter:soul_a_water,
           backgroundMain : sword_farme_earth,
           textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
           img_m:sword_m_earth,
@@ -665,10 +670,10 @@ const Swords = () => {
                   <div>
                     <h1 className={classes.attribue_h1}> <span>Attribues</span></h1>
                     <div className={classes.itemDetailsIcon}>
-                      <img id="sword_img_class" className={classes.imageDetails} src={soul_fire} /><p className={classes.attribue_h1}>Class</p>
+                      <img id="sword_img_class" className={classes.imageDetails} src={soul_a_fire} /><p className={classes.attribue_h1}>Class</p>
                     </div>
                     <div className={classes.itemDetailsIcon}>
-                      <img id="sword_img_class_counter" className={classes.imageDetails} src={soul_metal} /><p className={classes.attribue_h1}>Class Counter</p>
+                      <img id="sword_img_class_counter" className={classes.imageDetails} src={soul_a_metal} /><p className={classes.attribue_h1}>Class Counter</p>
                     </div>
                     <h1 className={classes.attribue_h1}> <span>Stength state:</span></h1>
                     <div className={classes.itemDetailsIcon}>
