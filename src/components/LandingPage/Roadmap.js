@@ -15,6 +15,7 @@ import line3 from '../../assets/road_map_line_3.png';
 import line4 from '../../assets/road_map_line_4.png';
 import road_sword from '../../assets/road_sword.png';
 import road_map_sword_light from '../../assets/road_map_sword_light.png';
+import road_map_content from '../../assets/road_map_content.png';
 const getStepsData = () => {
   return [
     {
@@ -402,6 +403,9 @@ const Roadmap = () => {
         <img className={classes.road_img} src={road_img} />
       </div>
       <div className={classes.itemsContainer}>
+        <img className={classes.road_img} src={road_map_content} />
+      </div>
+      {/* <div className={classes.itemsContainer}>
         <div className={classes.body}>
           <div className={classes.body_d}>
             <div className={classes.itemsContainer}>
@@ -413,7 +417,14 @@ const Roadmap = () => {
               </div>
             </div>
             <div className={classes.itemsContainer_text_l}>
-               <h1 className={classes.line1_d_text}>Lorem ipsum dolor sit </h1>
+               <h2 className={classes.line1_d_text}>
+                <p style={{margin:0}}>Project Ideation</p>
+                <p style={{margin:0}}>Global Team Formation</p>
+                <p style={{margin:0}}>Gameplay</p>
+                <p style={{margin:0}}>Conceptualized</p>
+                <p style={{margin:0}}>Assets Development</p>
+                <p style={{margin:0}}>Graphic Design</p>
+               </h2>
             </div>
           </div>
 
@@ -459,7 +470,7 @@ const Roadmap = () => {
           </div>
           
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

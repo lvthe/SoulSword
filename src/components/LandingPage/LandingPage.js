@@ -42,7 +42,7 @@ const LandingPage = () => {
 
       <section id="backer">
         <Backer />
-        <Investor />
+        {/* <Investor /> */}
         <Footer />
       </section>
 

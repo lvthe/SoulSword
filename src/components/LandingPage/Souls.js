@@ -69,6 +69,13 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
   },
 
+  itemsContainer_d: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    paddingTop: 30,
+    flexWrap: 'wrap',
+  },
   itemsContainerSword: {
     display: 'flex',
     justifyContent: 'space-evenly',
@@ -204,6 +211,7 @@ const useStyles = makeStyles((theme) => ({
     width: 90,
     backgroundSize: 'contain',
     position: 'relative',
+    padding:20,
     '&:hover': {
       transform: "scale(1.05)"
     },
@@ -213,6 +221,7 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
+      padding:0,
     },
   },
   frameCardBottom: {
@@ -292,7 +301,7 @@ const useStyles = makeStyles((theme) => ({
   itemDetailsIcon: {
     verticalAlign: 'middle',
     display: 'flex',
-
+    padding:5
   },
   attribue_h1: {
     color: 'white',
@@ -593,7 +602,7 @@ const Swords = () => {
           There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.
         </p>
       </div> */}
-      <div className={classes.itemsContainer}>
+      <div className={classes.itemsContainer_d}>
         {items.map((item) => {
           return (
             <div  key={item.id} className={classes.frameCard}   onClick={() => { createCss(  item.imageDetail) }}  >

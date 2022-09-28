@@ -269,41 +269,41 @@ const Tokenomics = () => {
             <div className={classes.itemsContainer}>
               <div className={classes.itemsContainerMaster}>
                 <h1 className={classes.text_h1}>TOKEN</h1>
-                <h0 className={classes.text_h0}>Lorem ipsum</h0>
+                <h0 className={classes.text_h0}>SWORD</h0>
                 <h1 className={classes.text_h1}>MAX SUPPLY</h1>
                 <di>
-                  <img lassName={classes.tokennomic_icon} src={tokennomic_icon} /> <h0 className={classes.text_h0} >Lorem ipsum</h0>
+                  <img lassName={classes.tokennomic_icon} src={tokennomic_icon} /> <h0 className={classes.text_h0} >100,000,000</h0>
                 </di>
                 <h1 className={classes.text_h1}>USE CASE</h1>
                 <div className={classes.frameStats}><ul className={classes.frameList}>
-                  <li className={classes.text_h0}>Lorem ipsum</li>
-                  <li className={classes.text_h0}>Lorem ipsum</li>
-                  <li className={classes.text_h0}>Lorem ipsum</li>
+                  <li className={classes.text_h0}>InGame Reward</li>
+                  <li className={classes.text_h0}>MarketPlace</li>
+                  {/* <li className={classes.text_h0}>Lorem ipsum</li> */}
                 </ul></div>
                 <h1 className={classes.text_h1}>CONTRACT ADDRESS</h1>
-                <h0 className={classes.text_h0}>TEXT 999</h0>
-                <h0 className={classes.text_h0}>TEXT 999</h0>
+                <h0 className={classes.text_h0}>Soon</h0>
+                {/* <h0 className={classes.text_h0}>TEXT 999</h0> */}
               </div>
               <div className={classes.itemsContainerMaster}>
                 <img className={classes.tokenomics_line} src={tokenomics_line} />
               </div>
               <div className={classes.itemsContainerMaster}>
                 <h1 className={classes.text_h1}>TOKEN</h1>
-                <h0 className={classes.text_h0}>Lorem ipsum</h0>
+                <h0 className={classes.text_h0}>SOUL</h0>
                 <h1 className={classes.text_h1}>MAX SUPPLY</h1>
                 <di>
-                  <img lassName={classes.tokennomic_icon} src={tokennomic_icon} /> <h0 className={classes.text_h0}>Lorem ipsum</h0>
+                  <img lassName={classes.tokennomic_icon} src={tokennomic_icon} /> <h0 className={classes.text_h0}>100,000,000</h0>
                 </di>
                 <h1 className={classes.text_h1}>USE CASE</h1>
                 <div className={classes.frameStats}><ul className={classes.frameList}>
-                  <li className={classes.text_h0}>Lorem ipsum</li>
-                  <li className={classes.text_h0}>Lorem ipsum</li>
-                  <li className={classes.text_h0}>Lorem ipsum</li>
+                  <li className={classes.text_h0}>InGame System</li>
+                  {/* <li className={classes.text_h0}>Lorem ipsum</li>
+                  <li className={classes.text_h0}>Lorem ipsum</li> */}
                 </ul>
                 </div>
                 <h1 className={classes.text_h1}>CONTRACT ADDRESS</h1>
-                <h0 className={classes.text_h0}> TEXT 999</h0>
-                <h0 className={classes.text_h0}>TEXT 999</h0>
+                <h0 className={classes.text_h0}>Soon</h0>
+                {/* <h0 className={classes.text_h0}>TEXT 999</h0> */}
               </div>
               <div className={classes.itemsContainerMaster}>
                 <img className={classes.tokenomics_logo} src={tokenomics_logo} />

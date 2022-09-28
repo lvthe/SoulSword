@@ -51,6 +51,61 @@ import soul_a_metal from '../../assets/sword_a_metal.png';
 import soul_a_water from '../../assets/sword_a_water.png';
 import soul_a_wood from '../../assets/sword_a_wood.png';
 import soul_a_earth from '../../assets/sword_a_earth.png';
+import sword_dd_metal_1 from '../../assets/sword_dd_metal_1.gif';
+import sword_dd_metal_2 from '../../assets/sword_dd_metal_2.gif';
+import sword_dd_metal_3 from '../../assets/sword_dd_metal_3.gif';
+import sword_dd_metal_4 from '../../assets/sword_dd_metal_4.gif';
+import sword_dd_metal_5 from '../../assets/sword_dd_metal_5.gif';
+import sword_dd_metal_6 from '../../assets/sword_dd_metal_6.gif';
+import sword_dd_metal_7 from '../../assets/sword_dd_metal_7.gif';
+import sword_dd_metal_8 from '../../assets/sword_dd_metal_8.gif';
+import sword_dd_metal_9 from '../../assets/sword_dd_metal_9.gif';
+import sword_dd_metal_10 from '../../assets/sword_dd_metal_10.gif';
+
+import sword_dd_wood_1 from '../../assets/sword_dd_wood_1.gif';
+import sword_dd_wood_2 from '../../assets/sword_dd_wood_2.gif';
+import sword_dd_wood_3 from '../../assets/sword_dd_wood_3.gif';
+import sword_dd_wood_4 from '../../assets/sword_dd_wood_4.gif';
+import sword_dd_wood_5 from '../../assets/sword_dd_wood_5.gif';
+import sword_dd_wood_6 from '../../assets/sword_dd_wood_6.gif';
+import sword_dd_wood_7 from '../../assets/sword_dd_wood_7.gif';
+import sword_dd_wood_8 from '../../assets/sword_dd_wood_8.gif';
+import sword_dd_wood_9 from '../../assets/sword_dd_wood_9.gif';
+import sword_dd_wood_10 from '../../assets/sword_dd_wood_10.gif';
+
+import sword_dd_earth_1 from '../../assets/sword_dd_earth_1.gif';
+import sword_dd_earth_2 from '../../assets/sword_dd_earth_2.gif';
+import sword_dd_earth_3 from '../../assets/sword_dd_earth_3.gif';
+import sword_dd_earth_4 from '../../assets/sword_dd_earth_4.gif';
+import sword_dd_earth_5 from '../../assets/sword_dd_earth_5.gif';
+import sword_dd_earth_6 from '../../assets/sword_dd_earth_6.gif';
+import sword_dd_earth_7 from '../../assets/sword_dd_earth_7.gif';
+import sword_dd_earth_8 from '../../assets/sword_dd_earth_8.gif';
+import sword_dd_earth_9 from '../../assets/sword_dd_earth_9.gif';
+import sword_dd_earth_10 from '../../assets/sword_dd_earth_10.gif';
+
+import sword_dd_fire_1 from '../../assets/sword_dd_fire_1.gif';
+import sword_dd_fire_2 from '../../assets/sword_dd_fire_2.gif';
+import sword_dd_fire_3 from '../../assets/sword_dd_fire_3.gif';
+import sword_dd_fire_4 from '../../assets/sword_dd_fire_4.gif';
+import sword_dd_fire_5 from '../../assets/sword_dd_fire_5.gif';
+import sword_dd_fire_6 from '../../assets/sword_dd_fire_6.gif';
+import sword_dd_fire_7 from '../../assets/sword_dd_fire_7.gif';
+import sword_dd_fire_8 from '../../assets/sword_dd_fire_8.gif';
+import sword_dd_fire_9 from '../../assets/sword_dd_fire_9.gif';
+import sword_dd_fire_10 from '../../assets/sword_dd_fire_10.gif';
+
+import sword_dd_water_1 from '../../assets/sword_dd_water_1.gif';
+import sword_dd_water_2 from '../../assets/sword_dd_water_2.gif';
+import sword_dd_water_3 from '../../assets/sword_dd_water_3.gif';
+import sword_dd_water_4 from '../../assets/sword_dd_water_4.gif';
+import sword_dd_water_5 from '../../assets/sword_dd_water_5.gif';
+import sword_dd_water_6 from '../../assets/sword_dd_water_6.gif';
+import sword_dd_water_7 from '../../assets/sword_dd_water_7.gif';
+import sword_dd_water_8 from '../../assets/sword_dd_water_8.gif';
+import sword_dd_water_9 from '../../assets/sword_dd_water_9.gif';
+import sword_dd_water_10 from '../../assets/sword_dd_water_10.gif';
+
 
 const useStyles = makeStyles((theme) => ({
   background: {
@@ -98,13 +153,27 @@ const useStyles = makeStyles((theme) => ({
       transform: "scale(1.05)",
     },
     [theme.breakpoints.down('md')]: {
-       width: 55,
-       height: 89,
+       width: 28,
+       height: 46,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
     },
 
+  },
+  itemsContainer_d: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    paddingTop: 30,
+    flexWrap: 'wrap',
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+      paddingTop: 0,
+      // paddingTop: 30,
+   },
   },
   itemsContainer: {
     display: 'flex',
@@ -261,16 +330,17 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   frameCardBottom: {
-     background: `url(${sword_bg_detail})`,
+    //  background: `url(${sword_bg_detail})`,
      backgroundRepeat: 'no-repeat',
      backgroundPosition: 'center',
      backgroundSize: 'cover',
      height: 200,
-     width: 100,
+     width: 120,
      backgroundSize: 'contain',
      position: 'relative',
     [theme.breakpoints.down('md')]: {
-      height: 100,
+      width:50,
+      height: 50,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -307,6 +377,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
      top: '14%',
      left: '-2%',
+     width:100,
      
     [theme.breakpoints.down('md')]: {
       top: '6%',
@@ -528,6 +599,62 @@ const Swords = () => {
       bg_defautl: background_sword,
       items: [
         {
+          id: 'btn-fire',
+          name: 'Tizona',
+          image: soul_fire,
+          active: true,
+          imageDetailBG: sword_bg_fire,
+          imageClass:soul_a_fire,
+          imageClassCounter:soul_a_metal,
+          backgroundMain : sword_farme_fire,
+          textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
+          img_m:sword_m_fire,
+          img_sword_d:sword_d_fire,
+          img_farme:sword_bg_detail,
+          sword_d:[
+            {
+              id:'1',
+              sword_dd:sword_dd_fire_1
+            },
+            {
+              id:'2',
+              sword_dd:sword_dd_fire_2
+            },
+            {
+              id:'3',
+              sword_dd:sword_dd_fire_3
+            },
+            {
+              id:'4',
+              sword_dd:sword_dd_fire_4
+            },
+            {
+              id:'5',
+              sword_dd:sword_dd_fire_5
+            },
+            {
+              id:'6',
+              sword_dd:sword_dd_fire_6
+            },
+            {
+              id:'7',
+              sword_dd:sword_dd_fire_7
+            },
+            {
+              id:'8',
+              sword_dd:sword_dd_fire_8
+            },
+            {
+              id:'9',
+              sword_dd:sword_dd_fire_9
+            },
+            {
+              id:'10',
+              sword_dd:sword_dd_fire_10
+            }
+          ]
+        },
+        {
           id: 'btn-metal',
           name: 'Backbiter',
           image: soul_metal,
@@ -539,7 +666,49 @@ const Swords = () => {
           textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
           img_m:sword_m_metal,
           img_sword_d:sword_d_metal,
-          img_farme:sword_bg_detail
+          img_farme:sword_bg_detail,
+          sword_d:[
+            {
+              id:'1',
+              sword_dd:sword_dd_metal_1
+            },
+            {
+              id:'2',
+              sword_dd:sword_dd_metal_2
+            },
+            {
+              id:'3',
+              sword_dd:sword_dd_metal_3
+            },
+            {
+              id:'4',
+              sword_dd:sword_dd_metal_4
+            },
+            {
+              id:'5',
+              sword_dd:sword_dd_metal_5
+            },
+            {
+              id:'6',
+              sword_dd:sword_dd_metal_6
+            },
+            {
+              id:'7',
+              sword_dd:sword_dd_metal_7
+            },
+            {
+              id:'8',
+              sword_dd:sword_dd_metal_8
+            },
+            {
+              id:'9',
+              sword_dd:sword_dd_metal_9
+            },
+            {
+              id:'10',
+              sword_dd:sword_dd_metal_10
+            }
+          ]
         },
         {
           id: 'btn-wood',
@@ -553,36 +722,49 @@ const Swords = () => {
           textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
           img_m:sword_m_wood,
           img_sword_d:sword_d_wood,
-          img_farme:sword_bg_detail
-          
-        },
-        {
-          id: 'btn-fire',
-          name: 'Tizona',
-          image: soul_fire,
-          active: true,
-          imageDetailBG: sword_bg_fire,
-          imageClass:soul_a_fire,
-          imageClassCounter:soul_a_metal,
-          backgroundMain : sword_farme_fire,
-          textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
-          img_m:sword_m_fire,
-          img_sword_d:sword_d_fire,
-          img_farme:sword_bg_detail
-        },
-        {
-          id: 'btn-water',
-          name: 'Shisui',
-          image: soul_water,
-          active: true,
-          imageDetailBG: sword_bg_water,
-          imageClass:soul_a_water,
-          imageClassCounter:soul_a_fire,
-          backgroundMain : sword_farme_water,
-          textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
-          img_m:sword_m_water,
-          img_sword_d:sword_d_water,
-          img_farme:sword_bg_detail
+          img_farme:sword_bg_detail,
+          sword_d:[
+            {
+              id:'1',
+              sword_dd:sword_dd_wood_1
+            },
+            {
+              id:'2',
+              sword_dd:sword_dd_wood_2
+            },
+            {
+              id:'3',
+              sword_dd:sword_dd_wood_3
+            },
+            {
+              id:'4',
+              sword_dd:sword_dd_wood_4
+            },
+            {
+              id:'5',
+              sword_dd:sword_dd_wood_5
+            },
+            {
+              id:'6',
+              sword_dd:sword_dd_wood_6
+            },
+            {
+              id:'7',
+              sword_dd:sword_dd_wood_7
+            },
+            {
+              id:'8',
+              sword_dd:sword_dd_wood_8
+            },
+            {
+              id:'9',
+              sword_dd:sword_dd_wood_9
+            },
+            {
+              id:'10',
+              sword_dd:sword_dd_wood_10
+            }
+          ]
           
         },
         {
@@ -597,9 +779,109 @@ const Swords = () => {
           textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
           img_m:sword_m_earth,
           img_sword_d:sword_d_earth,
-          img_farme:sword_bg_detail
+          img_farme:sword_bg_detail,
+          sword_d:[
+            {
+              id:'1',
+              sword_dd:sword_dd_earth_1
+            },
+            {
+              id:'2',
+              sword_dd:sword_dd_earth_2
+            },
+            {
+              id:'3',
+              sword_dd:sword_dd_earth_3
+            },
+            {
+              id:'4',
+              sword_dd:sword_dd_earth_4
+            },
+            {
+              id:'5',
+              sword_dd:sword_dd_earth_5
+            },
+            {
+              id:'6',
+              sword_dd:sword_dd_earth_6
+            },
+            {
+              id:'7',
+              sword_dd:sword_dd_earth_7
+            },
+            {
+              id:'8',
+              sword_dd:sword_dd_earth_8
+            },
+            {
+              id:'9',
+              sword_dd:sword_dd_earth_9
+            },
+            {
+              id:'10',
+              sword_dd:sword_dd_earth_10
+            }
+          ]
+          
+        },
+        {
+          id: 'btn-water',
+          name: 'Shisui',
+          image: soul_water,
+          active: true,
+          imageDetailBG: sword_bg_water,
+          imageClass:soul_a_water,
+          imageClassCounter:soul_a_fire,
+          backgroundMain : sword_farme_water,
+          textDetail:"There are a diversity of SWORD, which comes from the perfect combination of 5 SWORD Classes and Elements, and Each SWORD will become unique and worthwhile in your collection.",
+          img_m:sword_m_water,
+          img_sword_d:sword_d_water,
+          img_farme:sword_bg_detail,
+          sword_d:[
+            {
+              id:'1',
+              sword_dd:sword_dd_water_1
+            },
+            {
+              id:'2',
+              sword_dd:sword_dd_water_2
+            },
+            {
+              id:'3',
+              sword_dd:sword_dd_water_3
+            },
+            {
+              id:'4',
+              sword_dd:sword_dd_water_4
+            },
+            {
+              id:'5',
+              sword_dd:sword_dd_water_5
+            },
+            {
+              id:'6',
+              sword_dd:sword_dd_water_6
+            },
+            {
+              id:'7',
+              sword_dd:sword_dd_water_7
+            },
+            {
+              id:'8',
+              sword_dd:sword_dd_water_8
+            },
+            {
+              id:'9',
+              sword_dd:sword_dd_water_9
+            },
+            {
+              id:'10',
+              sword_dd:sword_dd_water_10
+            }
+          ]
           
         }
+       
       ]
     }
 
@@ -608,7 +890,19 @@ const Swords = () => {
   const [active, setActive] = React.useState(false);
   const [visible, setVisible] = React.useState(true);
   const [hover, setHover] = React.useState(false);
-  const createCss = (id: number, bgI: string, bgI_df: string, imgClass: String, imgClassCounter, bgMainI: string, text_m: string, text_d: string, img_m:string) => {
+  const createCss = (id: number, bgI: string, bgI_df: string, 
+                      imgClass: String, imgClassCounter, bgMainI: string, 
+                      text_m: string, text_d: string, img_m:string,
+                      img_1: string,
+                      img_2: string,
+                      img_3: string,
+                      img_4: string,
+                      img_5: string,
+                      img_6: string,
+                      img_7: string,
+                      img_8: string,
+                      img_9: string,
+                      img_10: string) => {
 
     document.getElementById("sword_bg_master").style.backgroundImage = `url(${bgI})`;
     let i_imgClass = document.querySelector("#sword_img_class");
@@ -619,33 +913,72 @@ const Swords = () => {
     
     //document.getElementById("backgroundFrame").style.backgroundImage = `url(${bgMainI})`;
     
+                        console.log(" img_6 ", img_6);
+     
     document.getElementById("text_main").innerHTML = text_m;  
     document.getElementById("text_detail").innerHTML = text_d;  
 
     let i_img_main_sword = document.querySelector("#img_main_sword");
-    i_img_main_sword.setAttribute("src", img_m)
+    i_img_main_sword.setAttribute("src", img_m);
+
+    let i_img_d_1 = document.querySelector("#sword_dd_1");
+    i_img_d_1.setAttribute("src", img_1);
+
+    let i_img_d_2 = document.querySelector("#sword_dd_2");
+    i_img_d_2.setAttribute("src", img_2);
+
+    let i_img_d_3 = document.querySelector("#sword_dd_3");
+    i_img_d_3.setAttribute("src", img_3);
+
+    let i_img_d_4 = document.querySelector("#sword_dd_4");
+    i_img_d_4.setAttribute("src", img_4);
+
+    let i_img_d_5 = document.querySelector("#sword_dd_5");
+    i_img_d_5.setAttribute("src", img_5);
+
+    let i_img_d_6 = document.querySelector("#sword_dd_6");
+    i_img_d_6.setAttribute("src", img_6);
+
+    let i_img_d_7 = document.querySelector("#sword_dd_7");
+    i_img_d_7.setAttribute("src", img_7);
+
+    let i_img_d_8 = document.querySelector("#sword_dd_8");
+    i_img_d_8.setAttribute("src", img_8);
+
+    let i_img_d_9 = document.querySelector("#sword_dd_9");
+    i_img_d_9.setAttribute("src", img_9);
+
+    let i_img_d_10 = document.querySelector("#sword_dd_10");
+    i_img_d_10.setAttribute("src", img_10);
     
-    console.log("id " , id );
-    const btn = document.querySelector("#btn-metal");
-			btn.classList.add('hover');
+    
 
-    //backgroundFrame  
-
-
+    let cur_id = "";
   };
+  const createCssD = (id: String, ) => {
+
+    var src_img =  document.getElementById(id).src;
+
+    let i_img_main_sword = document.querySelector("#img_main_sword");
+    i_img_main_sword.setAttribute("src", src_img);
+
+
+
+let cur_id = "";
+};
 
   return (
     <div>
-      {masters.map((master, id) => {
+      {masters.map((master, id,) => {
         return (
           <div key={master.items.id} id="sword_bg_master" className={classes.background}  >
             <div className={classes.itemsContainer}>
               <img className={classes.Sword_main} src={Sword_main} />
             </div>
-            <div className={classes.itemsContainer}>
-              {master.items.map((item) => {
+            <div className={classes.itemsContainer_d}>
+              {master.items.map((item,id) => {
                 return (
-                  <div className={classes.itemsContainer}>
+                  <div className={classes.itemsContainer_d}>
                     <div key={item.id} className={classes.frameCard} onClick={() => { createCss(  item.id, 
                                                                                                   item.imageDetailBG, 
                                                                                                   master.items.bg_defautl,
@@ -654,7 +987,17 @@ const Swords = () => {
                                                                                                   item.backgroundMain,
                                                                                                   item.name,
                                                                                                   item.textDetail,
-                                                                                                  item.img_m
+                                                                                                  item.img_m,
+                                                                                                  item.sword_d[0].sword_dd,
+                                                                                                  item.sword_d[1].sword_dd,
+                                                                                                  item.sword_d[2].sword_dd,
+                                                                                                  item.sword_d[3].sword_dd,
+                                                                                                  item.sword_d[4].sword_dd,
+                                                                                                  item.sword_d[5].sword_dd,
+                                                                                                  item.sword_d[6].sword_dd,
+                                                                                                  item.sword_d[7].sword_dd,
+                                                                                                  item.sword_d[8].sword_dd,
+                                                                                                  item.sword_d[9].sword_dd
                                                                                                 ) }}  >
                       <div id={item.id} className={classes.frameImage}>
                         <img className={classes.image} src={item.image} />
@@ -663,6 +1006,9 @@ const Swords = () => {
                   </div>
                 );
               })}
+
+
+              
             </div>
             <div className={classes.itemsContainer}>
               <div className={classes.itemMaster}>
@@ -711,28 +1057,61 @@ const Swords = () => {
                 </p>
               </div>
             </div>
-            <div className={classes.itemsContainer}>
-              {master.items.map((item) => {
-                return (
-                  <div className={classes.itemsContainer}>
-                    <div key={item.id} className={classes.frameCardBottom} onClick={() => { createCss(  item.id, 
-                                                                                                  item.imageDetailBG, 
-                                                                                                  master.items.bg_defautl,
-                                                                                                  item.imageClass, 
-                                                                                                  item.imageClassCounter, 
-                                                                                                  item.backgroundMain,
-                                                                                                  item.name,
-                                                                                                  item.textDetail,
-                                                                                                  item.img_m
-                                                                                                ) }}>
-                      <div className={classes.frameImageD}>
-                        <img className={classes.imageD} src={item.img_sword_d} />
-                      </div>
-                    </div>
+
+            <div className={classes.itemsContainer_d}> 
+              <div className={classes.itemsContainer_d}>
+                <div  className={classes.frameCardBottom}>
+                  <div className={classes.frameImageD}>
+                    <img id="sword_dd_1" className={classes.imageD} src={sword_dd_fire_1} onClick={() => { createCssD("sword_dd_1") }}  />
                   </div>
-                );
-              })}
-            </div>    
+                </div>
+                <div  className={classes.frameCardBottom}>
+                  <div className={classes.frameImageD}>
+                    <img  id="sword_dd_2" className={classes.imageD} src={sword_dd_fire_2}  onClick={() => { createCssD("sword_dd_2") }} />
+                  </div>
+                </div>
+                <div  className={classes.frameCardBottom}>
+                  <div className={classes.frameImageD}>
+                    <img id="sword_dd_3" className={classes.imageD} src={sword_dd_fire_3}  onClick={() => { createCssD("sword_dd_3") }} />
+                  </div>
+                </div>
+                <div  className={classes.frameCardBottom}>
+                  <div className={classes.frameImageD}>
+                    <img id="sword_dd_4" className={classes.imageD} src={sword_dd_fire_4} onClick={() => { createCssD("sword_dd_4") }} />
+                  </div>
+                </div>
+                <div  className={classes.frameCardBottom}>
+                  <div className={classes.frameImageD}>
+                    <img id="sword_dd_5" className={classes.imageD} src={sword_dd_fire_5} onClick={() => { createCssD("sword_dd_5") }} />
+                  </div>
+                </div>
+                <div  className={classes.frameCardBottom}>
+                  <div className={classes.frameImageD}>
+                    <img id="sword_dd_6" className={classes.imageD} src={sword_dd_fire_6} onClick={() => { createCssD("sword_dd_6") }} />
+                  </div>
+                </div>
+                <div  className={classes.frameCardBottom}>
+                  <div className={classes.frameImageD}>
+                    <img id="sword_dd_7" className={classes.imageD} src={sword_dd_fire_7} onClick={() => { createCssD("sword_dd_7") }} />
+                  </div>
+                </div>
+                <div  className={classes.frameCardBottom}>
+                  <div className={classes.frameImageD}>
+                    <img id="sword_dd_8" className={classes.imageD} src={sword_dd_fire_8} onClick={() => { createCssD("sword_dd_8") }} />
+                  </div>
+                </div>
+                <div  className={classes.frameCardBottom}>
+                  <div className={classes.frameImageD}>
+                    <img id="sword_dd_9" className={classes.imageD} src={sword_dd_fire_9} onClick={() => { createCssD("sword_dd_9") }} />
+                  </div>
+                </div>
+                <div  className={classes.frameCardBottom}>
+                  <div className={classes.frameImageD}>
+                    <img id="sword_dd_10" className={classes.imageD} src={sword_dd_fire_10} onClick={() => { createCssD("sword_dd_10") }} />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         );
       })}
